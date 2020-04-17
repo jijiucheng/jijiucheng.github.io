@@ -482,7 +482,6 @@ installed.
 
 
 
-<br>
 # 三、CocoaPods 安装过程中报错问题解决
 
 **说明：此部分所列举的问题均是在执行相关指令时出现的报错**
@@ -625,7 +624,7 @@ $ sudo xcode-select -switch /Applications/Xcode.app
 [方案解决链接 2 - CocoaPods安装和使用及问题：Setting up CocoaPods master repo](http://blog.csdn.net/zhangjunjian127/article/details/47954981)
 
 
-<br>
+
 # 四、资料补充
 ### 1、指令补全
 
@@ -696,9 +695,6 @@ $ pod install                       #  安装 CocoaPods 的配置文件 Podfile
 ```
 
 
-<br>
-<br>
-
 # 五、引用资料
 
 > 说明：此处是列举了我安装CocoaPods 和写这篇文章时查询引用的文章，如有涉及到版权问题，请联系，我会删除的。
@@ -714,7 +710,7 @@ $ pod install                       #  安装 CocoaPods 的配置文件 Podfile
 - **08** - [ruby学习及编译ruby缺少openssl问题解决](http://www.cnblogs.com/netbuddy/p/3501147.html)
 - **09** - [如何在本地安装多个版本的 CocoaPods](https://www.jianshu.com/p/ca57863c4109)
 - **10** - [CocoaPods 1.8 Beta is Here!](http://blog.cocoapods.org/CocoaPods-1.8.0-beta/)
-<br>
+
 - **01** - [解决升级EI Capiton CocoaPods "pod: command not found"](http://www.jianshu.com/p/6ff1903c3f11)
 - **02** - [curl: (35) Server aborted the SSL handshake](https://segmentfault.com/q/1010000004276750)
 - **03** - [第一种 - Error running '__rvm_make -j 1'](http://stackoverflow.com/questions/35228481/error-running-rvm-make-install)
@@ -730,7 +726,6 @@ $ pod install                       #  安装 CocoaPods 的配置文件 Podfile
 - **13** - [[!] CDN: trunk Repo update failed](https://www.jianshu.com/p/bf1cbe49cb5d)
 - **14** - [Homebrew installation on Mac OS X Failed to connect to raw.githubusercontent.com port 443](https://stackoverflow.com/questions/29910217/homebrew-installation-on-mac-os-x-failed-to-connect-to-raw-githubusercontent-com)
 - **15** - [安装homebrew报错curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
-<br>
 
 
 # 六、后续更新
@@ -763,9 +758,6 @@ OS X 10.11以后系统的安装 CocoaPods 指令： $ sudo gem install -n /usr/l
 `三种结果都能安装 Cocoapods 成功，只不过安装更新的内容略有不同。
 推荐使用：指令：$ sudo gem install cocoapods`
 
-
-<br>
-<br>
 
 ### 2018.04.08 更新
 
@@ -823,11 +815,6 @@ gem -v             2.6.6
 
 
 
-<br>
-<br>
-<br>
-
-
 ### 2018.07.23 更新
 
 - **1、报错信息**
@@ -868,8 +855,6 @@ git clone https://git.coding.net/CocoaPods/Specs.git ~/.cocoapods/repos/master
 - **3、参考链接**
 - [安装cocoapods设置pod的时候](https://blog.csdn.net/love9099/article/details/79738724)
 
-<br>
-<br>
 
 ### 2018.10.10 更新
 
@@ -1135,8 +1120,6 @@ rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://r
 
 ------
 
-
-<br>
 # 声明：
 > 报错信息板块尚未写完，后面有时间会继续完善！！！
 > 如果有错误的信息，希望大家可以指出，进而及时修改，相互学习！！！
