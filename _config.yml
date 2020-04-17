@@ -1,0 +1,130 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://jijiucheng.github.io/
+date_format: "ordinal"
+title: 苜蓿
+subtitle: "曾梦想仗剑天涯，后来工作忙没去"
+description: "GitHub - jijiucheng 个人博客"
+keywords: 苜蓿, 鬼仙, 苜蓿鬼仙, jijiucheng, mxgx
+timezone: China/Hefei
+encoding: "utf-8"
+side_bar_repo_limit: 5
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: 苜蓿鬼仙
+organization: 
+organization_url: 
+github_username: jijiucheng
+location: Hefei, China
+email: jijiucheng999@gmail.com
+
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
+
+  -
+    href: /categories/
+    label: 分类
+
+#   -
+#     href: /archives/
+#     label: 归档
+
+  -
+    href: /wiki/
+    label: 维基
+
+  -
+    href: /links/
+    label: 链接
+
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 20
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
+
+repository: jijiucheng/jijiucheng.github.io
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: 
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: jijiucheng
+    repo: blog-comments
+    oauth:
+        client_id: 0c478d9a528799ea0055
+        client_secret: 814f60320dfdcafe2a4bca07e978e52cef309f61
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: jijiucheng
+    repo: blog-comments
+    clientID: 359b06ea524a7700164d
+    clientSecret: 306575c0f8ef949e860ca7012153ea30580a1502
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 20
+
+# ---------------- #
+#      Google      #
+# ---------------- #
+google:
+    analytics_id: UA-80669434-1
+    adsense:
+        footer: true
+        sidebar: true
+        content_header: true
+        content_footer: false
