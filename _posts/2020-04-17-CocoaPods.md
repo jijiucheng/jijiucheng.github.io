@@ -18,13 +18,13 @@ keywords: iOS 配置, CocoaPods
 
 ### 1、官网及相关链接
 
-**Rvm 官网** ： https://www.rvm.io/
-**Ruby 官网** ：https://rubygems.org/
-**CocoaPods 官网** ：https://cocoapods.org/
-`Rvm 安装指南` ：https://rvm.io/rvm/install
-`Homebrew 官网` ：http://brew.sh/index_zh-cn.html
-`ruby 镜像 - taobao`：https://ruby.taobao.org/
-`ruby 镜像 - china`：https://gems.ruby-china.org/
+- **Rvm 官网** ： https://www.rvm.io/ 
+- **Ruby 官网** ：https://rubygems.org/
+- **CocoaPods 官网** ：https://cocoapods.org/
+- `Rvm 安装指南` ：https://rvm.io/rvm/install
+- `Homebrew 官网` ：http://brew.sh/index_zh-cn.html
+- `ruby 镜像 - taobao`：https://ruby.taobao.org/
+- `ruby 镜像 - china`：https://gems.ruby-china.org/
 
 ### 2、Homebrew 介绍
 
@@ -33,7 +33,10 @@ keywords: iOS 配置, CocoaPods
 ### 3、Rvm 介绍
 
   - `Rvm` 全称 `Ruby Version Manager` ，是安装和管理 `ruby` 的一种工具。
-  - 摘录：`RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.`
+  
+  > 摘录：
+  > 
+  > RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.
 
 ### 4、Ruby 介绍
 
@@ -791,7 +794,9 @@ RuntimeError - [Xcodeproj] Unknown object version.
 
 [!] Oh no, an error occurred.
 ```
+
 - **2、报错原因**
+
 ```
 主要原因就是 Xcode 当前版本和 当前的 CocoaPods 的版本问题不匹配，需要对当前 CocoaPods 进行安装更新。
 
@@ -800,6 +805,7 @@ gem -v             2.6.6
 ```
 
 - **3、解决办法**
+
 ```
 方法一：
 ① 终端执行   gem install cocoapods --pre  命令；
@@ -818,6 +824,7 @@ gem -v             2.6.6
 ### 2018.07.23 更新
 
 - **1、报错信息**
+
 ```
 jijiuchengdeMacBook-Pro:lemon-ios jijiucheng$ pod install
 Analyzing dependencies
@@ -840,7 +847,9 @@ fatal: unpack-objects failed
 
 [!] Automatically assigning platform `ios` with version `8.0` on target `lemon` because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.
 ```
+
 - **2、解决办法**
+
 ```
 因为本人使用的是 SourceTree，所以本人是在具体项目界面的，点击右上角 Settings --> Remotes --> Edit Config File... --> 输入 `[http] 
         postBuffer = 524288000`  增大缓存空间。
@@ -852,6 +861,7 @@ fatal: unpack-objects failed
 
 git clone https://git.coding.net/CocoaPods/Specs.git ~/.cocoapods/repos/master
 ```
+
 - **3、参考链接**
 - [安装cocoapods设置pod的时候](https://blog.csdn.net/love9099/article/details/79738724)
 
@@ -859,6 +869,7 @@ git clone https://git.coding.net/CocoaPods/Specs.git ~/.cocoapods/repos/master
 ### 2018.10.10 更新
 
 - **1、报错信息**
+
 ```
 jijiuchengdeMacBook-Pro:~ jijiucheng$ gem sources -l
 *** CURRENT SOURCES ***
@@ -870,11 +881,15 @@ jijiuchengdeMacBook-Pro:~ jijiucheng$ gem sources --add https://gems.ruby-china.
 Error fetching https://gems.ruby-china.org:
 	bad response Not Found 404 (https://gems.ruby-china.org/specs.4.8.gz)
 ```
+
 - **2、解决办法**
+
 ```
 将 `gem sources --add https://gems.ruby-china.org` 替换成 `gem sources --add https://gems.ruby-china.com` 即可
 ```
+
 - **3、参考链接**
+
 - [Error fetching https://gems.ruby-china.org/: bad response Not Found 404 (https://gems.ruby-china.org/specs.4.8.gz)](http://www.mamicode.com/info-detail-2427771.html)
 
 
@@ -883,12 +898,15 @@ Error fetching https://gems.ruby-china.org:
 #### 1、问题一：`-bash: /usr/local/bin/pod: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: bad interpreter: No such file or directory`
 
 - **1、报错信息**
+
 ```
 mxgx:PetBar mxgx$ pod --version
 -bash: /usr/local/bin/pod: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: bad interpreter: No such file or directory
 ```
+
 - **2、解决办法**
 > 主要是因为升级 `macOS Catalina version 10.15` 引起的  `cocoapods` 无法使用了。
+
 ```
 mxgx:PetBar mxgx$ sudo gem update --system
 Latest version already installed. Done.
@@ -900,6 +918,7 @@ Done installing documentation for cocoapods after 1 seconds
 mxgx:PetBar mxgx$ pod --version
 1.8.4
 ```
+
 - **3、参考链接**
  - [zsh: /usr/local/bin/pod: bad interpreter: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: no such file or directory](https://www.cnblogs.com/BK-12345/p/11645856.html)
 
@@ -907,6 +926,7 @@ mxgx:PetBar mxgx$ pod --version
 #### 2、问题二：`[!] CDN: trunk Repo update failed - 127 error(s):`
 
 - **1、报错信息**
+
 ```
 mxgx:PetBar mxgx$ pod install
 Analyzing dependencies
@@ -916,9 +936,11 @@ CDN: trunk URL couldn't be downloaded: https://raw.githubusercontent.com/CocoaPo
 CDN: trunk URL couldn't be downloaded: https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/a/a/6/Kingfisher/0.0.2/Kingfisher.podspec.json, error: Failed to open TCP connection to raw.githubusercontent.com:443 (Connection refused - connect(2) for "raw.githubusercontent.com" port 443)
 CDN: trunk URL couldn't be downloaded: https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/a/a/6/Kingfisher/1.0.0/Kingfisher.podspec.json, error: Failed to open TCP connection to raw.githubusercontent.com:443 (Connection refused - connect(2) for "raw.githubusercontent.com" port 443)
 ```
+
 - **2、解决办法**
 > 主要是因为默认源的变更。
 > 只需要在 Podfile 文件里添加 `source 'https://github.com/CocoaPods/Specs.git'` ，并执行指令 `pod repo remove trunk` 即可。
+
 ```
 platform :ios, '11.0'
 
@@ -971,6 +993,7 @@ Pod installation complete! There are 9 dependencies from the Podfile and 11 tota
 #### 3、问题三：`curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused`
 
 - **1、报错信息**
+
 ```
 mxgx:PetBar mxgx$ rvm -v
 -bash: rvm: command not found
@@ -989,12 +1012,14 @@ mxgx:PetBar mxgx$ curl -L https://get.rvm.io | bash -s stable
   0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
 curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused
 ```
+
 - **2、解决办法**
 > 主要原因暂时位置，只找到了解决办法。
 >
 > 先将 [https://raw.githubusercontent.com/Homebrew/install/master/install](https://raw.githubusercontent.com/Homebrew/install/master/install) 输入到浏览器中看是否能打开，如果能打开，右击 `save as` 保存名为 `brew_install.rb` 网页到任意目录下（只要能找的到）。
 >
 > 打开终端，`cd` 到对应的文件目录，依次执行下面指令即可。
+
 ```
 mxgx:~ mxgx$ cd Desktop/
 mxgx:PetBar mxgx$ curl
@@ -1111,6 +1136,7 @@ mxgx:Desktop mxgx$ source ~/.rvm/scripts/rvm
 mxgx:Desktop mxgx$ rvm -v
 rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
 ```
+
 - **3、参考链接**
  - [Homebrew installation on Mac OS X Failed to connect to raw.githubusercontent.com port 443](https://stackoverflow.com/questions/29910217/homebrew-installation-on-mac-os-x-failed-to-connect-to-raw-githubusercontent-com)
  - [安装homebrew报错curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
