@@ -7,7 +7,7 @@ keywords: iOS 配置, CocoaPods
 ---
 
 # 〇、前言
-<p>
+
 在iOS开发中 [CocoaPods](https://github.com/CocoaPods/CocoaPods) 作为库依赖管理工具就是一把利器。
 
 有了 `CocoaPods` 则无需再通过拖 `第三方库` 及第三方库所依赖的 `framework` 静态库到项目中等麻烦的操作，仅仅只需要通过终端`（Terminal）`输入一些指令即可完成这些操作；而且涉及到第三方库的更新升级也可以通过 `CocoaPods` 进行手动管理更新。
@@ -17,6 +17,7 @@ keywords: iOS 配置, CocoaPods
 # 一、Homebrew、Rvm、Ruby、CocoaPods 简介
 
 ### 1、官网及相关链接
+
 **Rvm 官网** ： https://www.rvm.io/
 **Ruby 官网** ：https://rubygems.org/
 **CocoaPods 官网** ：https://cocoapods.org/
@@ -26,21 +27,23 @@ keywords: iOS 配置, CocoaPods
 `ruby 镜像 - china`：https://gems.ruby-china.org/
 
 ### 2、Homebrew 介绍
+
   -  `Homebrew` 是一个软件包管理器，用于在mac上安装一些os x上没有的UNiX工具；类似于360软件管理器。
 
 ### 3、Rvm 介绍
+
   - `Rvm` 全称 `Ruby Version Manager` ，是安装和管理 `ruby` 的一种工具。
   - 摘录：`RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.`
 
 ### 4、Ruby 介绍
+
   - `Ruby` 是一种面向对象的脚本语言，简单易用，功能强大。能跨平台和可移植性好等等。其实就是种脚本语言。
   - `Ruby` 的软件源使用的是亚马逊的云服务，国内网络环境下载时可能会出现各种不稳定和超时，所以自带的需要翻墙，可以将 `官方 ruby 源` 替换成国内 `淘宝 ruby 源`（[https://ruby.taobao.org/](https://ruby.taobao.org/) ）或者是由 `China ruby 源` （[https://gems.ruby-china.org/](https://gems.ruby-china.org/) ）。据消息了解，2016.06 `淘宝源` 暂停维护了，建议使用 `China ruby 源`。
 
-
 ### 5、CocoaPods 介绍
+
   - `CocoaPods` 是 iOS 最常用的第三方类库管理工具，绝大部分有名的开源类库都支持 `CocoaPods`。
   - `CocoaPods` 是用 `ruby` 实现的，要想使用它首先需要有 `ruby` 的环境。幸运的是OS X系统默认已经可以运行 `ruby` 了。但是有时候 `ruby` 版本过低是无法正常支持 `CocoaPods` 的使用，所以需要先安装更新升级 `rvm` 和 `ruby`。
-
 
 # 二、CocoaPods 安装使用
 
