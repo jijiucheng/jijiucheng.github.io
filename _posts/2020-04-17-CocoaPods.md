@@ -70,6 +70,7 @@ muxuguixiandeMacBook-Pro:~ jijiucheng$ rvm -v
 
   - **情况一**：如果不存在 `rvm` 环境，先安装配置 `rvm` 环境；
   
+  
 ```
 ① 期间可能会问你 `sudo管理员` 密码，以及自动通过 `homebrew` 安装依赖包；
 等待一段时间后就可以成功安装好 `rvm`。
@@ -106,6 +107,7 @@ but no GPG software exists to validate it, skipping.
 In case of problems: https://rvm.io/help and https://twitter.com/rvm_io
 ```
 ![下载安装 rvm 环境.png](https://images.xiaozhuanlan.com/photo/2019/b69788f5ad2d506e34eb4d863386c7da.png)
+
 ```
 ② 然后，载入 RVM 环境（新开 Termal 就不用这么做了，会自动重新载入的）。
 ```
@@ -129,7 +131,8 @@ rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <m
 ```
 
   - **情况二**：如果存在 `rvm` 环境，用 `rvm` 安装 `ruby` 环境；
-  - 当 `ruby` 版本低于 `2.2.2` 时，安装 `CocoaPods` 会报错；为防止 `ruby` 版本过低，建议先升级 `ruby` 环境，建议升级到 `2.3.0` 版本以上。【可以通过 `$ ruby -v` 指令检查当前 ruby 版本】
+    - 当 `ruby` 版本低于 `2.2.2` 时，安装 `CocoaPods` 会报错；为防止 `ruby` 版本过低，建议先升级 `ruby` 环境，建议升级到 `2.3.0` 版本以上。【可以通过 `$ ruby -v` 指令检查当前 ruby 版本】
+  
   
 ```
   ① 查询已知的 ruby 环境。
@@ -558,8 +561,10 @@ $ xcode-select --install
 ```
 ![解决方案 .png](https://images.xiaozhuanlan.com/photo/2019/745d2f5b0c8ea51355b08d31fe8c338f.png)
 *⑤ 方案链接：*
-[方案解决链接 1 - http://stackoverflow.com/questions/35228481/error-running-rvm-make-install](http://stackoverflow.com/questions/35228481/error-running-rvm-make-install)
-[方案解决链接 2 - http://www.th7.cn/Program/Ruby/201609/966343.shtml](http://www.th7.cn/Program/Ruby/201609/966343.shtml)
+
+- [方案解决链接 1 - http://stackoverflow.com/questions/35228481/error-running-rvm-make-install](http://stackoverflow.com/questions/35228481/error-running-rvm-make-install)
+
+- [方案解决链接 2 - http://www.th7.cn/Program/Ruby/201609/966343.shtml](http://www.th7.cn/Program/Ruby/201609/966343.shtml)
 
    - **报错三：**
 **① Gemset '' does not exist, 'rvm ruby-2.3.0 do rvm gemset create ' first, or append '--create'.**
@@ -622,13 +627,15 @@ $ sudo xcode-select -switch /Applications/Xcode.app
 ```
 ![解决方案 .png](https://images.xiaozhuanlan.com/photo/2019/fb97779e1c099de24728897389c62c9a.png)
 *⑤ 资料补充：*
-`出现 Setting up CocoaPods master repo，说明 Cocoapods 在将它的信息下载到  ~/.cocoapods 里；
-新创建终端窗口，输入 cd ~/.cocoapods ，回车，输入 du -sh *  命令来查看文件大小，
-每隔几分钟查看一次，这个目录最终大小是100多M（ 本人这里大概 800M + ），就是完成了。`
+
+> `出现 Setting up CocoaPods master repo，说明 Cocoapods 在将它的信息下载到  ~/.cocoapods 里；
+> 新创建终端窗口，输入 cd ~/.cocoapods ，回车，输入 du -sh *  命令来查看文件大小，
+> 每隔几分钟查看一次，这个目录最终大小是100多M（ 本人这里大概 800M + ），就是完成了。`
 
 *⑥ 方案链接：*
-[方案解决链接 1 - ios开发怎样卸载已经安装的cocoapod](http://zhidao.baidu.com/link?url=WZj_AtGSTkdb0J3G09EdHxqNaD6eM6Uf5u-Qp6-SrFbDBUzA5Bhka9qQ_uHQe67Pn51nWw3wrulL2vy-nfal8KpLqMN_5-ahsYHY6G_8eOa)
-[方案解决链接 2 - CocoaPods安装和使用及问题：Setting up CocoaPods master repo](http://blog.csdn.net/zhangjunjian127/article/details/47954981)
+
+- [方案解决链接 1 - ios开发怎样卸载已经安装的cocoapod](http://zhidao.baidu.com/link?url=WZj_AtGSTkdb0J3G09EdHxqNaD6eM6Uf5u-Qp6-SrFbDBUzA5Bhka9qQ_uHQe67Pn51nWw3wrulL2vy-nfal8KpLqMN_5-ahsYHY6G_8eOa)
+- [方案解决链接 2 - CocoaPods安装和使用及问题：Setting up CocoaPods master repo](http://blog.csdn.net/zhangjunjian127/article/details/47954981)
 
 
 
