@@ -539,8 +539,10 @@ $ git remote set-url origin git://mirrors.ustc.edu.cn/brew.git
 $ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bashrc
 ```
 ![解决方案 .png](https://images.xiaozhuanlan.com/photo/2019/729408ad3f7a4e007fe53afc90c5bee4.png)
+
 *⑤ 方案链接：*
-[方案解决链接 -- https://segmentfault.com/q/1010000004276750](https://segmentfault.com/q/1010000004276750)
+
+  - [方案解决链接 -- https://segmentfault.com/q/1010000004276750](https://segmentfault.com/q/1010000004276750)
 
    - **报错二：**
 **① Error running '__rvm_make -j 1', 
@@ -567,11 +569,12 @@ There has been an error while running make. Halting the installation.
 $ xcode-select --install
 ```
 ![解决方案 .png](https://images.xiaozhuanlan.com/photo/2019/745d2f5b0c8ea51355b08d31fe8c338f.png)
+
 *⑤ 方案链接：*
 
-- [方案解决链接 1 - http://stackoverflow.com/questions/35228481/error-running-rvm-make-install](http://stackoverflow.com/questions/35228481/error-running-rvm-make-install)
+  - [方案解决链接 1 - http://stackoverflow.com/questions/35228481/error-running-rvm-make-install](http://stackoverflow.com/questions/35228481/error-running-rvm-make-install)
 
-- [方案解决链接 2 - http://www.th7.cn/Program/Ruby/201609/966343.shtml](http://www.th7.cn/Program/Ruby/201609/966343.shtml)
+  - [方案解决链接 2 - http://www.th7.cn/Program/Ruby/201609/966343.shtml](http://www.th7.cn/Program/Ruby/201609/966343.shtml)
 
    - **报错三：**
 **① Gemset '' does not exist, 'rvm ruby-2.3.0 do rvm gemset create ' first, or append '--create'.**
@@ -641,8 +644,9 @@ $ sudo xcode-select -switch /Applications/Xcode.app
 
 *⑥ 方案链接：*
 
-- [方案解决链接 1 - ios开发怎样卸载已经安装的cocoapod](http://zhidao.baidu.com/link?url=WZj_AtGSTkdb0J3G09EdHxqNaD6eM6Uf5u-Qp6-SrFbDBUzA5Bhka9qQ_uHQe67Pn51nWw3wrulL2vy-nfal8KpLqMN_5-ahsYHY6G_8eOa)
-- [方案解决链接 2 - CocoaPods安装和使用及问题：Setting up CocoaPods master repo](http://blog.csdn.net/zhangjunjian127/article/details/47954981)
+  - [方案解决链接 1 - ios开发怎样卸载已经安装的cocoapod](http://zhidao.baidu.com/link?url=WZj_AtGSTkdb0J3G09EdHxqNaD6eM6Uf5u-Qp6-SrFbDBUzA5Bhka9qQ_uHQe67Pn51nWw3wrulL2vy-nfal8KpLqMN_5-ahsYHY6G_8eOa)
+  
+  - [方案解决链接 2 - CocoaPods安装和使用及问题：Setting up CocoaPods master repo](http://blog.csdn.net/zhangjunjian127/article/details/47954981)
 
 
 
@@ -847,8 +851,10 @@ gem -v             2.6.6
 ```
 
 - **4、参考链接**
-[① pod 更新第三方依赖遇到的 object version 问题](https://blog.csdn.net/miaopf123/article/details/70492411)
-[② 如何在本地安装多个版本的 CocoaPods](https://www.jianshu.com/p/ca57863c4109)
+
+  - [① pod 更新第三方依赖遇到的 object version 问题](https://blog.csdn.net/miaopf123/article/details/70492411)
+
+  - [② 如何在本地安装多个版本的 CocoaPods](https://www.jianshu.com/p/ca57863c4109)
 
 
 
@@ -894,7 +900,8 @@ git clone https://git.coding.net/CocoaPods/Specs.git ~/.cocoapods/repos/master
 ```
 
 - **3、参考链接**
-- [安装cocoapods设置pod的时候](https://blog.csdn.net/love9099/article/details/79738724)
+  
+  - [安装cocoapods设置pod的时候](https://blog.csdn.net/love9099/article/details/79738724)
 
 
 ### 2018.10.10 更新
@@ -921,7 +928,7 @@ Error fetching https://gems.ruby-china.org:
 
 - **3、参考链接**
 
-- [Error fetching https://gems.ruby-china.org/: bad response Not Found 404 (https://gems.ruby-china.org/specs.4.8.gz)](http://www.mamicode.com/info-detail-2427771.html)
+  - [Error fetching https://gems.ruby-china.org/: bad response Not Found 404 (https://gems.ruby-china.org/specs.4.8.gz)](http://www.mamicode.com/info-detail-2427771.html)
 
 
 ### 2019.12.14 更新
@@ -1173,8 +1180,8 @@ rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://r
 ```
 
 - **3、参考链接**
- - [Homebrew installation on Mac OS X Failed to connect to raw.githubusercontent.com port 443](https://stackoverflow.com/questions/29910217/homebrew-installation-on-mac-os-x-failed-to-connect-to-raw-githubusercontent-com)
- - [安装homebrew报错curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
+  - [Homebrew installation on Mac OS X Failed to connect to raw.githubusercontent.com port 443](https://stackoverflow.com/questions/29910217/homebrew-installation-on-mac-os-x-failed-to-connect-to-raw-githubusercontent-com)
+  - [安装homebrew报错curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
 
 
 
