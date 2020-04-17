@@ -131,6 +131,7 @@ rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <m
 ```
 
   - **情况二**：如果存在 `rvm` 环境，用 `rvm` 安装 `ruby` 环境；
+     
     - 当 `ruby` 版本低于 `2.2.2` 时，安装 `CocoaPods` 会报错；为防止 `ruby` 版本过低，建议先升级 `ruby` 环境，建议升级到 `2.3.0` 版本以上。【可以通过 `$ ruby -v` 指令检查当前 ruby 版本】
   
   
@@ -234,6 +235,7 @@ $ rvm remove 1.9.2
   - `CocoaPods` 是用 `gem ruby` 实现的，要想使用它首先需要有 `gem ruby` 的环境。且 MAC 的 OS X系统默认已经可以运行 `ruby` 。
   - 此处建议 `gem ruby` 包环境升级到 `2.6.x` 以上。
   - 检查 `gem ruby` 版本号：
+
 ```
 $ sudo gem -v
 ```
@@ -262,6 +264,7 @@ Latest version currently installed. Aborting.
 ```
 
   - 检查 `ruby 源`
+
 ```
 $ gem sources -l
 ```  
@@ -273,6 +276,7 @@ https://rubygems.org/
 ```
 
   - 移除 `ruby 源`
+
 ```
 $ gem sources --remove https://rubygems.org/
 ```
@@ -284,6 +288,7 @@ https://rubygems.org/ removed from sources
 
   - 替换添加国内镜像源 `ruby-china 源`，因为上面已经提到国内镜像源 `taobao 源` 已经停止维护了，所以此处替换的是 `ruby-china 源`，且尽量确保只有一个 `ruby-china 源`，
 备注：`https://gems.ruby-china.org` 已废弃，改为`https://gems.ruby-china.com`
+
 ```
 $ gem sources --add https://gems.ruby-china.com
 ```
@@ -360,9 +365,11 @@ Done installing documentation for pods after 0 seconds
 
 
 ### 4、配置 CocoaPods 环境
+  
   - **说明** ：此处为了做测试，在 MAC 桌面 `Desktop` 创建了一个工程 `CocoaPodsTestDemo`。
 
   - **第一步** ：`cd` 到目录文件夹，回车 `enter`（ `快速方式`：直接将文件夹拖入到终端 `Terminal` ）。
+
 ```
 $ cd /Users/jijiucheng/Desktop/CocoaPodsTestDemo 
 ```
