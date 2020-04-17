@@ -53,6 +53,7 @@ keywords: iOS 配置, CocoaPods
 ### 1、检查安装 rvm 环境（ 正常情况可直接略过此步骤 ）
 
 - 检查当前 `rvm` 环境（ 此处检查是否存在 `rvm` 环境 ）：
+
 ```
 $ rvm -v
 ```
@@ -68,6 +69,7 @@ muxuguixiandeMacBook-Pro:~ jijiucheng$ rvm -v
 ```
 
   - **情况一**：如果不存在 `rvm` 环境，先安装配置 `rvm` 环境；
+  
 ```
 ① 期间可能会问你 `sudo管理员` 密码，以及自动通过 `homebrew` 安装依赖包；
 等待一段时间后就可以成功安装好 `rvm`。
@@ -104,11 +106,9 @@ but no GPG software exists to validate it, skipping.
 In case of problems: https://rvm.io/help and https://twitter.com/rvm_io
 ```
 ![下载安装 rvm 环境.png](https://images.xiaozhuanlan.com/photo/2019/b69788f5ad2d506e34eb4d863386c7da.png)
-
 ```
 ② 然后，载入 RVM 环境（新开 Termal 就不用这么做了，会自动重新载入的）。
 ```
-
 ```
 $ source ~/.rvm/scripts/rvm
 ```
@@ -130,6 +130,7 @@ rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <m
 
   - **情况二**：如果存在 `rvm` 环境，用 `rvm` 安装 `ruby` 环境；
   - 当 `ruby` 版本低于 `2.2.2` 时，安装 `CocoaPods` 会报错；为防止 `ruby` 版本过低，建议先升级 `ruby` 环境，建议升级到 `2.3.0` 版本以上。【可以通过 `$ ruby -v` 指令检查当前 ruby 版本】
+  
 ```
   ① 查询已知的 ruby 环境。
 ```
@@ -199,7 +200,6 @@ ironruby[-1.1.3]
 ironruby-head
 ```
 ![查询已知的 ruby 环境 .png](https://images.xiaozhuanlan.com/photo/2019/cf1ed58d9d8892cc93062fee57391ecc.png)
-
 ```
 ② 指定 ruby 版本进行更新（ 此处按照 ruby 2.3.0 版本进行更新 ）。
 ```
@@ -210,7 +210,6 @@ $ rvm install 2.3.0
 输出结果：（ 此处因为终端输出的字符过多，所以此处用截图方式 ）
 ```
 ![指定 ruby 版本进行更新 .png](https://images.xiaozhuanlan.com/photo/2019/819d92576e886ab30b956797fa42ab73.png)
-
 ```
 ③ 第二步需要一段时间等待，完成后此时 rvm 环境就配置好了；Ruby Gems 就安装好了。
 ```
@@ -242,6 +241,7 @@ muxuguixiandeMacBook-Pro:local jijiucheng$ gem -v
 ```
 
   - 更新 `gem ruby` 版本号：
+  
 ```
 $ sudo gem update --system
 ```
@@ -299,6 +299,7 @@ https://gems.ruby-china.com
 ### 3、安装 CocoaPods
 
 - 安装 CocoaPods（ `sudo 表示管理员执行指令` ）（ `此处需要输入一次密码` ）
+
 ```
 $ sudo gem install cocoapods
 ```
@@ -368,6 +369,7 @@ muxuguixiandeMacBook-Pro:~ jijiucheng$ cd /Users/jijiucheng/Desktop/CocoaPodsTes
 ```
 
  - **第二步（建议）**：如果不知道第三方库版本的情况下，建议先查找一下当前所需第三方库的最新版本，可以通过输入指令的方式完成。并且查询完成后输入 `wq` 返回之前终端 `Terminal`页面。
+ 
 ```
 $ pod search 'AFNetworking'
 ```
@@ -398,6 +400,7 @@ muxuguixiandeMacBook-Pro:CocoaPodsTestDemo jijiucheng$ pod search 'AFNetworking'
 ![搜索 'AFNetworking' 打印结果.png](https://images.xiaozhuanlan.com/photo/2019/0d03f8983bfa50ddedae5e78ae430170.png)
 
  - **第三步**：创建 Podfile 配置文件
+ 
 ```
 $ vim Podfile
 ```
@@ -452,6 +455,7 @@ Podfile 输入完毕之后（如下）：
 ![配置文件完成后新增 Podfile 文件 .png](https://images.xiaozhuanlan.com/photo/2019/8571125918c05b36ba04e7ac9df2767e.png)
 
   - **第四步**：下载第三方库文件到项目工程中
+  
 ```
 $ pod install
 ```
@@ -632,6 +636,7 @@ $ sudo xcode-select -switch /Applications/Xcode.app
 ### 1、指令补全
 
   - **① Rvm 指令库**
+  
 ```
 $ ruby -v                     #  查看ruby 版本 
 $ rvm list known              #  列出已知的 ruby 版本
@@ -649,6 +654,7 @@ $ curl -sSL https://get.rvm.io | bash -s stable --ruby=2.3.0     #  安装 rvm �
 $ source ~/.rvm/scripts/rvm                                      #  载入 rvm 
 ```
  - **②  gem 指令库**
+
 ```
 $ gem -v                                  #  查看 gem 版本
 $ gem source                              #  查看 gem 配置源
@@ -690,7 +696,9 @@ $ sudo gem update cocoapods               #  更新 CocoaPods 至最新版（以
 $ sudo gem update cocoapods --pre         #  更新 CocoaPods 至预览版（以管理员权限）
 $ sudo gem uninstall cocoapods -v 0.39.0  #  移除 CocoaPods 指定版本（以管理员权限）
 ```
+
  - **③  pod 指令库**
+
 ```
 $ pod setup                         #  CocoaPods 将信息下载到~/.cocoapods/repos 目录下。如果安装 CocoaPods 时不执行此命令，在初次执行 pod intall 命令时，系统也会自动执行该指令
 $ pod --version                     #  检查 CocoaPods 是否安装成功及其版本号
@@ -744,20 +752,29 @@ OS X 10.11以后系统的安装 CocoaPods 指令： $ sudo gem install -n /usr/l
 ② 更改原因：
  *因为有朋友说在 `mac OS 10.11` 和 `mac OS 10.12` 环境中所用的指令不一样，当时写这篇文章的时候环境是 `mac OS 10.11` ，但是并没有做 `mac OS 10.12` 的环境，今天又做了一下测试，现在的环境是 `mac OS 10.12.1`。*
 ![测试环境 mac OS 10.12.1.png](https://images.xiaozhuanlan.com/photo/2019/48fc1197230defb6860929167adfee1f.png)
+
 ③ 测试结果：
+
 `----> 指令：
 ----> $ sudo gem install cocoa pods 
 ----> 不需要密码 `
+
 ![指令：$ sudo gem install cocoa pods 测试结果.png](https://images.xiaozhuanlan.com/photo/2019/2207ed415351ef4447c2f158e8644bb2.png)
+
 `----> 指令：
 ----> $ sudo gem install cocoapods 
 ----> 需要密码 `
+
 ![指令：$ sudo gem install cocoapods 测试结果.png](https://images.xiaozhuanlan.com/photo/2019/f95aa6707c47e3af4d951c1ed379d9ea.png)
+
 `----> 指令：
 ----> $ sudo gem install -n /usr/local/bin cocoa pods 
 ----> 需要密码 `
+
 ![指令：$ sudo gem install -n /usr/local/bin cocoa pods 测试结果.png](https://images.xiaozhuanlan.com/photo/2019/21e162bc76ef6325ba6d45449ceb43f4.png)
+
 ④ 测试结论：
+
 `三种结果都能安装 Cocoapods 成功，只不过安装更新的内容略有不同。
 推荐使用：指令：$ sudo gem install cocoapods`
 
@@ -905,6 +922,7 @@ mxgx:PetBar mxgx$ pod --version
 ```
 
 - **2、解决办法**
+
 > 主要是因为升级 `macOS Catalina version 10.15` 引起的  `cocoapods` 无法使用了。
 
 ```
@@ -920,7 +938,7 @@ mxgx:PetBar mxgx$ pod --version
 ```
 
 - **3、参考链接**
- - [zsh: /usr/local/bin/pod: bad interpreter: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: no such file or directory](https://www.cnblogs.com/BK-12345/p/11645856.html)
+  - [zsh: /usr/local/bin/pod: bad interpreter: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: no such file or directory](https://www.cnblogs.com/BK-12345/p/11645856.html)
 
 
 #### 2、问题二：`[!] CDN: trunk Repo update failed - 127 error(s):`
@@ -938,6 +956,7 @@ CDN: trunk URL couldn't be downloaded: https://raw.githubusercontent.com/CocoaPo
 ```
 
 - **2、解决办法**
+
 > 主要是因为默认源的变更。
 > 只需要在 Podfile 文件里添加 `source 'https://github.com/CocoaPods/Specs.git'` ，并执行指令 `pod repo remove trunk` 即可。
 
@@ -986,8 +1005,9 @@ Pod installation complete! There are 9 dependencies from the Podfile and 11 tota
 ```
 
 - **3、参考链接**
- - [[!] CDN: trunk Repo update failed](https://www.jianshu.com/p/bf1cbe49cb5d)
- - [CocoaPods 1.8 Beta is Here!](http://blog.cocoapods.org/CocoaPods-1.8.0-beta/)
+  
+  - [[!] CDN: trunk Repo update failed](https://www.jianshu.com/p/bf1cbe49cb5d)
+  - [CocoaPods 1.8 Beta is Here!](http://blog.cocoapods.org/CocoaPods-1.8.0-beta/)
 
 
 #### 3、问题三：`curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused`
@@ -1014,6 +1034,7 @@ curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection re
 ```
 
 - **2、解决办法**
+
 > 主要原因暂时位置，只找到了解决办法。
 >
 > 先将 [https://raw.githubusercontent.com/Homebrew/install/master/install](https://raw.githubusercontent.com/Homebrew/install/master/install) 输入到浏览器中看是否能打开，如果能打开，右击 `save as` 保存名为 `brew_install.rb` 网页到任意目录下（只要能找的到）。
