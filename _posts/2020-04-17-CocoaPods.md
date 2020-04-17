@@ -6,10 +6,6 @@ description: CocoaPods 安装配置
 keywords: iOS 配置, CocoaPods
 ---
 
-
-[TOC]
-
-
 # 〇、前言
 <p>
 在iOS开发中 [CocoaPods](https://github.com/CocoaPods/CocoaPods) 作为库依赖管理工具就是一把利器。
