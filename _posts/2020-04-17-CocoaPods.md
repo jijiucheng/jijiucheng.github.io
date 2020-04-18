@@ -4,6 +4,7 @@ title: 【iOS工具】rvm、Ruby环境和CocoaPods安装使用及相关报错问
 categories: iOS
 description: CocoaPods 安装配置
 keywords: iOS 配置, CocoaPods
+topmost: true
 ---
 
 # 〇、前言
