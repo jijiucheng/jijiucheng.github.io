@@ -3,4 +3,6 @@
       - iOS
       - Objective-C
       - Swift
+      - CocoaPods
+      - Carthage
 
