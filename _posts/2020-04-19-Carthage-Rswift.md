@@ -151,4 +151,17 @@ carthage update --platform iOS --no-use-binaries
 - [----------]()
 - [Code码农网 - 解决 LLDB 出现 “Couldn't IRGen expression” 的问题](https://www.codercto.com/a/29825.html)
 
+## 版权声明
+
+> **原文作者**：[苜蓿鬼仙（苜蓿、jijiucheng）](https://jijiucheng.github.io/)
+> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【iOS】使用 Carthage 管理 R.Swift 库](https://jijiucheng.github.io/2020/04/19/Carthage-Rswift/)
+> **发表日期**：2020/04/19 17:00:00
+> **更新日期**：2020/04/22 17:30:00
+
+> **GitHub**：[GitHub - jijiucheng](https://github.com/jijiucheng)
+> **个人博客**：[GitHub.io - 苜蓿鬼仙](https://jijiucheng.github.io)
+> **小专栏**：[小专栏 - 苜蓿鬼仙](https://xiaozhuanlan.com/u/6667468960)
+> **掘金**：[掘金 - 苜蓿鬼仙](https://juejin.im/user/5a31e95c51882533d023137d)
+> **微博**：[微博 - 苜蓿鬼仙](https://weibo.com/u/1585459545)
+
 
