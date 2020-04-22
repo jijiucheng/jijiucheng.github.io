@@ -315,6 +315,18 @@ Traceback (most recent call last):
 /usr/local/Cellar/ruby/2.7.1_1/lib/ruby/2.7.0/socket.rb:201:in `bind': Address already in use - bind(2) for 127.0.0.1:4000 (Errno::EADDRINUSE)
 ```
 
+> **注意：**
+> 
+> 有时候可能会出现本地预览失效的问题，无法预览，可能是因为本地预览的服务关闭了，可以通过终端重启本地预览服务，或者将该服务加入后台程序。
+
+```
+# 启动本地预览服务（关闭终端该服务会关闭，本地预览失效）
+$ bundle exec jekyll serve
+
+# 启动本地预览服务（加入后台程序）(nohup <command> & 一般的命令都能这样后台执行)
+$ nohup bundle exec jekyll serve &
+```
+
 #### 4、预览本地个人博客
 
 [预览本地个人博客：http://localhost:4000](http://localhost:4000)
