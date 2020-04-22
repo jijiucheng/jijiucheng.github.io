@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 【iOS配置】开源库文件到cocoapods管理（2019.07.24 更新）
+title: 【iOS】开源库文件到cocoapods管理（2019.07.24 更新）
 categories: iOS
 description: CocoaPods 安装配置
-keywords: iOS 配置, CocoaPods
+keywords: iOS, iOS配置, CocoaPods
 topmost: true
 ---
 

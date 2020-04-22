@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://jijiucheng.github.io/
+url: https://jijiucheng.github.io
 date_format: "ordinal"
 title: 苜蓿鬼仙
 subtitle: "曾梦想仗剑天涯，后来工作忙没去"

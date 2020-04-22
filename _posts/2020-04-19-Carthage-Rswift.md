@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 【iOS配置】使用 Carthage 管理 R.Swift 库
+title: 【iOS】使用 Carthage 管理 R.Swift 库
 categories: iOS
 description: Carthage 安装配置
-keywords: iOS 配置, Carthage
+keywords: iOS, iOS配置, Carthage
 topmost: false
 ---
 

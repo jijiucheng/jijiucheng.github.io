@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 【iOS配置】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2019.12.14 更新）
+title: 【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2019.12.14 更新）
 categories: iOS
 description: CocoaPods 安装配置
-keywords: iOS 配置, CocoaPods
+keywords: iOS, iOS配置, CocoaPods
 topmost: true
 ---
 
