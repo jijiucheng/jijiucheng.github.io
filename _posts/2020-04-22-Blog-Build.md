@@ -327,6 +327,14 @@ $ bundle exec jekyll serve
 $ nohup bundle exec jekyll serve &
 ```
 
+> 有时候凌晨编写的文档，通过本地预览无法编译出对应的预览文件，这个经过 [GitHub - mzlogin](https://github.com/mzlogin/mzlogin.github.io) 大佬的提示，发现这个编译是有时区的，`jekyll` 默认使用 `UTC` 时间，而 `UTC` 时间是比 `china` 的要慢的。
+> 
+> 修改方法：修改 `_config.yml` 中 `timezone: '+0800'` 
+> 
+> 参考资料：
+> - [CSDN - think_ycx - jekyll _config timezone](https://blog.csdn.net/think_ycx/article/details/77460567)
+> - [GitHub - jekyll - timezone is not read. #3879](https://github.com/jekyll/jekyll/issues/3879)
+
 #### 4、预览本地个人博客
 
 [预览本地个人博客：http://localhost:4000](http://localhost:4000)
@@ -337,11 +345,15 @@ $ nohup bundle exec jekyll serve &
 - [GitHub - mzlogin](https://github.com/mzlogin/mzlogin.github.io)
 - [GitHub - mzlogin/码志 - 个人博客](https://mazhuang.org)
 - [GitHub - 评论系统：GitTalk](https://github.com/gitalk/gitalk)
+- 
 - [本地预览配置参考：Setting up your Pages site locally with Jekyll](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
 - [【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2019.12.14 更新）](https://jijiucheng.github.io/2020/04/17/CocoaPods/)
 - [Jekyll](https://jekyllrb.com/docs/installation/)
 - [Jekyll - Install - MacOS](https://jekyllrb.com/docs/installation/macos/)
 - [Jekyll - Creating a GitHub Pages site with Jekyll](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll#)
+- 
+- [CSDN - think_ycx - jekyll _config timezone（凌晨编译无法预览问题）](https://blog.csdn.net/think_ycx/article/details/77460567)
+- [GitHub - jekyll - timezone is not read. #3879](https://github.com/jekyll/jekyll/issues/3879)
 
 
 # 版权声明

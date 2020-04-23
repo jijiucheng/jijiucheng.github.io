@@ -30,7 +30,7 @@ remote: error: File  XXX/XXX/XXX is 234 MB; this exceeds GitHub‘s file size li
 
 `Git LFS` 是 `Github` 开发的一个 `Git` 的扩展，用于实现 `Git` 对大文件的支持。
 
-![git-lfs](https://upload-images.jianshu.io/upload_images/1059995-670f795346b86292)
+![git-grow](/images/Blog/2020-04-23-GitHub-UploadLargeFile-GitLFS.gif)
 
 ![git-grow](/images/Blog/2020-04-23-GitHub-UploadLargeFile-GitGrow.png)
 
