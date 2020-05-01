@@ -95,7 +95,7 @@ $ git lfs install
 
 ```
 # 此处建议此种格式，可以统一关联 .zip 类型的文件（具体文件类型，视项目而定）
-$ git lfs track "* .zip"
+$ git lfs track "*.zip"
 ```
 
 ### 提交大文件
