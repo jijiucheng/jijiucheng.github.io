@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2019.12.14 更新）
+title: 【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2020.05.08 更新）
 categories: iOS
 description: CocoaPods 安装配置
 keywords: iOS, iOS配置, CocoaPods
@@ -1185,6 +1185,59 @@ rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://r
   - [安装homebrew报错curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
 
 
+### 2020.05.08 更新
+
+#### 问题一：xcode-select: error: invalid developer directory '/Library/Developer/CommandLineTools'  Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
+
+- **1、报错信息**
+
+> 在安装 brew 的时候，执行如下命令时出现如下报错：
+> ```
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+> ```
+
+```
+Error installing updates.
+==> /usr/bin/sudo /bin/rm -f /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+==> /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
+xcode-select: error: invalid developer directory '/Library/Developer/CommandLineTools'
+Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
+```
+
+![安装 brew 报错](/images/iOS/1851588941885_.pic_hd.png)
+
+- **2、解决办法**
+
+> 查询了很多资料，发现主要就是因为路径产生一些错误问题，网上也给了很多解决办法，但是经过本人测试，发现比较实在点的方法：
+> 
+> 1、直接去 [Apple Developer - More Downloads](https://developer.apple.com/download/more/) 下载对应 Xcode 版本的 `Command Line Tools for Xcode` 文件，估计在 200MB+；
+> 
+> 2、说明步骤一：【其实也可以通过执行如下指令进行安装，但是发现有时候会无法进行安装，大概原因是由于之前存在的旧版本，被识别到了之后就不会再进行安装了】
+> ```
+> xcode-select --install
+> ```
+> 
+> 3、执行指令如下指令，会得到相应的路径结果：
+> ```
+> xcode-select -p
+> 结果：/Applications/Xcode.app/Contents/Developer
+> ```
+> 
+> 4、然后在执行如下指令更改路径即可：
+> ```
+> sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+> ```
+> 
+> 5、最后再次执行 brew 的安装命令即可：
+> ```
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+> ```
+
+
+- **3、参考链接**
+  
+  - [Homebrew - 主页](https://brew.sh/index_zh-cn.html)
+  - [Stack Overflow - I tried rvm install 2.1 and I got this error xcode-select: error: invalid developer directory](https://stackoverflow.com/questions/48562808/i-tried-rvm-install-2-1-and-i-got-this-error-xcode-select-error-invalid-develo)
 
 
 ------
