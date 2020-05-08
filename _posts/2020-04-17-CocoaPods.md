@@ -1254,7 +1254,7 @@ Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/C
 
 > **原文作者**：[苜蓿鬼仙（苜蓿、jijiucheng）](https://jijiucheng.github.io/)
 > 
-> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2019.12.14 更新）](https://jijiucheng.github.io/2020/04/17/CocoaPods/)
+> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2020.05.08 更新）](https://jijiucheng.github.io/2020/04/17/CocoaPods/)
 > 
 > **发表日期**：2020/04/17 17:00:00
 > 
