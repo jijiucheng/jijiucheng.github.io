@@ -561,9 +561,9 @@ class LottieViewController: UIViewController {
 > 
 > **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【iOS】Animation 动画特效图片资源文件的处理实现策略](https://jijiucheng.github.io/2020/05/20/Animation-SVGAAndLottie/)
 > 
-> **发表日期**：2020/04/23 09:00:00
+> **发表日期**：2020/05/25 09:00:00
 > 
-> **更新日期**：2020/04/23 09:30:00
+> **更新日期**：2020/05/26 10:00:00
 > 
 > -
 > 
