@@ -11,6 +11,24 @@ keywords: 苜蓿, 鬼仙, 苜蓿鬼仙, jijiucheng, mxgx
 timezone: '+0800'
 encoding: "utf-8"
 side_bar_repo_limit: 5
+repository: jijiucheng/jijiucheng.github.io
+# 对 css 和 js 资源的 cdn 加速配置
+cdn:
+    jsdelivr:
+        enabled: true
+# 组件配置
+components:
+    # 分享
+    share:
+        enabled: false
+    # 不蒜子访问统计
+    busuanzi:
+        enabled: true
+        start_date: 2020-05-28
+# 压缩页面内容
+compress_html:
+  clippings: all
+  comments: ["<!--", "-->"]
 
 # ---------------- #
 #      Author      #
@@ -71,7 +89,7 @@ lsi: false
 quiet: false
 excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
-gems:
+plugins:
     - jekyll-github-metadata
     - rouge
 #     - jekyll-html-pipeline
@@ -84,8 +102,6 @@ collections:
     wiki:
         output: true
         permalink: /wiki/:path/
-
-repository: jijiucheng/jijiucheng.github.io
 
 # ---------------- #
 #      Comments    #
@@ -129,6 +145,6 @@ google:
     analytics_id: UA-80669434-1
     adsense:
         footer: true
-        sidebar: false
+        sidebar: true
         content_header: true
         content_footer: false
