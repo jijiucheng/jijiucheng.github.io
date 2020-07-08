@@ -563,7 +563,7 @@ class LottieViewController: UIViewController {
 > 
 > **发表日期**：2020/05/25 09:00:00
 > 
-> **更新日期**：2020/05/26 10:00:00
+> **更新日期**：2020/07/08 14:40:00
 > 
 > -
 > 
@@ -576,5 +576,9 @@ class LottieViewController: UIViewController {
 > **掘金**：[掘金 - 苜蓿鬼仙](https://juejin.im/user/5a31e95c51882533d023137d)
 > 
 > **微博**：[微博 - 苜蓿鬼仙](https://weibo.com/u/1585459545)
+> 
+> **公众号**：[微信 - 苜蓿小站](#)
+> 
+> **小程序**：[微信 - 苜蓿小站](#)
 
 
