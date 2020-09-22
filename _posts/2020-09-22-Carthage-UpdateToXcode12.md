@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 【iOS】升级 Xcode12 配置变更问题
+title: 【iOS】升级 Xcode12 引起的 Carthage 配置变更问题
 categories: iOS
-description: 【iOS】升级 Xcode12 配置变更问题
+description: 【iOS】升级 Xcode12 引起的 Carthage 配置变更问题
 keywords: iOS, AutoLayout, Masonry, SnapKit
 topmost: false
 ---
@@ -143,7 +143,7 @@ carthage build "$@"
 
 > **原文作者**：[苜蓿鬼仙（苜蓿、jijiucheng）](https://jijiucheng.github.io/)
 > 
-> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【iOS】升级 Xcode12 配置变更问题](https://jijiucheng.github.io/2020/09/22/Carthage-UpdateToXcode12/)
+> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【iOS】升级 Xcode12 引起的 Carthage 配置变更问题](https://jijiucheng.github.io/2020/09/22/Carthage-UpdateToXcode12/)
 > 
 > **发表日期**：2020/09/22 10:00:00
 > 
