@@ -15,7 +15,7 @@ topmost: false
 Module compiled with Swift 5.2.4 cannot be imported by the Swift 5.3 compiler:/Users/mxgx/Documents/GitHub/MyGitHub/JJCAppStoreProjects/JJCComicBook/JJCComicBook/Carthage/Build/iOS/SnapKit.framework/Modules/SnapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
 ```
 
-![无法编译 SnapKit 库报错信息](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-01)
+![无法编译 SnapKit 库报错信息](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-01.png)
 
 # 初次问题解决
 
@@ -30,7 +30,7 @@ Build Failed
 This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: /var/folders/kt/pbq7yrws4xz_kspt99zyc9lc0000gn/T/carthage-xcodebuild.kLdrkn.log
 ```
 
-![删除 framework 库后再次编译报错问题](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-02)
+![删除 framework 库后再次编译报错问题](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-02.png)
 
 根据报错的信息，只能看出大概是编译配置出问题了，尝试看一下 `log` 日志文件：
 
@@ -38,7 +38,7 @@ This usually indicates that project itself failed to compile. Please check the x
 /var/folders/kt/pbq7yrws4xz_kspt99zyc9lc0000gn/T/carthage-xcodebuild.kLdrkn.log
 ```
 
-![carthage-xcodebuild.kLdrkn.log 日志文件](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-03)
+![carthage-xcodebuild.kLdrkn.log 日志文件](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-03.png)
 
 但是发现完全看不懂。
 
@@ -75,7 +75,7 @@ carthage update --platform ios
 
 [Carthage builds fail at xcrun lipo on Xcode 12 beta (3,4,5...) #3019](https://github.com/Carthage/Carthage/issues/3019)
 
-![配置脚本编译](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-04)
+![配置脚本编译](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-04.png)
 
 **脚本如下：**
 
@@ -121,7 +121,7 @@ carthage build "$@"
 
 运行成功后，再次 `Command + B` 编译 `Xcode12`，发现一切正常了。 
 
-![脚本执行结果](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-05)
+![脚本执行结果](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-05.png)
 
 # 总结
 
@@ -129,7 +129,7 @@ carthage build "$@"
 
 [Carthage builds fail at xcrun lipo on Xcode 12 beta (3,4,5...) #3019](https://github.com/Carthage/Carthage/issues/3019)
 
-![问题原因](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-06)
+![问题原因](/images/iOS/2020-09-22-Carthage-UpdateToXcode12-06.png)
 
 里面的各位大佬的问题反馈，应该是 `AppleSilicon` 上的 `iPhoneSimulator` 是 `arch arm64`，而 `iPhoneSimulator` 则与同一 `arch arm64` 上的 `iPhoneOS` 库有冲突，所以出现了这种问题。
 
