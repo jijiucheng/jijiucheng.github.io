@@ -7,6 +7,9 @@ keywords: iOS, iOS配置, CocoaPods
 topmost: true
 ---
 
+**导读：** 
+本篇文章主要介绍 `CocoaPods` 环境的搭建、安装及相关报错的问题解决。
+
 # 〇、前言
 
 在iOS开发中 [CocoaPods](https://github.com/CocoaPods/CocoaPods) 作为库依赖管理工具就是一把利器。

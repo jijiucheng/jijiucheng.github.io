@@ -7,6 +7,9 @@ keywords: GitHub, git-lfs
 topmost: false
 ---
 
+**导读：** 
+本篇文章主要介绍 `GitHub` 上传超过 100MB 大文件的解决方案 `git-lfs`。
+
 # 前言
 
 最近在 `GitHub` 上传代码时，需要上传一些大文件，有时候甚至会超过 `100MB`，则由于 `GitHub` 不支持上传如此大的文件，所以提交代码时往往都会报错！！！

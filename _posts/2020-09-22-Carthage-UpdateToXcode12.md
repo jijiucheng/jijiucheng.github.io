@@ -7,6 +7,9 @@ keywords: iOS, AutoLayout, Masonry, SnapKit
 topmost: false
 ---
 
+**导读：** 
+本篇文章主要介绍升级 `Xcode 12` 引起的 `Carthage` 配置变更问题。
+
 # 前言
 
 随着 `iOS14` 和 `Xcode12` 的更新到来，又一波的升级适配需要搞起来了，昨天开始着手升级了一下 `Xcode12`，但是发现原本使用 `Carthage` 配置的第三方库管理，编译出现了失败：

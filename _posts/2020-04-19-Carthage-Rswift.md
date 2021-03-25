@@ -7,6 +7,9 @@ keywords: iOS, iOS配置, Carthage
 topmost: false
 ---
 
+**导读：** 
+本篇文章主要介绍 `Carthage` 的基本使用及 `R.Swift` 库的配置问题。
+
 ## 前言
 
 > 声明：本篇文章只用于记录配置笔记！！！

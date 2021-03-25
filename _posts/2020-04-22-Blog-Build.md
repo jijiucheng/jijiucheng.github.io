@@ -7,6 +7,8 @@ keywords: Blog, GitHub
 topmost: false
 ---
 
+**导读：** 
+本篇文章主要介绍自己借助 `GitHub` 搭建个人博客的教程。
 
 # 前言
 
