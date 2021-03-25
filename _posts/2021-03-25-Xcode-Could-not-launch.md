@@ -11,7 +11,7 @@ topmost: false
 
 最近开发项目一直使用的是 `Xcode` 的模拟器，昨天处理一个内测出现在真机上的 bug 时，需要通过真机进行调试，然而发现编译成功出现 `Build Success` 后，又弹出了一个警示弹框而中断了 App 的运行：
 
-![Could not launch "xxx"](/images/iOS/2021-03-25-Xcode-Could-not-launch-01.png)
+![Could not launch "xxx" 报错](/images/iOS/2021-03-25-Xcode-Could-not-launch-01.png)
 
 > 备注声明：
 > 
