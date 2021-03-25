@@ -81,7 +81,23 @@ topmost: false
 
 `pages/about.md` 文件内容对应网站的 `「关于」` 页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 `_data` 目录下的 `skills.yml` 和 `social.yml` 文件里的数据。
 
-### 六、配置本地预览功能
+### 六、配置评论功能
+
+此处我这边用的是 `Gitalk`，除了按照官网配置相应的信息外，可能会出现提示 `Error Not Found` 的错误信息，此处是因为未关联评论 `issue`，只需要新创建一个仓库与之对应即可。
+
+```
+/// _config.yml
+gitalk:
+    owner: xxx
+    repo: blog-comments
+```
+
+只需要在自己 `Github` 仓库中新创建一个名为 `blog-comments` 即可。
+
+- [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/#gitalk-%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95%E5%90%8E%E6%8F%90%E7%A4%BA-403-%E9%94%99%E8%AF%AF)
+- [gitalk提示Error Not Found](https://github.com/Molunerfinn/hexo-theme-melody/issues/130)
+
+### 七、配置本地预览功能
 
 如果没有配置本地预览功能，需要每次修改后都要将对应的代码提交到 `GitHub` 后，有时界面没有更新还需要删除浏览器缓存才能预览到新的界面。所以配置本地预览功能就很有必要了。
 
@@ -345,7 +361,9 @@ $ nohup bundle exec jekyll serve &
 - [GitHub - mzlogin](https://github.com/mzlogin/mzlogin.github.io)
 - [GitHub - mzlogin/码志 - 个人博客](https://mazhuang.org)
 - [GitHub - 评论系统：GitTalk](https://github.com/gitalk/gitalk)
-- 
+-
+- [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/#gitalk-%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95%E5%90%8E%E6%8F%90%E7%A4%BA-403-%E9%94%99%E8%AF%AF)
+- [gitalk提示Error Not Found](https://github.com/Molunerfinn/hexo-theme-melody/issues/130)
 - [本地预览配置参考：Setting up your Pages site locally with Jekyll](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
 - [【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2019.12.14 更新）](https://jijiucheng.github.io/2020/04/17/CocoaPods/)
 - [Jekyll](https://jekyllrb.com/docs/installation/)
