@@ -8,10 +8,6 @@ topmost: true
 ---
 
 **导读：** 
-本篇文章主要介绍 `CocoaPods` 环境的搭建、安装及相关报错的问题解决。
-
-# 〇、前言
-
 在iOS开发中 [CocoaPods](https://github.com/CocoaPods/CocoaPods) 作为库依赖管理工具就是一把利器。
 
 有了 `CocoaPods` 则无需再通过拖 `第三方库` 及第三方库所依赖的 `framework` 静态库到项目中等麻烦的操作，仅仅只需要通过终端`（Terminal）`输入一些指令即可完成这些操作；而且涉及到第三方库的更新升级也可以通过 `CocoaPods` 进行手动管理更新。

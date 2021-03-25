@@ -10,11 +10,9 @@ topmost: false
 **导读：** 
 本篇文章主要介绍 `Carthage` 的基本使用及 `R.Swift` 库的配置问题。
 
-## 前言
-
 > 声明：本篇文章只用于记录配置笔记！！！
 
-## 一、配置 Carthage
+# 一、配置 Carthage
 
 ### 1、在工程目录下添加 `Cartfile` 文件
 
@@ -81,7 +79,7 @@ mxgx:JJCListeningBook mxgx$ carthage update --platform ios
 *** Building scheme "SwiftyJSON iOS" in SwiftyJSON.xcworkspace
 ```
 
-## 二、在 Xcode 中配置 R.Swift 库
+# 二、在 Xcode 中配置 R.Swift 库
 
 ### 1、链接静态库
 
