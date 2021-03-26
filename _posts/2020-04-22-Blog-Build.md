@@ -81,16 +81,9 @@ topmost: false
 
 ### 六、配置评论功能
 
-此处我这边用的是 `Gitalk`，除了按照官网配置相应的信息外，可能会出现提示 `Error Not Found` 的错误信息，此处是因为未关联评论 `issue`，只需要新创建一个仓库与之对应即可。
+此处我这边用的是 `Gitalk`，除了按照官网配置相应的信息外，可能会出现提示 `Error Not Found` 的错误信息，此处是因为未关联评论 `issue`，只需要将 `repo` 与之对应即可。
 
-```
-/// _config.yml
-gitalk:
-    owner: xxx
-    repo: blog-comments
-```
-
-只需要在自己 `Github` 仓库中新创建一个名为 `blog-comments` 即可。
+![Gitalk 关联 issue](/images/Blog/2020-04-22-Blog-Build-Gitalk.png)
 
 - [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/#gitalk-%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95%E5%90%8E%E6%8F%90%E7%A4%BA-403-%E9%94%99%E8%AF%AF)
 - [gitalk提示Error Not Found](https://github.com/Molunerfinn/hexo-theme-melody/issues/130)
