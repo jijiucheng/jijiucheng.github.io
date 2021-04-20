@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Git】日常 Git/Github 报错处理
+title: 【Git】日常 Git/Github 报错处理（2021.04.20 更新）
 categories: Git
 description: 【Git】日常 Git/GitHub 报错处理
 keywords: iOS, Xcode, Git, GitHub, Error
@@ -26,7 +26,7 @@ fatal: unable to access 'https://github.com/SunshineBrother/JHBlog.git/': Failed
 Completed with errors, see above
 ```
 
-![fatal: unable to access 'https://github.com/xxx/xxx.git/': Failed to connect to github.com port 443: Operation timed out](/images/Git/2020-04-20-Git-Errors-01.png)
+![fatal: unable to access 'https://github.com/xxx/xxx.git/': Failed to connect to github.com port 443: Operation timed out](/images/Git/2021-04-20-Git-Errors-01.png)
 
 #### 问题原因
 
