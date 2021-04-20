@@ -26,7 +26,7 @@ fatal: unable to access 'https://github.com/SunshineBrother/JHBlog.git/': Failed
 Completed with errors, see above
 ```
 
-![fatal: unable to access 'https://github.com/xxx/xxx.git/': Failed to connect to github.com port 443: Operation timed out](/images/Git/2021-04-20-Git-Errors-01.png)
+![Git-Errors-01](/images/Git/2021-04-20-Git-Errors-01.png)
 
 #### 问题原因
 
