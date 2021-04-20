@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 【Blog】GitHub 上传超过 100MB 的大文件（git-lfs）
-categories: Blog
+title: 【Git】GitHub 上传超过 100MB 的大文件（git-lfs）
+categories: Git
 description: GitHub 上传超过 100MB 的大文件解决办法，使用 git-lfs
 keywords: GitHub, git-lfs
 topmost: false
