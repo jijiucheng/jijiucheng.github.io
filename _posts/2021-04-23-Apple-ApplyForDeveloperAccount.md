@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【iOS】苹果开发者账户申请及邓白氏编号（D-U-N-S® Number）申请（2021.04.25 更新）
-categories: Git
+categories: iOS
 description: 【iOS】苹果开发者账户申请及邓白氏编号（D-U-N-S® Number）申请
 keywords: iOS, Xcode, Apple, Developer, 苹果开发者, 邓白氏, 邓白氏编号, D-U-N-S, D-U-N-S® Number
 topmost: true
