@@ -1203,7 +1203,7 @@ xcode-select: error: invalid developer directory '/Library/Developer/CommandLine
 Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
 ```
 
-![安装 brew 报错](/images/iOS/1851588941885_.pic_hd.png)
+![安装 brew 报错](/images/iOS/2020-04-17-CocoaPods-01.png)
 
 - **2、解决办法**
 

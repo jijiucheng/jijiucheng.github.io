@@ -50,7 +50,7 @@ open func stopAnimating()
 
 ### 示例代码
 
-![UIImageViewFrameAnimation.gif](/images/iOS/Animation-SVGAAndLottie-imageview 01.gif)
+![UIImageViewFrameAnimation.gif](/images/iOS/2020-05-25-Animation-SVGAAndLottie-01.gif)
 
 ```
 import UIKit
@@ -118,13 +118,13 @@ class UIImageViewController: UIViewController {
 
 [GitHub - SVGA](https://github.com/svga)
 
-![SVGA 支持平台](/images/iOS/Animation-SVGAAndLottie-svga 01.png)
+![SVGA 支持平台](/images/iOS/2020-05-25-Animation-SVGAAndLottie-02.png)
 
 暂时已知的是，`SVGA` 已经支持 `iOS / Android / Web / Flutter` 平台。
 
 ### SVGA 动画原理
 
-![SVGA 使用展示流程](/images/iOS/Animation-SVGAAndLottie-svga 02.png)
+![SVGA 使用展示流程](/images/iOS/2020-05-25-Animation-SVGAAndLottie-03.png)
 
 `SVGA` 最初的 `目标是为降低序列帧动画开销而生的`，因此，性能问题一直是 SVGA 关注的焦点。SVGA 实质上做了一件非常重要的事情：
 
@@ -226,7 +226,7 @@ SVGAParser *parser = [[SVGAParser alloc] init];
 
 ### 示例代码
 
-![SVGA 示例动画](/images/iOS/Animation-SVGAAndLottie-svga 03.gif)
+![SVGA 示例动画](/images/iOS/2020-05-25-Animation-SVGAAndLottie-04.gif)
 
 ```
 import UIKit
@@ -369,7 +369,7 @@ open var animationDuration: CGFloat { get }
 
 ### 示例代码
 
-![Lottie 示例动画](/images/iOS/Animation-SVGAAndLottie-lottie 03.gif)
+![Lottie 示例动画](/images/iOS/2020-05-25-Animation-SVGAAndLottie-05.gif)
 
 ```
 import UIKit
@@ -438,8 +438,8 @@ class LottieViewController: UIViewController {
 
 ### 性能特点对比
 
-![多种动画库方案对比](/images/iOS/Animation-SVGAAndLottie-lottie 01.png)
-![SVGA 和 Lottie 性能对比](/images/iOS/Animation-SVGAAndLottie-lottie 02.png)
+![多种动画库方案对比](/images/iOS/2020-05-25-Animation-SVGAAndLottie-06.png)
+![SVGA 和 Lottie 性能对比](/images/iOS/2020-05-25-Animation-SVGAAndLottie-07.png)
 
 ### SVGA 和 Lottie 思路对比
 
