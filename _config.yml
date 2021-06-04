@@ -13,6 +13,7 @@ encoding: "utf-8"
 side_bar_repo_limit: 5
 repository: jijiucheng/jijiucheng.github.io
 # 对 css 和 js 资源的 cdn 加速配置
+# 如果想在本地预览时能看到图片，需要将 cdn 暂时关闭，当正式上传时在更改为 true 即可
 cdn:
     jsdelivr:
         enabled: true

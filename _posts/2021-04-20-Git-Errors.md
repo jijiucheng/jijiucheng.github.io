@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Git】日常 Git/Github 报错处理（2021.04.20 更新）
+title: 【Git】日常 Git/Github 报错处理（2021.06.04 更新）
 categories: Git
 description: 【Git】日常 Git/GitHub 报错处理
 keywords: iOS, Xcode, Git, GitHub, Error
@@ -12,7 +12,7 @@ topmost: true
 
 # 问题
 
-### fatal: unable to access 'https://github.com/xxx/xxx.git/': Failed to connect to github.com port 443: Operation timed out
+### 1、fatal: unable to access 'https://github.com/xxx/xxx.git/': Failed to connect to github.com port 443: Operation timed out
 
 #### 问题描述
 
@@ -20,7 +20,7 @@ topmost: true
 
 当通过 `git pull` 准备拉取最新代码时，发现一直没有响应，当超过一段时间后报错：
 
-```
+```swift
 git --no-optional-locks -c color.branch=false -c color.diff=false -c color.status=false -c diff.mnemonicprefix=false -c core.quotepath=false -c credential.helper=sourcetree fetch origin 
 fatal: unable to access 'https://github.com/SunshineBrother/JHBlog.git/': Failed to connect to github.com port 443: Operation timed out
 Completed with errors, see above
@@ -81,10 +81,58 @@ Completed with errors, see above
 - [git clone 出现fatal: unable to access ‘https://github 类错误解决方法](https://blog.csdn.net/gbz3300255/article/details/97103621)
 - [Git使用出现git@github.com: Permission denied (publickey). 处理](https://blog.csdn.net/qq_43768946/article/details/90411154)
 
+### 2、fatal: bad object refs/remotes/origin/HEAD error: failed to run repack
+
+#### 问题描述
+
+本来打算对 `git` 仓库进行清理缓存分支，包括清理已经被删除的的分支，
+然而当执行完 `git fetch -p` 后，出现了该报错：
+
+```swift
+{21-06-04 10:22}[ruby-3.0.0]jcji:~/xxxxxx@master-ED mxgx% git fetch -p
+
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+warning: The last gc run reported the following. Please correct the root cause
+and remove .git/gc.log.
+Automatic cleanup will not be performed until the file is removed.
+
+fatal: bad object refs/remotes/origin/HEAD
+fatal: failed to run repack
+```
+
+然而根据报错信息，并未在 `~/.git/refs/remotes/origin/HEAD` 对应的文件夹，即使开启隐藏文件模式依旧如此。
+
+![Git-Errors-03](/images/Git/2021-04-20-Git-Errors-03.png)
+
+#### 问题原因
+
+主要原因应该是提交的改动过多，导致本地的缓冲区占用太大，本地一些 `悬空对象` 太多 `（git删除分支或者清空 stash 的时候，这些其实还没有真正删除，成为悬空对象）`。
+
+所以主要的解决方式就是要清除这些缓存对象，然后才能对分支进行清理。
+
+#### 问题解决
+
+依次执行清除命令即可：
+
+```swift 
+$ mv .git/refs/remotes/origin/HEAD /tmp
+$ git gc
+```
+
+![Git-Errors-02](/images/Git/2021-04-20-Git-Errors-02.png)
+
+#### 参考链接
+
+- [How to handle git gc fatal: bad object refs/remotes/origin/HEAD error?](https://stackoverflow.com/questions/37145151/how-to-handle-git-gc-fatal-bad-object-refs-remotes-origin-head-error/38192799#38192799)
+- [【开发工具的那些故事】git问题记录（三）：error: The last gc run reported the following. Please correct the root cause a](https://blog.csdn.net/yy339452689/article/details/108641201)
+
 # 参考链接
 
 - [git clone 出现fatal: unable to access ‘https://github 类错误解决方法](https://blog.csdn.net/gbz3300255/article/details/97103621)
 - [Git使用出现git@github.com: Permission denied (publickey). 处理](https://blog.csdn.net/qq_43768946/article/details/90411154)
+- [How to handle git gc fatal: bad object refs/remotes/origin/HEAD error?](https://stackoverflow.com/questions/37145151/how-to-handle-git-gc-fatal-bad-object-refs-remotes-origin-head-error/38192799#38192799)
+- [【开发工具的那些故事】git问题记录（三）：error: The last gc run reported the following. Please correct the root cause a](https://blog.csdn.net/yy339452689/article/details/108641201)
 
 # 版权声明
 
@@ -94,7 +142,7 @@ Completed with errors, see above
 > 
 > **发表日期**：2021/04/20 16:00:00
 > 
-> **更新日期**：2021/04/20 16:00:00
+> **更新日期**：2021/06/04 11:00:00
 > 
 > -
 > 
