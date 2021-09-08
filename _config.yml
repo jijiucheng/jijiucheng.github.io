@@ -16,7 +16,7 @@ repository: jijiucheng/jijiucheng.github.io
 # 如果想在本地预览时能看到图片，需要将 cdn 暂时关闭，当正式上传时在更改为 true 即可
 cdn:
     jsdelivr:
-        enabled: true
+        enabled: false
 # 组件配置
 components:
     # 分享
