@@ -370,6 +370,17 @@ pod trunk push JJCSwiftTools.podspec --allow-warnings
 ![SDK 开发实践 - 添加 CocoaPod 支持 - 将库文件推送到 cocoapods 服务器](/images/SDK/2021-07-06-SDK-Framework-14.png)
 
 
+> **注意**：如果出现如下报错：
+> - 1、检查是私有库还是公有库？
+> - 2、检查是否添加对应的 tag 标签了？
+
+```
+[!] Source code for your Pod was not accessible to CocoaPods Trunk. Is it a private repo or behind a username/password on http?
+```
+
+![SDK 开发实践 - 添加 CocoaPod 支持 - 将库文件推送到 cocoapods 服务器报错](/images/SDK/2021-07-06-SDK-Framework-15.png)
+
+
 
 <——待更新——>
 
