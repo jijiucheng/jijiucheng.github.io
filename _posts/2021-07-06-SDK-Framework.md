@@ -296,23 +296,23 @@ $ git push origin :refs/tags/1.0.0   # 删除远程端指定 tag 标签
 
 
 ## 从本地验证 pod 能否通过验证
-pod lib lint JJCTools.podspec         
+pod lib lint JJCSwiftTools.podspec         
 ## 从本地验证依赖三方库的 pod 能否通过验证          
-pod lib lint JJCTools.podspec --use-libraries 
+pod lib lint JJCSwiftTools.podspec --use-libraries 
 ## 从本地验证带有警告的 pod 能否通过验证  
-pod lib lint JJCTools.podspec --allow-warnings
+pod lib lint JJCSwiftTools.podspec --allow-warnings
 ## 从本地验证依赖三方库且有警告的 pod 能否通过验证  
-pod lib lint JJCTools.podspec --use-libraries --allow-warnings  
+pod lib lint JJCSwiftTools.podspec --use-libraries --allow-warnings  
 
 
 ## 从本地和远程端验证 pod 能否通过验证
-pod spec lint JJCTools.podspec         
+pod spec lint JJCSwiftTools.podspec         
 ## 从本地和远程端验证依赖三方库的 pod 能否通过验证         
-pod spec lint JJCTools.podspec --use-libraries 
+pod spec lint JJCSwiftTools.podspec --use-libraries 
 ## 从本地验和远程端证带有警告的 pod 能否通过验证  
-pod spec lint JJCTools.podspec --allow-warnings
+pod spec lint JJCSwiftTools.podspec --allow-warnings
 ## 从本地和远程端验证依赖三方库且有警告的 pod 能否通过验证  
-pod spec lint JJCTools.podspec --use-libraries --allow-warnings  
+pod spec lint JJCSwiftTools.podspec --use-libraries --allow-warnings  
 
 
 ## 详细编译验证 podspec 合法性
@@ -348,16 +348,19 @@ pod trunk register 302926124@qq.com 'jijiucheng'
 ## 将库文件推送到 cocoapods 远程端
 
 ## 将库文件推送到 cocoapods 远程端 
-pod trunk push JJCTools.podspec                    
+pod trunk push JJCSwiftTools.podspec                    
 ## 将带有警告的库文件推送到 cocoapods 远程端
-pod trunk push JJCTools.podspec --allow-warnings   
+pod trunk push JJCSwiftTools.podspec --allow-warnings   
 ## 将依赖三方库的库文件推送到 cocoapods 远程端
-pod trunk push JJCTools.podspec --use-libraries 
+pod trunk push JJCSwiftTools.podspec --use-libraries 
 ## 将依赖三方库且带有警告的库文件推送到 cocoapods 远程端  
-pod trunk push JJCTools.podspec --use-libraries --allow-warnings  
+pod trunk push JJCSwiftTools.podspec --use-libraries --allow-warnings  
 
 ## 刷新库文件，可保证通过 pod search 立即搜索的到 
 pod repo update    
+
+## 删除某个已发布的版本
+pod trunk delete JJCSwiftTools 1.0.2
 ```
 
 ```
