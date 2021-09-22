@@ -380,6 +380,23 @@ pod trunk push JJCSwiftTools.podspec --allow-warnings
 
 ![SDK 开发实践 - 添加 CocoaPod 支持 - 将库文件推送到 cocoapods 服务器报错](/images/SDK/2021-07-06-SDK-Framework-15.png)
 
+> **注意：**
+> - 如果项目中已经使用了某个版本的库，但是又因为一些原因删除了当前版本的库，则 `CocoaPods` 本地会残留缓存，需要清除对应缓存，否则当下次再使用该版本的库时，会一直优先加载缓存库。
+> - 或者使用 `pod install` 重新安装？暂时没有测试
+
+```
+## 删除某个已发布的版本
+pod trunk delete JJCSwiftTools 1.0.2
+
+## 清除 Cocoapods 缓存（依次执行）
+- rm -rf ~/Library/Caches/CocoaPods
+- rm -rf Pods
+- rm -rf ~/Library/Developer/Xcode/DerivedData`
+- 此处需要 cd 到对应项目
+- pod deintegrate 
+- pod setup
+- pod install
+```
 
 
 <——待更新——>
