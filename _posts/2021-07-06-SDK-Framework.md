@@ -390,8 +390,8 @@ pod trunk delete JJCSwiftTools 1.0.2
 
 ## 清除 Cocoapods 缓存（依次执行）
 - rm -rf ~/Library/Caches/CocoaPods/
-- rm -rf Pods
 - rm -rf ~/Library/Developer/Xcode/DerivedData/
+- rm -rf Pods
 - 此处需要 cd 到对应项目
 - pod deintegrate 
 - pod setup
