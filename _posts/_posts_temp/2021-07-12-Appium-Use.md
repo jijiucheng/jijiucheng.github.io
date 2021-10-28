@@ -518,6 +518,27 @@ adb kill-server
 adb --help
 ```
 
+## UIAutomatorViewer 
+
+### UIAutomatorViewer 简介
+
+`UIAutomatorViewer` 用来扫描和分析 `Android` 应用程序的 `UI` 控件的工具。
+
+定位元素的时候必须根据元素的相关特征来进行定位，而 `UIAutomatorViewer` 就是用来获取元素特征的。
+
+### UIAutomatorViewer 使用步骤
+
+- 进入SDK目录下的目录
+  - `Mac` 在 `tools/bin` 目录下，打开 `uiautomatorviewer`；
+  - `Windows` 在 `tools` 目录下，打开 `uiautomatorviewer.bat`。
+- 电脑连接真机或打开 `Android` 模拟器
+- 启动待测试 App
+- 点击 `uiautomatorviewer` 的左上角 `Device Screenshot`（从左数第二个按钮）
+- 点击希望查看的控件
+- 查看右下角 `Node Detail` 相关信息
+
+![UIAutomatorViewer 界面](/images/Test/2021-07-12-Appium-Use-07.png)
+
 ## Appium 使用
 
 ### Appium 使用步骤
@@ -818,6 +839,286 @@ driver.implicitly_wait(5)
 search_button = driver.find_element_by_xpath("//*[contains(@content-desc,'收 起')]") 
 search_button.click()
 ```
+
+### 元素操作
+
+```Python
+# 元素操作
+
+# 对 element 按钮进行点击操作
+element.click()
+
+# 对 element 输入框进行输入操作 
+# value：输入的内容 
+# 注：默认输入中文无效，但不会报错，需要在 “前置代码” 中增加两个参数
+#   - desired_caps['unicodeKeyboard'] = True
+#   - desired_caps['resetKeyboard'] = True
+element.send_keys(value) 
+# 对 element 输入框进行清空操作 
+element.clear()
+
+# 获取 element 控件（按钮、输入框、文本框等）的文本内容
+element.text
+
+# 获取 element 的位置 
+# 返回值：字典，x 为元素的 x 坐标，y 为元素的 y 坐标 
+element.location 
+# 获取 element 的大小 
+# 返回值：字典，width 为宽度，height 为高度
+element.size
+
+# 对 element 进行点击操作
+# value：要获取的属性名 
+# 返回值：根据属性名得到的属性值 
+# 注意点：
+#   - value = 'text'        返回 text 的属性值
+#   - value = 'name'        返回 content-desc / text 属性值
+#   - value = 'className'   返回 class 属性值，只有 API => 18 才能支持
+#   - value = 'resourceId'  返回 resource-id 属性值，只有 API => 18 才能支持
+element.get_attribute(value)
+# 示例
+title.get_attribute("text")
+title.get_attribute("ClassName")
+```
+
+### 滑动和拖拽事件
+
+**swipe 滑动事件**
+
+- 概念：
+  - 从一个坐标位置滑动到另一个坐标位置，只能是两个点之间的滑动。
+- 核心代码：
+  - `driver.swipe(start_x, start_y, end_x, end_y, duration=None)`
+- 结论：
+  - `距离相同时，持续时间越长，惯性越小；`
+  - `持续时间相同时，手指滑动的距离越大，实际滑动的距离也就越大。`
+
+```Python
+# swipe 滑动事件
+# 
+# 从一个坐标位置滑动到另一个坐标位置，只能是两个点之间的滑动 
+# start_x： 起点 X 轴坐标 
+# start_y： 起点 Y 轴坐标 
+# end_x：   终点 X 轴坐标 
+# end_y：   终点 Y 轴坐标 
+# duration：滑动这个操作一共持续的时间长度，单位：ms 
+driver.swipe(start_x, start_y, end_x, end_y, duration=None)
+
+# 示例1：模拟手指从（100, 2000），滑动到（100, 1000）的位置
+driver.swipe(100, 2000, 100, 1000)
+# 示例2：模拟手指从（100, 2000），滑动到（100, 100）的位置
+driver.swipe(100, 2000, 100, 100)
+# 示例3：模拟手指从（100, 2000），滑动到（100, 100）的位置，持续5秒
+driver.swipe(100, 2000, 100, 100, 5000)
+
+# 结论：
+# - 距离相同时，持续时间越长，惯性越小；
+# - 持续时间相同时，手指滑动的距离越大，实际滑动的距离也就越大。
+```
+
+**scroll 滑动事件**
+
+- 概念：
+  - 从一个元素滑动到另一个元素，直到页面自动停止。
+- 核心代码：
+  - `driver.scroll(origin_el, destination_el)`
+- 结论：
+  - `不能设置持续时间，惯性很大。`
+
+```Python
+# scroll 滑动事件
+# 
+# 从一个元素滑动到另一个元素，直到页面自动停止 
+# origin_el：滑动开始的元素 
+# destination_el：滑动结束的元素 
+driver.scroll(origin_el, destination_el)
+
+# 示例1：从 “存储” 滑动到 “更多”
+save_button = driver.find_element_by_xpath("//*[@text='存储']") 
+more_button = driver.find_element_by_xpath("//*[@text='更多']") 
+driver.scroll(save_button, more_button)
+
+# 结论：
+# - 不能设置持续时间，惯性很大。
+```
+
+**drag_and_drop 拖拽事件**
+
+- 概念：
+  - 从一个元素滑动到另一个元素，第二个元素替代第一个元素原本屏幕上的位置。
+- 核心代码：
+  - `driver.drag_and_drop(origin_el, destination_el)`
+- 结论：
+  - `不能设置持续时间，没有惯性。`
+
+```Python
+# drag_and_drop 滑动事件
+# 
+# 从一个元素滑动到另一个元素，第二个元素替代第一个元素原本屏幕上的位置 
+# origin_el：滑动开始的元素 
+# destination_el：滑动结束的元素 
+driver.drag_and_drop(origin_el, destination_el)
+
+# 示例1：从 “存储” 滑动到 “更多”
+save_button = driver.find_element_by_xpath("//*[@text='存储']") 
+more_button = driver.find_element_by_xpath("//*[@text='更多']") 
+driver.drag_and_drop(save_button, more_button)
+
+# 结论：
+# - 不能设置持续时间，没有惯性。
+```
+
+**滑动和拖拽事件选择**
+
+- 滑动和拖拽无非就是考虑是否有 `“惯性”` ，以及传递的参数是 `“元素”` 还是 `“坐标”`：
+  - `有 “惯性” ，传入 “元素”`
+    - scroll
+  - `无 “惯性” ，传入 “元素”`
+    - drag_and_drop
+  - `有 “惯性” ，传入 “坐标”`
+    - swipe，并且设置较短的 duration 时间
+  - `无 “惯性” ，传入 “坐标”`
+    - swipe，并且设置较长的 duration 时间
+
+### 高级手势 - TouchAction
+
+`TouchAction` 可以实现一些针对手势的操作，比如 `滑动、长按、拖动` 等。我们可以将这些基本手势组合成一个相对复杂的手势。比如，我们解锁手机或者一些应用软件都有手势解锁的这种方式。
+
+**执行步骤：**
+
+- 1、创建 `TouchAction` 对象
+- 2、通过对象调用想执行的手势
+- 3、通过 `perform()` 执行动作
+  - 所有手势都要通过执行 `perform()` 函数才会运行。
+
+**轻敲操作**
+
+```Python
+# 轻敲操作
+
+# 模拟手指对元素或坐标的轻敲操作 
+# element：元素 
+# x：x 坐标 
+# y：y 坐标
+TouchAction(driver).tap(element=None, x=None, y=None).perform()
+
+
+# 示例 - 1. 打开《设置》；2. 轻敲 “WLAN”
+el = driver.find_element_by_xpath("//*[contains(@text,'WLAN')]")
+TouchAction(driver).tap(el).perform()
+```
+
+**按下和抬起操作**
+
+```Python
+# 按下和抬起操作
+# 模拟手指一直按下，模拟手指抬起。可以用来组合成轻敲或长按的操作
+
+# 模拟手指对元素或坐标的按下操作 
+# el：元素 
+# x：x 坐标 
+# y：y 坐标 
+TouchAction(driver).press(el=None, x=None, y=None).perform()
+
+# 模拟手指对元素或坐标的抬起操作 
+TouchAction(driver).release().perform()
+
+
+# 示例1 - 使用坐标的形式按下 WLAN （650, 650），2 秒后，按下（650, 650）的位置
+TouchAction(driver).press(x=650, y=650).perform() 
+time.sleep(2) 
+TouchAction(driver).press(x=650, y=650).perform()
+
+# 示例2 - 使用坐标的形式按下 WLAN （650, 650），2 秒后，按下（650, 650）的位置，并抬起
+TouchAction(driver).press(x=650, y=650).perform() 
+time.sleep(2) 
+TouchAction(driver).press(x=650, y=650).release().perform()
+```
+
+**等待操作**
+
+```Python
+# 等待操作
+
+# 模拟手指暂定操作 
+# ms：暂停的毫秒数 
+TouchAction(driver).wait(ms=0).perform()
+
+
+# 示例 - 使用坐标的形式点击 WLAN （650, 650），2 秒后，按下（650, 650）的位置，暂停 2 秒，并抬 起
+TouchAction(driver).tap(x=650, y=650).perform() 
+time.sleep(2) 
+TouchAction(driver).press(x=650, y=650).wait(2000).release().perform()
+```
+
+**长按操作**
+
+```Python
+# 长按操作
+
+# 模拟手指对元素或坐标的长按操作 
+# el：元素 
+# x：x 坐标 
+# y：y 坐标 
+# duration：长按时间，毫秒 
+TouchAction(driver).long_press(el=None, x=None, y=None, duration=1000).perform()
+
+
+# 示例 - 使用坐标的形式点击 WLAN （650, 650），2 秒后，长按（650, 650）的位置持续 2 秒
+TouchAction(driver).tap(x=400, y=400).perform() 
+time.sleep(2) 
+TouchAction(driver).long_press(x=400, y=400, duration=2000).release().perform()
+```
+
+**移动操作**
+
+```Python
+# 移动操作
+
+# 模拟手指对元素或坐标的移动操作 
+# el：元素 
+# x：x 坐标 
+# y：y 坐标 
+TouchAction(driver).move_to(el=None, x=None, y=None).perform()
+
+
+# 示例 - 在手势解锁中，画一个手势解锁路径
+TouchAction(driver).press(x=246, y=857).move_to(x=721, y=867).move_to(x=1200, y=851).move_to(x=1200, y=1329).move_to(x=724, y=1329).move_to(x=246, y=1329).move_to(x=718, y=1815).release().perform()
+```
+
+### 手机操作 API
+
+```Python
+# 获取手机分辨率 
+driver.get_window_size()
+# 结果：{'height': 800, 'width': 480}
+
+# 手机截图
+# filename：指定路径下，指定格式的图片 
+get_screenshot_as_file(filename)
+# 示例 - 1、打开设置页面；2、截图当前页面保存到当前目录，命名为 screen.png
+driver.get_screenshot_as_file(os.getcwd() + os.sep + './screen.png')
+
+# 获取手机网络
+driver.network_connection
+
+# 设置手机网络 
+# connectionType：网络类型 
+driver.set_network_connection(connectionType)
+
+# 发送键到设备 
+# keycode：发送给设备的关键代码 
+# metastate：关于被发送的关键代码的元信息，一般为默认值 
+# 按键对应的编码，可以在百度搜索关键字 “android keycode” 
+# 例如：https://blog.csdn.net/feizhixuan46789/article/details/16801429
+driver.press_keycode(keycode, metastate=None)
+
+# 打开手机通知栏 
+# Appium 官方并没有为我们提供关闭通知的 api，那么现实生活中怎么关闭，就怎样操作就行，比 如，手指从下往上滑动，或者，按返回键
+driver.open_notifications()
+```
+
+![网络类型](/images/Test/2021-07-12-Appium-Use-08.png)
 
 
 ## 参考链接
