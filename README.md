@@ -1,3 +1,7 @@
+
+![Alt](https://repobeats.axiom.co/api/embed/6a92e95ae0fa31390c50862fb1bcfb1a4e807f2c.svg "Repobeats analytics image")
+
+
 # jijiucheng.github.io
 
 - [GitHub - jijiucheng 博客 - https://jijiucheng.github.io/](https://jijiucheng.github.io/)
