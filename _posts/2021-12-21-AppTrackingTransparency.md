@@ -18,7 +18,7 @@ topmost: false
 
 在 `iOS13 及以前`，系统会默认为用户开启允许追踪设置，我们可以简单的通过代码来获取到用户的 `IDFA` 标识符。
 
-```Swift
+```swift
 /// iOS 13及之前 获取 IDFA 标识符方法
 if ASIdentifierManager.shared().isAdvertisingTrackingEnabled {
     let idfaString = ASIdentifierManager.shared().advertisingIdentifier.uuidString
@@ -45,7 +45,7 @@ if ASIdentifierManager.shared().isAdvertisingTrackingEnabled {
 
 通过以下代码即可以获取：
 
-```Swift
+```swift
 /// 需要引入 AppTrackingTransparency 库
 ATTrackingManager.requestTrackingAuthorization { [weak self] (status) in
     debugPrint("iOS 获取用户 IDFA 追踪权限：\(status.rawValue)")
@@ -82,7 +82,7 @@ Since your App Store Connect status is Metadata Rejected, we do NOT require a ne
 
 我们首先来看一下对应权限的枚举值：
 
-```Swift
+```swift
 @available(iOS 14, *)
 public enum AuthorizationStatus : UInt {
     // 无法确定或用户未进行任何操作时
@@ -126,7 +126,7 @@ The requestTrackingAuthorization(completionHandler:) is the one-time request to 
 
 ![配置 info.plist 文件](/images/iOS/2021-12-21-AppTrackingTransparency-07.png)
 
-```Swift
+```swift
 <key>NSUserTrackingUsageDescription</key>
 <string>需要您允许访问广告标识符权限，以便于提供更优质的广告服务和信息推送服务</string>
 ```
@@ -137,7 +137,7 @@ The requestTrackingAuthorization(completionHandler:) is the one-time request to 
 
 如果是 `iOS13.x` 以上的，且使用了 `SceneDelegate` 的，如下：
 
-```Swift
+```swift
 @available(iOS 13.0, *)
 func sceneDidBecomeActive(_ scene: UIScene) {
     // Called when the scene has moved from an inactive state to an active state.
@@ -162,7 +162,7 @@ private func getATTracking() {
 
 如果是没有使用 `SceneDelegate` 的，仅使用 `AppDelegate` 的，如下：
 
-```Swift
+```swift
 func applicationDidBecomeActive(_ application: UIApplication) {
     getATTracking()
 }
