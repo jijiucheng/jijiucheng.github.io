@@ -8,7 +8,6 @@ topmost: false
 ---
 
 **导读：** 
-
 `App Tracking Transparency（ATT）` 是苹果官方从 `iOS 14` 开始重点强调的 `申请用户广告追踪权限` 相关的 `framework`。
 
 对于开发人员来讲，我们常会听到的一个词 `IDFA`，全称是 `Identifier for Advertising`，即广告标识符。是苹果公司提供的 `用于追踪用户的广告标识符`，可以用来打通不同 app 之间的广告。`IDFA` 是一串 `16进制` 的 `32位` 串的由数字和字母组成的用来标识唯一设备的字符串。
