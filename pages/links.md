@@ -8,6 +8,14 @@ menu: 链接
 permalink: /links/
 ---
 
+> 博客搭建
+
+{% for link in site.data.links %}
+  {% if link.src == 'blog-build' %}
+* [{{ link.name }}]({{ link.url }})
+  {% endif %}
+{% endfor %}
+
 > God made relatives. Thank God we can choose our friends.
 
 {% for link in site.data.links %}

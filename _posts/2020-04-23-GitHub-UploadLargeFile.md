@@ -148,53 +148,53 @@ error: failed to push some refs to 'https://github.com/jijiucheng/JJC_GoWeb.git'
 
 ### Git-LFS 常用指令
 
-```git
-# 查看 git-lfs 相关指令
+```swift
+/// 查看 git-lfs 相关指令
 git lfs --help
-# 查看 git-lfs 当前环境版本等信息
+/// 查看 git-lfs 当前环境版本等信息
 git lfs env
-# 查看 git-lfs 当前版本号
+/// 查看 git-lfs 当前版本号
 git lfs version
-# 查看 git-lfs 文件状态
+/// 查看 git-lfs 文件状态
 git lfs status
-# 查看 git-lfs 文件内容填充副本
+/// 查看 git-lfs 文件内容填充副本
 git lfs checkout
-# 查看 git-lfs 扩展信息
+/// 查看 git-lfs 扩展信息
 git lfs ext
-# 检查 git-lfs 文件一致性
+/// 检查 git-lfs 文件一致性
 git lfs fsck
-# 查看 git-lfs 命令的错误信息
+/// 查看 git-lfs 命令的错误信息
 git lfs logs
-# 显示 git-lfs 当前分支下所有的文件信息
+/// 显示 git-lfs 当前分支下所有的文件信息
 git lfs ls-files
 
-# 安装 git-lfs 配置，只需执行一次即可，即可开启 lfs 功能
+/// 安装 git-lfs 配置，只需执行一次即可，即可开启 lfs 功能
 git lfs install 
-# 关闭 lfs 功能
+/// 关闭 lfs 功能
 git lfs uninstall
-# 从远程端拉取 git-lfs 文件
+/// 从远程端拉取 git-lfs 文件
 git lfs fetch
-# 从远处端拉取 git-lfs 文件，并标明变更文件
+/// 从远处端拉取 git-lfs 文件，并标明变更文件
 git lfs pull
-# 更新 git-lfs 文件
+/// 更新 git-lfs 文件
 git lfs update
 
-# 此处建议此种格式，可以统一关联 .zip 类型的文件（具体文件类型，视项目而定）
+/// 此处建议此种格式，可以统一关联 .zip 类型的文件（具体文件类型，视项目而定）
 git lfs track "*.zip"
-# 取消关联某文件
+/// 取消关联某文件
 git lfs untrack "*.zip"
-# 从本地存储中删除旧的 git-lfs 文件
+/// 从本地存储中删除旧的 git-lfs 文件
 git lfs prune xxx
-# 对 git-lfs 文件去重（同时会显示当前分支下所有 git-lfs 文件）
+/// 对 git-lfs 文件去重（同时会显示当前分支下所有 git-lfs 文件）
 git lfs dedup
 
-# 对 git-lfs 文件设置为 “锁定” 状态
+/// 对 git-lfs 文件设置为 “锁定” 状态
 git lfs lock xxx
-# 对 git-lfs 文件移除 “锁定” 状态
+/// 对 git-lfs 文件移除 “锁定” 状态
 git lfs unlock xxx
-# 查看当前 git-lfs 服务器上所有 “锁定” 状态文件
+/// 查看当前 git-lfs 服务器上所有 “锁定” 状态文件
 git lfs locks
-# 迁移历史信息到 git-lfs 或 从 git-lfs 迁移到历史信息
+/// 迁移历史信息到 git-lfs 或 从 git-lfs 迁移到历史信息
 git lfs migrate
 ```
 

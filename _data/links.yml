@@ -1,3 +1,7 @@
+- name: rouge-ruby / rouge（博客高亮语法支持语言）
+  url: https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers
+  src: blog-build
+
 - name: 码志
   url: http://mazhuang.org
   src: life
