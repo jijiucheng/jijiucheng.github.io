@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Git】GitHub 上传超过 100MB 的大文件（git-lfs）
+title: 【Git】GitHub 上传超过 100MB 的大文件（git-lfs）（2021.12.27 更新）
 categories: Git
 description: GitHub 上传超过 100MB 的大文件解决办法，使用 git-lfs
 keywords: GitHub, git-lfs
@@ -196,76 +196,6 @@ git lfs unlock xxx
 git lfs locks
 # 迁移历史信息到 git-lfs 或 从 git-lfs 迁移到历史信息
 git lfs migrate
-
-
-```
-
-```git
-git-lfs-env(1)
-              Display the Git LFS environment.
-
-       git-lfs-checkout(1)
-              Populate working copy with real content from Git LFS files.
-
-       git-lfs-dedup(1)
-              De-duplicate Git LFS files.
-
-              git-lfs-ext(1)
-              Display Git LFS extension details.
-
-       git-lfs-fetch(1)
-              Download Git LFS files from a remote.
-
-       git-lfs-fsck(1)
-              Check Git LFS files for consistency.
-
-       git-lfs-install(1)
-              Install Git LFS configuration.
-
-       git-lfs-lock(1)
-              Set a file as "locked" on the Git LFS server.
-
-              git-lfs-locks(1)
-              List currently "locked" files from the Git LFS server.
-
-       git-lfs-logs(1)
-              Show errors from the Git LFS command.
-
-       git-lfs-ls-files(1)
-              Show information about Git LFS files in the index and working tree.
-
-       git-lfs-migrate(1)
-              Migrate history to or from Git LFS
-
-       git-lfs-prune(1)
-              Delete old Git LFS files from local storage
-
-       git-lfs-pull(1)
-              Fetch Git LFS changes from the remote & checkout any required working tree files.
-
-       git-lfs-push(1)
-              Push queued large files to the Git LFS endpoint.
-
-       git-lfs-status(1)
-              Show the status of Git LFS files in the working tree.
-
-              git-lfs-track(1)
-              View or add Git LFS paths to Git attributes.
-
-       git-lfs-uninstall(1)
-              Uninstall Git LFS by removing hooks and smudge/clean filter configuration.
-
-       git-lfs-unlock(1)
-              Remove "locked" setting for a file on the Git LFS server.
-
-       git-lfs-untrack(1)
-              Remove Git LFS paths from Git Attributes.
-
-       git-lfs-update(1)
-              Update Git hooks for the current Git repository.
-
-       git-lfs-version(1)
-              Report the version number.
 ```
 
 # 参考链接
@@ -286,7 +216,7 @@ git-lfs-env(1)
 > 
 > **发表日期**：2020/04/23 09:00:00
 > 
-> **更新日期**：2020/07/08 14:40:00
+> **更新日期**：2021/12/27 12:34:00
 > 
 > -
 > 
