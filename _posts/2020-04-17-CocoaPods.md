@@ -315,7 +315,7 @@ $ sudo gem install cocoapods
 `注意点：<------------------------------> 此处有个注意点`
 由于 OS X 系统的不同，此处的指令也是有些变化:
 OS X 10.11之前系统的安装 CocoaPods 指令： $ sudo gem install cocoapods
-OS X 10.11以后系统的安装 CocoaPods 指令： $ sudo gem install -n /usr/local/bin cocoa pods
+OS X 10.11以后系统的安装 CocoaPods 指令： $ sudo gem install -n /usr/local/bin cocoapods
 ```
 ```
 安装结果：（正常情况打印没有这么多，此处是因为解决报错时，同时打印了这么多）

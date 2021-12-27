@@ -146,6 +146,128 @@ error: failed to push some refs to 'https://github.com/jijiucheng/JJC_GoWeb.git'
 
 当排查完原因后，再次执行推送到远程的指令即可。
 
+### Git-LFS 常用指令
+
+```git
+# 查看 git-lfs 相关指令
+git lfs --help
+# 查看 git-lfs 当前环境版本等信息
+git lfs env
+# 查看 git-lfs 当前版本号
+git lfs version
+# 查看 git-lfs 文件状态
+git lfs status
+# 查看 git-lfs 文件内容填充副本
+git lfs checkout
+# 查看 git-lfs 扩展信息
+git lfs ext
+# 检查 git-lfs 文件一致性
+git lfs fsck
+# 查看 git-lfs 命令的错误信息
+git lfs logs
+# 显示 git-lfs 当前分支下所有的文件信息
+git lfs ls-files
+
+# 安装 git-lfs 配置，只需执行一次即可，即可开启 lfs 功能
+git lfs install 
+# 关闭 lfs 功能
+git lfs uninstall
+# 从远程端拉取 git-lfs 文件
+git lfs fetch
+# 从远处端拉取 git-lfs 文件，并标明变更文件
+git lfs pull
+# 更新 git-lfs 文件
+git lfs update
+
+# 此处建议此种格式，可以统一关联 .zip 类型的文件（具体文件类型，视项目而定）
+git lfs track "*.zip"
+# 取消关联某文件
+git lfs untrack "*.zip"
+# 从本地存储中删除旧的 git-lfs 文件
+git lfs prune xxx
+# 对 git-lfs 文件去重（同时会显示当前分支下所有 git-lfs 文件）
+git lfs dedup
+
+# 对 git-lfs 文件设置为 “锁定” 状态
+git lfs lock xxx
+# 对 git-lfs 文件移除 “锁定” 状态
+git lfs unlock xxx
+# 查看当前 git-lfs 服务器上所有 “锁定” 状态文件
+git lfs locks
+# 迁移历史信息到 git-lfs 或 从 git-lfs 迁移到历史信息
+git lfs migrate
+
+
+```
+
+```git
+git-lfs-env(1)
+              Display the Git LFS environment.
+
+       git-lfs-checkout(1)
+              Populate working copy with real content from Git LFS files.
+
+       git-lfs-dedup(1)
+              De-duplicate Git LFS files.
+
+              git-lfs-ext(1)
+              Display Git LFS extension details.
+
+       git-lfs-fetch(1)
+              Download Git LFS files from a remote.
+
+       git-lfs-fsck(1)
+              Check Git LFS files for consistency.
+
+       git-lfs-install(1)
+              Install Git LFS configuration.
+
+       git-lfs-lock(1)
+              Set a file as "locked" on the Git LFS server.
+
+              git-lfs-locks(1)
+              List currently "locked" files from the Git LFS server.
+
+       git-lfs-logs(1)
+              Show errors from the Git LFS command.
+
+       git-lfs-ls-files(1)
+              Show information about Git LFS files in the index and working tree.
+
+       git-lfs-migrate(1)
+              Migrate history to or from Git LFS
+
+       git-lfs-prune(1)
+              Delete old Git LFS files from local storage
+
+       git-lfs-pull(1)
+              Fetch Git LFS changes from the remote & checkout any required working tree files.
+
+       git-lfs-push(1)
+              Push queued large files to the Git LFS endpoint.
+
+       git-lfs-status(1)
+              Show the status of Git LFS files in the working tree.
+
+              git-lfs-track(1)
+              View or add Git LFS paths to Git attributes.
+
+       git-lfs-uninstall(1)
+              Uninstall Git LFS by removing hooks and smudge/clean filter configuration.
+
+       git-lfs-unlock(1)
+              Remove "locked" setting for a file on the Git LFS server.
+
+       git-lfs-untrack(1)
+              Remove Git LFS paths from Git Attributes.
+
+       git-lfs-update(1)
+              Update Git hooks for the current Git repository.
+
+       git-lfs-version(1)
+              Report the version number.
+```
+
 # 参考链接
 
 - [简书 - amosbake - Git LFS的使用](https://www.jianshu.com/p/493b81544f80)
