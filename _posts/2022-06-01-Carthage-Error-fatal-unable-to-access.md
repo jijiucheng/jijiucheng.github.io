@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Git】fatal unable to access xxxxxx LibreSSL SSL_connect SSL_ERROR_SYSCALL in connection to github.com:443 报错
+title: 【Git】fatal unable to access 'xxxxxx' LibreSSL SSL_connect SSL_ERROR_SYSCALL in connection to github.com443 报错
 categories: Git
 description: 【Git】fatal: unable to access 'xxxxxx': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 报错
 keywords: iOS, Xcode, Git，Carthage
@@ -177,7 +177,7 @@ Rebuild with --use-xcframeworks to create an xcframework bundle instead.
 
 > **原文作者**：[苜蓿鬼仙（苜蓿、jijiucheng）](https://jijiucheng.github.io/)
 > 
-> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【Git】fatal: unable to access 'xxxxxx': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 报错](https://jijiucheng.github.io/2022/06/01/Carthage-Error-fatal-unable-to-access/)
+> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【Git】fatal unable to access 'xxxxxx' LibreSSL SSL_connect SSL_ERROR_SYSCALL in connection to github.com443 报错](https://jijiucheng.github.io/2022/06/01/Carthage-Error-fatal-unable-to-access/)
 > 
 > **发表日期**：2022/06/01 17:00:00
 > 
