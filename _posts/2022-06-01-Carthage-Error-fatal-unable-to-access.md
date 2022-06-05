@@ -2,7 +2,7 @@
 layout: post
 title: 【Git】fatal unable to access xxxxxx LibreSSL SSL_connect SSL_ERROR_SYSCALL in connection
 categories: Git
-description: 【Git】fatal: unable to access 'xxxxxx': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 报错
+description: 【Git】fatal unable to access xxxxxx LibreSSL SSL_connect SSL_ERROR_SYSCALL in connection
 keywords: iOS, Xcode, Git，Carthage
 topmost: false
 ---
