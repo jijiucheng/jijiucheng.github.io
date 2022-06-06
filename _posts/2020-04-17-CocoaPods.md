@@ -755,6 +755,7 @@ $ pod install                       #  安装 CocoaPods 的配置文件 Podfile
 - **13** - [[!] CDN: trunk Repo update failed](https://www.jianshu.com/p/bf1cbe49cb5d)
 - **14** - [Homebrew installation on Mac OS X Failed to connect to raw.githubusercontent.com port 443](https://stackoverflow.com/questions/29910217/homebrew-installation-on-mac-os-x-failed-to-connect-to-raw-githubusercontent-com)
 - **15** - [安装homebrew报错curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
+- **16** - [简书 - 新生代农民工No1 - CocoaPods私有库制作](https://www.jianshu.com/p/0da5a4710850)
 
 
 # 六、后续更新
@@ -1257,7 +1258,7 @@ Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/C
 > 
 > **发表日期**：2020/04/17 17:00:00
 > 
-> **更新日期**：2020/07/08 14:40:00
+> **更新日期**：2022/06/06 20:40:00
 > 
 > -
 > 
