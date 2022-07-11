@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 【实事】司马南 vs 莫言：孰对孰错？孰真孰假？
-categories: 实事
-description: 【实事】司马南 vs 莫言：孰对孰错？孰真孰假？
-keywords: 实事, 司马南, 莫言, 文学, 文学之风
+title: 【人微言轻】司马南 vs 莫言：孰对孰错？孰真孰假？
+categories: 人微言轻
+description: 【人微言轻】司马南 vs 莫言：孰对孰错？孰真孰假？
+keywords: 人微言轻，实事, 司马南, 莫言, 文学, 文学之风
 topmost: false
 ---
 
@@ -12,7 +12,7 @@ topmost: false
 
 此后的言辞说法，仅为个人的一些观点想法。
 
-![](/images/Hot/2022-06-16-SimaVsMoyan-01.png)
+![](/images/TinyWords/2022-06-16-SimaVsMoyan-01.png)
 
 # 具体介绍
 
@@ -83,11 +83,11 @@ topmost: false
 
 > **原文作者**：[苜蓿鬼仙（苜蓿、jijiucheng）](https://jijiucheng.github.io/)
 > 
-> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【实事】司马南 vs 莫言：孰对孰错？孰真孰假？](https://jijiucheng.github.io/2022/06/16/SimaVsMoyan/)
+> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【人微言轻】司马南 vs 莫言：孰对孰错？孰真孰假？](https://jijiucheng.github.io/2022/06/16/SimaVsMoyan/)
 > 
 > **发表日期**：2022/06/16 12:00:00
 > 
-> **更新日期**：2022/06/16 12:00:00
+> **更新日期**：2022/07/11 23:00:00
 > 
 > -
 > 
