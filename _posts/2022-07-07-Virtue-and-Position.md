@@ -72,7 +72,7 @@ topmost: false
 
 > **原文作者**：[苜蓿鬼仙（苜蓿、jijiucheng）](https://jijiucheng.github.io/)
 > 
-> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【人微言轻】德与位](https://jijiucheng.github.io/2022/07/07/2022-07-07-Virtue-and-Position/)
+> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【人微言轻】德与位](https://jijiucheng.github.io/2022/07/07/Virtue-and-Position/)
 > 
 > **发表日期**：2022/07/07 23:00:00
 > 
