@@ -1241,7 +1241,7 @@ Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/C
 
 
 ### 2022.09.16 更新
-#### ERROR:  SSL verification error at depth 1: unable to get local issuer certificate (20) ERROR:  You must add /O=Digital Signature Trust Co./CN=DST Root CA X3 to your local tr sted store
+#### 问题一：ERROR:  SSL verification error at depth 1: unable to get local issuer certificate (20) ERROR:  You must add /O=Digital Signature Trust Co./CN=DST Root CA X3 to your local tr sted store
 
 - **1、报错信息**
 
@@ -1260,6 +1260,8 @@ ERROR:  SSL verification error at depth 1: unable to get local issuer certificat
 由于近两天刚升级系统到 `MacOS 12.6，Xcode 14.0`，今天运行 Xcode 的时候突然出现了 CocoaPods 相关的一些报错，故此原本打算通过更新 CocoaPods 尝试解决相关报错的，结果就突然出现了上面的报错信息。
 
 根据网上的一些参考资料，都是提到了 `Ruby` 版本过低，需要进行更新之类的，然而实际上本人这边操作并不能解决实际问题。
+
+该问题主要还是因为通过 brew 安装 ruby 环境的时候出问题了。
 
 后经过多方尝试，最终解决了：
 
@@ -1304,6 +1306,192 @@ brew cleanup -n
 - [知乎 - Mac下Homebrew的基本命令](https://zhuanlan.zhihu.com/p/90765541)
 - [CSDN - CocoaPods安装出现SSL verification error](https://blog.csdn.net/ios_xumin/article/details/76732271)
 - [CSDN - gem install bundler SSL证书错误 解决办法](https://blog.csdn.net/syx_1990/article/details/120895133)
+
+#### 问题二：/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems.rb:283:in `find_spec_for_exe': can't find gem cocoapods (>= 0.a) with executable pod (Gem::GemNotFoundException)
+
+- **1、报错信息**
+
+```
+✗✗✗✗✗✗ mxgx% pod --version
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems.rb:283:in `find_spec_for_exe': can't find gem cocoapods (>= 0.a) with executable pod (Gem::GemNotFoundException)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems.rb:302:in `activate_bin_path'
+	from /usr/local/bin/pod:23:in `<main>'
+```
+
+- **2、问题解决**
+
+该问题和问题一一样，都是属于因为 brew 安装 ruby 环境出错引起的问题。
+
+```
+/// 执行如下指令
+
+
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+$ brew reinstall cocoapods
+$ brew link --overwrite cocoapods
+```
+
+当执行完 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` 指令后，然后执行重装 cocoapods 命令。
+
+当执行 `brew reinstall cocoapods` 的过程中，可能会遇到类似的报错：
+
+```
+✗✗✗✗✗✗ mxgx% brew reinstall cocoapods
+==> Downloading https://ghcr.io/v2/homebrew/core/cocoapods/manifests/1.11.3
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/cocoapods/blobs/sha256:92ea102a56b7f97ea877b289b92ac7005f10be6ad68917f451160f97345
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:92ea102a56b7f97ea877b289b92ac7005f10be6ad68917
+######################################################################## 100.0%
+==> Reinstalling cocoapods 
+==> Pouring cocoapods--1.11.3.monterey.bottle.tar.gz
+Error: The `brew link` step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+Could not symlink bin/pod
+Target /usr/local/bin/pod
+already exists. You may want to remove it:
+  rm '/usr/local/bin/pod'
+
+To force the link and overwrite all conflicting files:
+  brew link --overwrite cocoapods
+
+To list all files that would be deleted:
+  brew link --overwrite --dry-run cocoapods
+
+Possible conflicting files are:
+/usr/local/bin/pod
+/usr/local/bin/xcodeproj
+==> Summary
+🍺  /usr/local/Cellar/cocoapods/1.11.3: 14,135 files, 29.9MB
+==> Running `brew cleanup cocoapods`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+```
+
+解决冲突执行如下指令即可：
+
+```
+✗✗✗✗✗✗ mxgx% brew link --overwrite cocoapods
+Linking /usr/local/Cellar/cocoapods/1.11.3... 2 symlinks created.
+```
+
+不过紧接着可能就会出现问题三的报错。
+
+- **3、参考资料**
+
+- [pod install 報錯: can’t find gem cocoapods (>= 0.a) with executable pod (Gem::GemNotFoundException)](https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E6%95%99%E5%AE%A4/pod-install-%E6%8A%A5%E9%94%99-cant-find-gem-cocoapods-0-a-with-executable-pod-gem-gemnotfoundexception-85fb3c9f02be)
+
+#### 问题三：/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/dependency.rb:311:in `to_specs': Could not find 'CFPropertyList' (>= 2.3.3, < 4.0) among 158 total gem(s) (Gem::MissingSpecError)
+
+- **1、报错信息**
+
+```
+✗✗✗✗✗✗ mxgx% pod --version
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/dependency.rb:311:in `to_specs': Could not find 'CFPropertyList' (>= 2.3.3, < 4.0) among 158 total gem(s) (Gem::MissingSpecError)
+Checked in 'GEM_PATH=/Users/mxgx/.rvm/gems/ruby-2.7.0:/Users/mxgx/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0:/usr/local/Cellar/cocoapods/1.11.3/libexec', execute `gem env` for more information
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/specification.rb:1449:in `block in activate_dependencies'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/specification.rb:1438:in `each'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/specification.rb:1438:in `activate_dependencies'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/specification.rb:1420:in `activate'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/specification.rb:1452:in `block in activate_dependencies'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/specification.rb:1438:in `each'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/specification.rb:1438:in `activate_dependencies'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/specification.rb:1420:in `activate'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems.rb:304:in `block in activate_bin_path'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems.rb:303:in `synchronize'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems.rb:303:in `activate_bin_path'
+	from /usr/local/Cellar/cocoapods/1.11.3/libexec/bin/pod:23:in `<main>'
+```
+
+- **2、问题解决**
+
+该问题和前两个问题类似，都是因为 brew 安装 ruby 环境引起的。
+
+```
+/// 执行如下指令
+/// 第一条指令前面执行过了，此处可以忽略
+
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+$ gem install xcodeproj
+```
+
+虽然有说执行 `sudo gem install CFPropertyList` 指令即可以解决问题，但是个人并未解决问题。
+
+执行信息如下：
+
+```
+/// 此处对网络要求比较高，尽量开全局代理
+
+✗✗✗✗✗✗ mxgx% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+==> Checking for `sudo` access (which may request your password)...
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+/usr/local/Homebrew
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /usr/sbin/chown -R mxgx:admin /usr/local/Homebrew
+==> Downloading and installing Homebrew...
+HEAD is now at 7a14ae618 Merge pull request #13876 from Homebrew/sponsors-maintainers-man-completions
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+```
+
+```
+✗✗✗✗✗✗ mxgx% gem install xcodeproj
+Fetching xcodeproj-1.22.0.gem
+Fetching atomos-0.1.3.gem
+Fetching rexml-3.2.5.gem
+Fetching claide-1.1.0.gem
+Fetching nanaimo-0.3.0.gem
+Fetching CFPropertyList-3.0.5.gem
+Fetching colored2-3.1.2.gem
+Successfully installed atomos-0.1.3
+Successfully installed rexml-3.2.5
+Successfully installed CFPropertyList-3.0.5
+Successfully installed claide-1.1.0
+Successfully installed colored2-3.1.2
+Successfully installed nanaimo-0.3.0
+Successfully installed xcodeproj-1.22.0
+Parsing documentation for atomos-0.1.3
+Installing ri documentation for atomos-0.1.3
+Parsing documentation for rexml-3.2.5
+Installing ri documentation for rexml-3.2.5
+Parsing documentation for CFPropertyList-3.0.5
+Installing ri documentation for CFPropertyList-3.0.5
+Parsing documentation for claide-1.1.0
+Installing ri documentation for claide-1.1.0
+Parsing documentation for colored2-3.1.2
+Installing ri documentation for colored2-3.1.2
+Parsing documentation for nanaimo-0.3.0
+Installing ri documentation for nanaimo-0.3.0
+Parsing documentation for xcodeproj-1.22.0
+Installing ri documentation for xcodeproj-1.22.0
+Done installing documentation for atomos, rexml, CFPropertyList, claide, colored2, nanaimo, xcodeproj after 2 seconds
+7 gems installed
+{22-09-16 16:05}[ruby-2.7.0]mxgx:~/Documents/GitHub/MyAppStore/JJCComicBook/Code/JJCComicBook@dev✗✗✗✗✗✗ mxgx% pod --version
+1.11.3
+```
+
+- **3、参考资料**
+
+- [CSDN - pod lib create 报错的问题](https://blog.csdn.net/qq_30932479/article/details/117771804)
+- [CSDN - React-Native ios pod install问题](https://blog.csdn.net/weixin_45922009/article/details/121465164)
+- [简书 - CocoaPods踩坑:activate_dependencies': Could not find 'CFPropertyList' (>= 2.3.3, < 4.0) among 78 to...](http://events.jianshu.io/p/17ef41eba67c)
 
 ------
 
