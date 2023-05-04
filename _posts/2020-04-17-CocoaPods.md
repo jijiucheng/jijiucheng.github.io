@@ -1493,6 +1493,20 @@ Done installing documentation for atomos, rexml, CFPropertyList, claide, colored
 - [CSDN - React-Native ios pod install问题](https://blog.csdn.net/weixin_45922009/article/details/121465164)
 - [简书 - CocoaPods踩坑:activate_dependencies': Could not find 'CFPropertyList' (>= 2.3.3, < 4.0) among 78 to...](http://events.jianshu.io/p/17ef41eba67c)
 
+### 2023.05.04 更新
+#### pod search 搜索很慢或搜索为空问题
+
+- 解决办法：
+  - ① 执行 `rm ~/Library/Caches/CocoaPods/ search_index.json` 指令，清除 `pod search` 缓存；
+  - ② 执行 `pod setup` 将 `CocoaPods` 信息下载到 `~/.cocoapods/repos/` 文件目录下；
+  - ③ 在 `~/.cocoapods/repos/` 目录文件夹下，通过 `pod repo list` 指令查询当前源 `list`；
+  - ④ 如果只有 `trunk` 源，通过 `git clone https://git.coding.net/CocoaPods/Specs.git` 在该文件夹下克隆；
+  - ⑤ 通过 `pod repo remove 'trunk'` 指令移除 `trunk` 源即可。
+
+- 参考链接：
+  - [iOS解决cocoapods 搜索速度慢或者搜索失败问题](https://www.jianshu.com/p/6e2677cc6590)
+  - [CocoaPods 【pod search 搜索类库失败的解决办法】](https://wangzhongyao.blog.csdn.net/article/details/53924210)
+
 ------
 
 # 声明：
