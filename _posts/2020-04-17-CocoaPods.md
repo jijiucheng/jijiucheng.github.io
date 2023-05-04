@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2022.09.16 更新）
+title: 【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2023.05.04 更新）
 categories: iOS
 description: CocoaPods 安装配置
 keywords: iOS, iOS配置, CocoaPods
@@ -1525,7 +1525,7 @@ Done installing documentation for atomos, rexml, CFPropertyList, claide, colored
 > 
 > **发表日期**：2020/04/17 17:00:00
 > 
-> **更新日期**：2022/09/16 12:00:00
+> **更新日期**：2023/05/04 12:00:00
 > 
 > -
 > 
