@@ -7,8 +7,8 @@ keywords: iOS, iOS配置, CocoaPods
 topmost: true
 ---
 
-**导读：** 
-在iOS开发中 [CocoaPods](https://github.com/CocoaPods/CocoaPods) 作为库依赖管理工具就是一把利器。
+**导读：**
+在 iOS 开发中  [CocoaPods](https://github.com/CocoaPods/CocoaPods)  作为库依赖管理工具就是一把利器。
 
 有了 `CocoaPods` 则无需再通过拖 `第三方库` 及第三方库所依赖的 `framework` 静态库到项目中等麻烦的操作，仅仅只需要通过终端`（Terminal）`输入一些指令即可完成这些操作；而且涉及到第三方库的更新升级也可以通过 `CocoaPods` 进行手动管理更新。
 
@@ -18,7 +18,7 @@ topmost: true
 
 ### 1、官网及相关链接
 
-- **Rvm 官网** ： https://www.rvm.io/ 
+- **Rvm 官网** ： https://www.rvm.io/
 - **Ruby 官网** ：https://rubygems.org/
 - **CocoaPods 官网** ：https://cocoapods.org/
 - `Rvm 安装指南` ：https://rvm.io/rvm/install
@@ -28,25 +28,25 @@ topmost: true
 
 ### 2、Homebrew 介绍
 
-  -  `Homebrew` 是一个软件包管理器，用于在mac上安装一些os x上没有的UNiX工具；类似于360软件管理器。
+- `Homebrew` 是一个软件包管理器，用于在 mac 上安装一些 os x 上没有的 UNiX 工具；类似于 360 软件管理器。
 
 ### 3、Rvm 介绍
 
-  - `Rvm` 全称 `Ruby Version Manager` ，是安装和管理 `ruby` 的一种工具。
-  
-  > 摘录：
-  > 
-  > RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.
+- `Rvm` 全称 `Ruby Version Manager` ，是安装和管理 `ruby` 的一种工具。
+
+> 摘录：
+>
+> RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.
 
 ### 4、Ruby 介绍
 
-  - `Ruby` 是一种面向对象的脚本语言，简单易用，功能强大。能跨平台和可移植性好等等。其实就是种脚本语言。
-  - `Ruby` 的软件源使用的是亚马逊的云服务，国内网络环境下载时可能会出现各种不稳定和超时，所以自带的需要翻墙，可以将 `官方 ruby 源` 替换成国内 `淘宝 ruby 源`（[https://ruby.taobao.org/](https://ruby.taobao.org/) ）或者是由 `China ruby 源` （[https://gems.ruby-china.org/](https://gems.ruby-china.org/) ）。据消息了解，2016.06 `淘宝源` 暂停维护了，建议使用 `China ruby 源`。
+- `Ruby` 是一种面向对象的脚本语言，简单易用，功能强大。能跨平台和可移植性好等等。其实就是种脚本语言。
+- `Ruby` 的软件源使用的是亚马逊的云服务，国内网络环境下载时可能会出现各种不稳定和超时，所以自带的需要翻墙，可以将 `官方 ruby 源` 替换成国内 `淘宝 ruby 源`（[https://ruby.taobao.org/](https://ruby.taobao.org/) ）或者是由 `China ruby 源` （[https://gems.ruby-china.org/](https://gems.ruby-china.org/) ）。据消息了解，2016.06 `淘宝源` 暂停维护了，建议使用 `China ruby 源`。
 
 ### 5、CocoaPods 介绍
 
-  - `CocoaPods` 是 iOS 最常用的第三方类库管理工具，绝大部分有名的开源类库都支持 `CocoaPods`。
-  - `CocoaPods` 是用 `ruby` 实现的，要想使用它首先需要有 `ruby` 的环境。幸运的是OS X系统默认已经可以运行 `ruby` 了。但是有时候 `ruby` 版本过低是无法正常支持 `CocoaPods` 的使用，所以需要先安装更新升级 `rvm` 和 `ruby`。
+- `CocoaPods` 是 iOS 最常用的第三方类库管理工具，绝大部分有名的开源类库都支持 `CocoaPods`。
+- `CocoaPods` 是用 `ruby` 实现的，要想使用它首先需要有 `ruby` 的环境。幸运的是 OS X 系统默认已经可以运行 `ruby` 了。但是有时候 `ruby` 版本过低是无法正常支持 `CocoaPods` 的使用，所以需要先安装更新升级 `rvm` 和 `ruby`。
 
 # 二、CocoaPods 安装使用
 
@@ -57,27 +57,30 @@ topmost: true
 ```
 $ rvm -v
 ```
+
 ```
 `输出结果：（ 存在 rvm 环境）`
 muxuguixiandeMacBook-Pro:~ jijiucheng$ rvm -v
 rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
 ```
+
 ```
 `输出结果：（不存在 rvm 环境）`
 muxuguixiandeMacBook-Pro:~ jijiucheng$ rvm -v
 -bash: rvm: command not found
 ```
 
-  - **情况一**：如果不存在 `rvm` 环境，先安装配置 `rvm` 环境；
-  
-  
+- **情况一**：如果不存在 `rvm` 环境，先安装配置 `rvm` 环境；
+
 ```
 ① 期间可能会问你 `sudo管理员` 密码，以及自动通过 `homebrew` 安装依赖包；
 等待一段时间后就可以成功安装好 `rvm`。
 ```
+
 ```
 $ curl -L https://get.rvm.io | bash -s stable
 ```
+
 ```
 输出结果：（下载安装）（显示的 `` 代表一行空格）
 muxuguixiandeMacBook-Pro:~ jijiucheng$ curl -L https://get.rvm.io | bash -s stable
@@ -106,41 +109,47 @@ but no GPG software exists to validate it, skipping.
 ``
 In case of problems: https://rvm.io/help and https://twitter.com/rvm_io
 ```
+
 ![下载安装 rvm 环境.png](https://images.xiaozhuanlan.com/photo/2019/b69788f5ad2d506e34eb4d863386c7da.png)
 
 ```
 ② 然后，载入 RVM 环境（新开 Termal 就不用这么做了，会自动重新载入的）。
 ```
+
 ```
 $ source ~/.rvm/scripts/rvm
 ```
+
 ```
 输出结果：（^_^）（什么都没有输出）
 muxuguixiandeMacBook-Pro:~ jijiucheng$ source ~/.rvm/scripts/rvm
 ```
+
 ```
 ③ 再次检查 rvm 是否安装正确。
 ```
+
 ```
 $ rvm -v
 ```
+
 ```
 `输出结果：（ 存在 rvm 环境）`
 muxuguixiandeMacBook-Pro:~ jijiucheng$ rvm -v
 rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
 ```
 
-  - **情况二**：如果存在 `rvm` 环境，用 `rvm` 安装 `ruby` 环境；
-     
-    - 当 `ruby` 版本低于 `2.2.2` 时，安装 `CocoaPods` 会报错；为防止 `ruby` 版本过低，建议先升级 `ruby` 环境，建议升级到 `2.3.0` 版本以上。【可以通过 `$ ruby -v` 指令检查当前 ruby 版本】
-  
-  
+- **情况二**：如果存在 `rvm` 环境，用 `rvm` 安装 `ruby` 环境；
+  - 当 `ruby` 版本低于 `2.2.2` 时，安装 `CocoaPods` 会报错；为防止 `ruby` 版本过低，建议先升级 `ruby` 环境，建议升级到 `2.3.0` 版本以上。【可以通过 `$ ruby -v` 指令检查当前 ruby 版本】
+
 ```
   ① 查询已知的 ruby 环境。
 ```
+
 ```
 $ rvm list known
 ```
+
 ```
 输出结果：（显示的 `` 代表一行空格）
 muxuguixiandeMacBook-Pro:~ jijiucheng$ rvm list known
@@ -203,53 +212,65 @@ macruby-head
 ironruby[-1.1.3]
 ironruby-head
 ```
+
 ![查询已知的 ruby 环境 .png](https://images.xiaozhuanlan.com/photo/2019/cf1ed58d9d8892cc93062fee57391ecc.png)
+
 ```
 ② 指定 ruby 版本进行更新（ 此处按照 ruby 2.3.0 版本进行更新 ）。
 ```
+
 ```
 $ rvm install 2.3.0
 ```
+
 ```
 输出结果：（ 此处因为终端输出的字符过多，所以此处用截图方式 ）
 ```
+
 ![指定 ruby 版本进行更新 .png](https://images.xiaozhuanlan.com/photo/2019/819d92576e886ab30b956797fa42ab73.png)
+
 ```
 ③ 第二步需要一段时间等待，完成后此时 rvm 环境就配置好了；Ruby Gems 就安装好了。
 ```
+
 ```
 ④ 补充相关指令：
 ```
-*查询已安装的 ruby：*
+
+_查询已安装的 ruby：_
+
 ```
 $ rvm list
 ```
-*卸载一个已安装版本：*
+
+_卸载一个已安装版本：_
+
 ```
 $ rvm remove 1.9.2
 ```
 
-
 ### 2、检查更新 ruby 版本环境（正常情况下从此步骤开始）
 
-  - `CocoaPods` 是用 `gem ruby` 实现的，要想使用它首先需要有 `gem ruby` 的环境。且 MAC 的 OS X系统默认已经可以运行 `ruby` 。
-  - 此处建议 `gem ruby` 包环境升级到 `2.6.x` 以上。
-  - 检查 `gem ruby` 版本号：
+- `CocoaPods` 是用 `gem ruby` 实现的，要想使用它首先需要有 `gem ruby` 的环境。且 MAC 的 OS X 系统默认已经可以运行 `ruby` 。
+- 此处建议 `gem ruby` 包环境升级到 `2.6.x` 以上。
+- 检查 `gem ruby` 版本号：
 
 ```
 $ sudo gem -v
 ```
+
 ```
 检查结果：（ 默认情况下版本应该较低，建议升级到 ）
 muxuguixiandeMacBook-Pro:local jijiucheng$ gem -v
 2.5.1
 ```
 
-  - 更新 `gem ruby` 版本号：
-  
+- 更新 `gem ruby` 版本号：
+
 ```
 $ sudo gem update --system
 ```
+
 ```
 更新成功：（ 实际打印可能与此不同，但是成功了就会显示 Successfully ）
 muxuguixiandeMacBook-Pro:local jijiucheng$ gem update --system
@@ -257,17 +278,19 @@ Updating rubygems-update
 Fetching: rubygems-update-2.6.7.gem (100%)
 Successfully installed rubygems-update-2.6.7
 ```
+
 ```
 此种提示：（ 表示已经是最新的 gem ruby 环境 ）
 muxuguixiandeMacBook-Pro:~ jijiucheng$ gem update --system
 Latest version currently installed. Aborting.
 ```
 
-  - 检查 `ruby 源`
+- 检查 `ruby 源`
 
 ```
 $ gem sources -l
-```  
+```
+
 ```
 检查结果：（ 如果电脑没安装过 CocoaPods，此时应该是默认 ruby 源 ）
 muxuguixiandeMacBook-Pro:~ jijiucheng$ gem sources -l
@@ -275,28 +298,31 @@ muxuguixiandeMacBook-Pro:~ jijiucheng$ gem sources -l
 https://rubygems.org/
 ```
 
-  - 移除 `ruby 源`
+- 移除 `ruby 源`
 
 ```
 $ gem sources --remove https://rubygems.org/
 ```
+
 ```
 移除结果：
 muxuguixiandeMacBook-Pro:local jijiucheng$ gem sources --remove https://rubygems.org/
 https://rubygems.org/ removed from sources
 ```
 
-  - 替换添加国内镜像源 `ruby-china 源`，因为上面已经提到国内镜像源 `taobao 源` 已经停止维护了，所以此处替换的是 `ruby-china 源`，且尽量确保只有一个 `ruby-china 源`，
-备注：`https://gems.ruby-china.org` 已废弃，改为`https://gems.ruby-china.com`
+- 替换添加国内镜像源 `ruby-china 源`，因为上面已经提到国内镜像源 `taobao 源` 已经停止维护了，所以此处替换的是 `ruby-china 源`，且尽量确保只有一个 `ruby-china 源`，
+  备注：`https://gems.ruby-china.org` 已废弃，改为`https://gems.ruby-china.com`
 
 ```
 $ gem sources --add https://gems.ruby-china.com
 ```
+
 ```
 替换结果：
 muxuguixiandeMacBook-Pro:local jijiucheng$ gem sources --add https://gems.ruby-china.com
 https://gems.ruby-china.com added to sources
 ```
+
 ```
 再次检查此时的 ruby 源：（ 已经变成了 ruby-china 源 ）
 muxuguixiandeMacBook-Pro:local jijiucheng$ gem sources -l
@@ -311,16 +337,18 @@ https://gems.ruby-china.com
 ```
 $ sudo gem install cocoapods
 ```
+
 ```
 `注意点：<------------------------------> 此处有个注意点`
 由于 OS X 系统的不同，此处的指令也是有些变化:
 OS X 10.11之前系统的安装 CocoaPods 指令： $ sudo gem install cocoapods
 OS X 10.11以后系统的安装 CocoaPods 指令： $ sudo gem install -n /usr/local/bin cocoapods
 ```
+
 ```
 安装结果：（正常情况打印没有这么多，此处是因为解决报错时，同时打印了这么多）
 muxuguixiandeMacBook-Pro:local jijiucheng$ sudo gem install cocoa pods
-Password:   <----------------------------------->  // 此处需要输入一次密码 
+Password:   <----------------------------------->  // 此处需要输入一次密码
 Fetching: ffi-1.9.14.gem (100%)
 Building native extensions.  This could take a while...
 Successfully installed ffi-1.9.14
@@ -359,30 +387,32 @@ Done installing documentation for pods after 0 seconds
 8 gems installed
 <------------------ 此处有 gems installed 标志着安装 CocoaPods 成功 ------------------>
 ```
+
 ![安装 CocoaPods .png](https://images.xiaozhuanlan.com/photo/2019/4dcb8f4c4f09bfdfc492018e1c6f0615.png)
 
-  - 正常情况下此处会出现很大的坑，经常会出现各种报错问题，大多数是为 `ruby` 环境过低没有更新升级，或者是牵扯到 `rvm` 管理器环境的问题，在后面各种报错问题的解决方案的中会有提到。
-
+- 正常情况下此处会出现很大的坑，经常会出现各种报错问题，大多数是为 `ruby` 环境过低没有更新升级，或者是牵扯到 `rvm` 管理器环境的问题，在后面各种报错问题的解决方案的中会有提到。
 
 ### 4、配置 CocoaPods 环境
-  
-  - **说明** ：此处为了做测试，在 MAC 桌面 `Desktop` 创建了一个工程 `CocoaPodsTestDemo`。
 
-  - **第一步** ：`cd` 到目录文件夹，回车 `enter`（ `快速方式`：直接将文件夹拖入到终端 `Terminal` ）。
+- **说明** ：此处为了做测试，在 MAC 桌面 `Desktop` 创建了一个工程 `CocoaPodsTestDemo`。
+
+- **第一步** ：`cd` 到目录文件夹，回车 `enter`（ `快速方式`：直接将文件夹拖入到终端 `Terminal` ）。
 
 ```
 $ cd /Users/jijiucheng/Desktop/CocoaPodsTestDemo 
 ```
+
 ```
 输入结果：（（^_^）此时没有任何结果 ）
 muxuguixiandeMacBook-Pro:~ jijiucheng$ cd /Users/jijiucheng/Desktop/CocoaPodsTestDemo 
 ```
 
- - **第二步（建议）**：如果不知道第三方库版本的情况下，建议先查找一下当前所需第三方库的最新版本，可以通过输入指令的方式完成。并且查询完成后输入 `wq` 返回之前终端 `Terminal`页面。
- 
+- **第二步（建议）**：如果不知道第三方库版本的情况下，建议先查找一下当前所需第三方库的最新版本，可以通过输入指令的方式完成。并且查询完成后输入 `wq` 返回之前终端 `Terminal`页面。
+
 ```
 $ pod search 'AFNetworking'
 ```
+
 ```
 查询结果：（因为会查询输出所有与 'AFNetworking' 相关的第三方库，此处只输出部分，其中下面的“横线”代替实际打印的一行空格）
 muxuguixiandeMacBook-Pro:~ jijiucheng$ cd /Users/jijiucheng/Desktop/CocoaPodsTestDemo 
@@ -407,33 +437,40 @@ muxuguixiandeMacBook-Pro:CocoaPodsTestDemo jijiucheng$ pod search 'AFNetworking'
      - AFNetworking/UIKit (3.1.0)
 ......（后面还有好多与 'AFNetworking' 相关的第三方库，此处不一一列举）
 ```
+
 ![搜索 'AFNetworking' 打印结果.png](https://images.xiaozhuanlan.com/photo/2019/0d03f8983bfa50ddedae5e78ae430170.png)
 
- - **第三步**：创建 Podfile 配置文件
- 
+- **第三步**：创建 Podfile 配置文件
+
 ```
 $ vim Podfile
 ```
+
 ```
 回车跳转界面（如下）：
 ```
+
 ![指令 vim Podfile 后跳转界面 .png](https://images.xiaozhuanlan.com/photo/2019/c3bcce15d52bfad0fce89516b1412e73.png)
+
 ```
 ① 键盘输入 i ，进入 Podfile 配置文件的编辑模式，底部会变成 ：
 -- INSERT --
 ```
+
 ```
 Podfile 配置文件编辑模式（如下）：
 ```
+
 ![Podfile 配置文件编辑模式 .png](https://images.xiaozhuanlan.com/photo/2019/5f451dee0c10486db6427639ed3db5d5.png)
+
 ```
 ② 通过固定语句编辑进行 Podfile 文件的配置：
 ```
 
-```
+````
 Podfile 配置文件固定语句（如下）：
  ```说明：可能有些人看到的固定语句不一样，但是大同小异，基本上都能实现最终效果。`
----> 
+--->
 # Uncomment this line to define a global platform for your project
 platform :ios, '8.0'
 target 'CocoaPodsTestDemo' do
@@ -449,8 +486,10 @@ target 'CocoaPodsTestDemo' do
 # use_frameworks!
 # pod 'ReactiveCocoa'
 end
-```
+````
+
 ![Podfile 配置文件固定语句 .png](https://images.xiaozhuanlan.com/photo/2019/e16eca071adc99dd0fcc0aa9f1349924.png)
+
 ```
 ③ 当固定语句输入完毕之后，按一次 `Esc` 按键退出编辑模式，底部就没有 `-- INSERT --` 标识了；
 再按一次 `shift + :` （ 英文输入法状态下 ）组合，底部就会出现一个 `冒号 :` ；
@@ -458,17 +497,20 @@ end
 此时 Podfile 文件就配置好了；
 此时可以在 `CocoaPodsTestDemo` 文件夹下发现多了一个 `Podfile` 文件。
 ```
+
 ```
 Podfile 输入完毕之后（如下）：
 ```
+
 ![Podfile 输入完毕之后 .png](https://images.xiaozhuanlan.com/photo/2019/fdf9681c992c4fa5e5c8ff4fd315115c.png)
 ![配置文件完成后新增 Podfile 文件 .png](https://images.xiaozhuanlan.com/photo/2019/8571125918c05b36ba04e7ac9df2767e.png)
 
-  - **第四步**：下载第三方库文件到项目工程中
-  
+- **第四步**：下载第三方库文件到项目工程中
+
 ```
 $ pod install
 ```
+
 ```
 下载输出（如下）：
 muxuguixiandeMacBook-Pro:CocoaPodsTestDemo jijiucheng$ pod install
@@ -487,32 +529,37 @@ Integrating client project
 Pod installation complete! There are 7 dependencies from the Podfile and 7 total pods
 installed.
 ```
+
 ![下载第三方库文件到项目工程中 .png](https://images.xiaozhuanlan.com/photo/2019/feb38552c4e7e4a9961fb90a9e296009.png)
 ![安装 CocoaPods 成功后项目文件变化 .png](https://images.xiaozhuanlan.com/photo/2019/5dcd309ce62086539d7b6d8a84cba3a7.png)
 
-  - **第五步**：此后打开项目工程只需要点击打开 `CocoaPodsTestDemo.xcworkspace` 文件即可
+- **第五步**：此后打开项目工程只需要点击打开 `CocoaPodsTestDemo.xcworkspace` 文件即可
+
 ```
 打开工程文件目录变化（如下）：
 所有的第三方库文件都在 `/CocoaPodsTestDemo/Pods/Pods` 文件夹目录下
 ```
+
 ![打开工程文件目录变化 .png](https://images.xiaozhuanlan.com/photo/2019/8ff64fb1e9a42ce3e42910c825e3d414.png)
-
-
 
 # 三、CocoaPods 安装过程中报错问题解决
 
 **说明：此部分所列举的问题均是在执行相关指令时出现的报错**
 
 ### 1、Rvm 环境搭建
-   - **报错一：**
-**① Error running 'requirements_osx_brew_update_system ruby-2.3.0', showing last 15 lines of /Users/jijiucheng/.rvm/log/1475769205_ruby-2.3.0/update_system.log
-② curl: (35) Server aborted the SSL handshake**
 
- *① 报错指令：*
+- **报错一：**
+  **① Error running 'requirements_osx_brew_update_system ruby-2.3.0', showing last 15 lines of /Users/jijiucheng/.rvm/log/1475769205_ruby-2.3.0/update_system.log
+  ② curl: (35) Server aborted the SSL handshake**
+
+_① 报错指令：_
+
 ```
 $ rvm install 2.3.0
-``` 
-*② 报错信息：*
+```
+
+_② 报错信息：_
+
 ```
 Error running 'requirements_osx_brew_update_system ruby-2.3.0',
 showing last 15 lines of /Users/jijiucheng/.rvm/log/1475769205_ruby-2.3.0/update_system.log
@@ -520,39 +567,48 @@ showing last 15 lines of /Users/jijiucheng/.rvm/log/1475769205_ruby-2.3.0/update
 ......
 Requirements installation failed with status: 1.
 ```
+
 ```
 curl: (35) Server aborted the SSL handshake
 ```
+
 ![报错信息 1.png](https://images.xiaozhuanlan.com/photo/2019/f86da9847851c979fef5c489cd80a9da.png)
 ![报错信息 2.png](https://images.xiaozhuanlan.com/photo/2019/be9fcd366d2609a0b0c5f1fbf13b5643.png)
-*③ 报错原因：*
+_③ 报错原因：_
 `网络问题，因为需要翻墙，所以网络不稳定；建议选择 VPN，保证线路的稳定性。`
 
-*④ 解决方案（ 指令一行一行输入 ）：*
+_④ 解决方案（ 指令一行一行输入 ）：_
+
 ```
 $ cd /usr/local
 ```
+
 ```
 $ git remote set-url origin git://mirrors.ustc.edu.cn/brew.git
 ```
+
 ```
 $ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bashrc
 ```
+
 ![解决方案 .png](https://images.xiaozhuanlan.com/photo/2019/729408ad3f7a4e007fe53afc90c5bee4.png)
 
-*⑤ 方案链接：*
+_⑤ 方案链接：_
 
-  - [方案解决链接 -- https://segmentfault.com/q/1010000004276750](https://segmentfault.com/q/1010000004276750)
+- [方案解决链接 -- https://segmentfault.com/q/1010000004276750](https://segmentfault.com/q/1010000004276750)
 
-   - **报错二：**
-**① Error running '__rvm_make -j 1', 
-showing last 15 lines of /Users/jijiucheng/.rvm/log/1475769349_ruby-2.3.0/make.log**
+- **报错二：**
+  **① Error running '\_\_rvm_make -j 1',
+  showing last 15 lines of /Users/jijiucheng/.rvm/log/1475769349_ruby-2.3.0/make.log**
 
-*① 报错指令：*
+_① 报错指令：_
+
 ```
 $ rvm install 2.3.0
-``` 
-*② 报错信息：*
+```
+
+_② 报错信息：_
+
 ```
 Error running '__rvm_make -j 1',
 showing last 15 lines of /Users/jijiucheng/.rvm/log/1475769349_ruby-2.3.0/make.log
@@ -560,30 +616,36 @@ showing last 15 lines of /Users/jijiucheng/.rvm/log/1475769349_ruby-2.3.0/make.l
 ......
 There has been an error while running make. Halting the installation.
 ```
+
 ![报错信息 .png](https://images.xiaozhuanlan.com/photo/2019/8149348ef2d0cb73bf9c7d93463a5978.png)
-*③ 报错原因：*
+_③ 报错原因：_
 `缺少 Xcode 工具，xcode command line`
 
-*④ 解决方案：*
+_④ 解决方案：_
+
 ```
 $ xcode-select --install
 ```
+
 ![解决方案 .png](https://images.xiaozhuanlan.com/photo/2019/745d2f5b0c8ea51355b08d31fe8c338f.png)
 
-*⑤ 方案链接：*
+_⑤ 方案链接：_
 
-  - [方案解决链接 1 - http://stackoverflow.com/questions/35228481/error-running-rvm-make-install](http://stackoverflow.com/questions/35228481/error-running-rvm-make-install)
+- [方案解决链接 1 - http://stackoverflow.com/questions/35228481/error-running-rvm-make-install](http://stackoverflow.com/questions/35228481/error-running-rvm-make-install)
 
-  - [方案解决链接 2 - http://www.th7.cn/Program/Ruby/201609/966343.shtml](http://www.th7.cn/Program/Ruby/201609/966343.shtml)
+- [方案解决链接 2 - http://www.th7.cn/Program/Ruby/201609/966343.shtml](http://www.th7.cn/Program/Ruby/201609/966343.shtml)
 
-   - **报错三：**
-**① Gemset '' does not exist, 'rvm ruby-2.3.0 do rvm gemset create ' first, or append '--create'.**
+- **报错三：**
+  **① Gemset '' does not exist, 'rvm ruby-2.3.0 do rvm gemset create ' first, or append '--create'.**
 
-*① 报错指令：*
+_① 报错指令：_
+
 ```
 $ rvm install 2.3.0
-``` 
-*② 报错信息：*
+```
+
+_② 报错信息：_
+
 ```
 muxuguixiandeMacBook-Pro:local jijiucheng$ rvm install 2.3.0
 Already installed ruby-2.3.0.
@@ -593,85 +655,96 @@ To reinstall use:
 .
 Gemset '' does not exist, 'rvm ruby-2.3.0 do rvm gemset create ' first, or append '--create'.
 ```
+
 ![报错信息 .png](https://images.xiaozhuanlan.com/photo/2019/e4cba7ce38746a9cdd6e2c1fffd31fbf.png)
-*③ 报错原因：*
+_③ 报错原因：_
 `指令不对，已经存在 ruby-2.3.0 的文件残留，需要重新安装；`
 
-*④ 解决方案：*
+_④ 解决方案：_
+
 ```
 $ rvm reinstall ruby-2.3.0
 ```
+
 ![解决方案 .png](https://images.xiaozhuanlan.com/photo/2019/f41814386677c6293956234557763cb5.png)
 
 ### 2、Ruby 环境搭建
-   - **报错一：**
+
+- **报错一：**
 
 ### 3、CocoaPods 安装
 
 ### 4、CocoaPods 配置使用
 
-   - **报错一：**
-**① Setting up CocoaPods master repo**
-**② [!] Unable to add a source with url `https://github.com/CocoaPods/Specs.git` named `master`. You can try adding it manually in `~/.cocoapods/repos` or via `pod repo add`.**
+- **报错一：**
+  **① Setting up CocoaPods master repo**
+  **② [!] Unable to add a source with url `https://github.com/CocoaPods/Specs.git` named `master`. You can try adding it manually in `~/.cocoapods/repos` or via `pod repo add`.**
 
-*① 报错指令：*
+_① 报错指令：_
+
 ```
 $ pod install
 ```
-*② 报错信息：*
+
+_② 报错信息：_
+
 ```
 muxuguixiandeMacBook-Pro:NFCustomer jijiucheng$ pod install
 Setting up CocoaPods master repo
 [!] Unable to add a source with url `https://github.com/CocoaPods/Specs.git` named `master`.
 You can try adding it manually in `~/.cocoapods/repos` or via `pod repo add`.
 ```
+
 ![报错信息 .png](https://images.xiaozhuanlan.com/photo/2019/d98a030117e5e484ba69a22940c9a251.png)
-*③ 报错原因：*
+_③ 报错原因：_
 `由于安装了多个Xcode导致路径变了，需要变换路径：
 sudo xcode-select -switch /Applications/Xcode.app 
 sudo xcode-select -switch /Applications/Xcode\ 2.app `
 
-*④ 解决方案：*
+_④ 解决方案：_
+
 ```
 $ sudo xcode-select -switch /Applications/Xcode.app
 ```
+
 ![解决方案 .png](https://images.xiaozhuanlan.com/photo/2019/fb97779e1c099de24728897389c62c9a.png)
-*⑤ 资料补充：*
+_⑤ 资料补充：_
 
 > `出现 Setting up CocoaPods master repo，说明 Cocoapods 在将它的信息下载到  ~/.cocoapods 里；
-> 新创建终端窗口，输入 cd ~/.cocoapods ，回车，输入 du -sh *  命令来查看文件大小，
-> 每隔几分钟查看一次，这个目录最终大小是100多M（ 本人这里大概 800M + ），就是完成了。`
+新创建终端窗口，输入 cd ~/.cocoapods ，回车，输入 du -sh *  命令来查看文件大小，
+每隔几分钟查看一次，这个目录最终大小是100多M（ 本人这里大概 800M + ），就是完成了。`
 
-*⑥ 方案链接：*
+_⑥ 方案链接：_
 
-  - [方案解决链接 1 - ios开发怎样卸载已经安装的cocoapod](http://zhidao.baidu.com/link?url=WZj_AtGSTkdb0J3G09EdHxqNaD6eM6Uf5u-Qp6-SrFbDBUzA5Bhka9qQ_uHQe67Pn51nWw3wrulL2vy-nfal8KpLqMN_5-ahsYHY6G_8eOa)
-  
-  - [方案解决链接 2 - CocoaPods安装和使用及问题：Setting up CocoaPods master repo](http://blog.csdn.net/zhangjunjian127/article/details/47954981)
+- [方案解决链接 1 - ios 开发怎样卸载已经安装的 cocoapod](http://zhidao.baidu.com/link?url=WZj_AtGSTkdb0J3G09EdHxqNaD6eM6Uf5u-Qp6-SrFbDBUzA5Bhka9qQ_uHQe67Pn51nWw3wrulL2vy-nfal8KpLqMN_5-ahsYHY6G_8eOa)
 
-
+- [方案解决链接 2 - CocoaPods 安装和使用及问题：Setting up CocoaPods master repo](http://blog.csdn.net/zhangjunjian127/article/details/47954981)
 
 # 四、资料补充
+
 ### 1、指令补全
 
-  - **① Rvm 指令库**
-  
+- **① Rvm 指令库**
+
 ```
-$ ruby -v                     #  查看ruby 版本 
+$ ruby -v                     #  查看ruby 版本
 $ rvm list known              #  列出已知的 ruby 版本
-$ rvm install 2.3.0           #  选择指定 ruby 版本进行更新 
+$ rvm install 2.3.0           #  选择指定 ruby 版本进行更新
 $ rvm get stable              #  更新 rvm
 $ rvm use 2.2.2               #  切换到指定 ruby 版本
-$ rvm use 2.2.2 --default     #  设置指定 ruby 版本为默认版本  
-$ rvm list                    #  查询已安装的 ruby 版本 
-$ rvm remove 1.9.2            #  卸载移除 指定 ruby 版本 
+$ rvm use 2.2.2 --default     #  设置指定 ruby 版本为默认版本
+$ rvm list                    #  查询已安装的 ruby 版本
+$ rvm remove 1.9.2            #  卸载移除 指定 ruby 版本
 ```
+
 ```
 $ curl -L https://get.rvm.io | bash -s stable                    #  安装 rvm 环境
 $ curl -sSL https://get.rvm.io | bash -s stable --ruby           #  默认安装 rvm 最新版本
 $ curl -sSL https://get.rvm.io | bash -s stable --ruby=2.3.0     #  安装 rvm 指定版本
-$ source ~/.rvm/scripts/rvm                                      #  载入 rvm 
+$ source ~/.rvm/scripts/rvm                                      #  载入 rvm
 ```
- - **②  gem 指令库**
+
+- **② gem 指令库**
 
 ```
 $ gem -v                                  #  查看 gem 版本
@@ -715,7 +788,7 @@ $ sudo gem update cocoapods --pre         #  更新 CocoaPods 至预览版（以
 $ sudo gem uninstall cocoapods -v 0.39.0  #  移除 CocoaPods 指定版本（以管理员权限）
 ```
 
- - **③  pod 指令库**
+- **③ pod 指令库**
 
 ```
 $ pod setup                         #  CocoaPods 将信息下载到~/.cocoapods/repos 目录下。如果安装 CocoaPods 时不执行此命令，在初次执行 pod intall 命令时，系统也会自动执行该指令
@@ -723,53 +796,53 @@ $ pod --version                     #  检查 CocoaPods 是否安装成功及其
 $ pod install                       #  安装 CocoaPods 的配置文件 Podfile
 ```
 
-
 # 五、引用资料
 
-> 说明：此处是列举了我安装CocoaPods 和写这篇文章时查询引用的文章，如有涉及到版权问题，请联系，我会删除的。
+> 说明：此处是列举了我安装 CocoaPods 和写这篇文章时查询引用的文章，如有涉及到版权问题，请联系，我会删除的。
 
-
-- **01** - [Rvm、Ruby及Cocoapods安装](http://www.jianshu.com/p/934849a5232a)
-- **02** - [RVM 和 Ruby的安装](http://www.jianshu.com/p/7fedee946f40)
-- **03** - [iOS的库依赖管理工具CocoaPods](http://www.jianshu.com/p/0cea9006c0cb)
-- **04** - [CocoaPods的安装以及遇到的坑](http://www.cocoachina.com/ios/20160922/17622.html)
-- **05** - [ios开发怎样卸载已经安装的cocoapod](http://zhidao.baidu.com/link?url=WZj_AtGSTkdb0J3G09EdHxqNaD6eM6Uf5u-Qp6-SrFbDBUzA5Bhka9qQ_uHQe67Pn51nWw3wrulL2vy-nfal8KpLqMN_5-ahsYHY6G_8eOa)
-- **06** - [配置CocoaPods前 - 本地安装好Ruby环境](http://www.cnblogs.com/cwllong/p/5072882.html)
-- **07** - [iOS 学习笔记二【cocopods安装使用和安装过程中遇到的问题及解决办法】【20160725更新】](http://www.cnblogs.com/boai/p/4977976.html)
-- **08** - [ruby学习及编译ruby缺少openssl问题解决](http://www.cnblogs.com/netbuddy/p/3501147.html)
+- **01** - [Rvm、Ruby 及 Cocoapods 安装](http://www.jianshu.com/p/934849a5232a)
+- **02** - [RVM 和 Ruby 的安装](http://www.jianshu.com/p/7fedee946f40)
+- **03** - [iOS 的库依赖管理工具 CocoaPods](http://www.jianshu.com/p/0cea9006c0cb)
+- **04** - [CocoaPods 的安装以及遇到的坑](http://www.cocoachina.com/ios/20160922/17622.html)
+- **05** - [ios 开发怎样卸载已经安装的 cocoapod](http://zhidao.baidu.com/link?url=WZj_AtGSTkdb0J3G09EdHxqNaD6eM6Uf5u-Qp6-SrFbDBUzA5Bhka9qQ_uHQe67Pn51nWw3wrulL2vy-nfal8KpLqMN_5-ahsYHY6G_8eOa)
+- **06** - [配置 CocoaPods 前 - 本地安装好 Ruby 环境](http://www.cnblogs.com/cwllong/p/5072882.html)
+- **07** - [iOS 学习笔记二【cocopods 安装使用和安装过程中遇到的问题及解决办法】【20160725 更新】](http://www.cnblogs.com/boai/p/4977976.html)
+- **08** - [ruby 学习及编译 ruby 缺少 openssl 问题解决](http://www.cnblogs.com/netbuddy/p/3501147.html)
 - **09** - [如何在本地安装多个版本的 CocoaPods](https://www.jianshu.com/p/ca57863c4109)
 - **10** - [CocoaPods 1.8 Beta is Here!](http://blog.cocoapods.org/CocoaPods-1.8.0-beta/)
 
-- **01** - [解决升级EI Capiton CocoaPods "pod: command not found"](http://www.jianshu.com/p/6ff1903c3f11)
+- **01** - [解决升级 EI Capiton CocoaPods "pod: command not found"](http://www.jianshu.com/p/6ff1903c3f11)
 - **02** - [curl: (35) Server aborted the SSL handshake](https://segmentfault.com/q/1010000004276750)
-- **03** - [第一种 - Error running '__rvm_make -j 1'](http://stackoverflow.com/questions/35228481/error-running-rvm-make-install)
-- **04** - [第二种 - Error running '__rvm_make -j 1'](http://www.th7.cn/Program/Ruby/201609/966343.shtml)
+- **03** - [第一种 - Error running '\_\_rvm_make -j 1'](http://stackoverflow.com/questions/35228481/error-running-rvm-make-install)
+- **04** - [第二种 - Error running '\_\_rvm_make -j 1'](http://www.th7.cn/Program/Ruby/201609/966343.shtml)
 - **05** - [[!] Unable to add a source with url "xxxxxxxxxxxxx"](http://zhidao.baidu.com/link?url=WZj_AtGSTkdb0J3G09EdHxqNaD6eM6Uf5u-Qp6-SrFbDBUzA5Bhka9qQ_uHQe67Pn51nWw3wrulL2vy-nfal8KpLqMN_5-ahsYHY6G_8eOa)
 - **06** - [Error running 'requirements_osx_brew_update_system ruby-2.0.0-p643'](http://blog.csdn.net/luohancc/article/details/46897247)
-- **07** - [关于安装cocoapods遇到的一些坑（ERROR: Error installing cocoapods: activesupport requires Ruby version >= 2.2）](http://blog.csdn.net/fairytale_1/article/details/51850734)
+- **07** - [关于安装 cocoapods 遇到的一些坑（ERROR: Error installing cocoapods: activesupport requires Ruby version >= 2.2）](http://blog.csdn.net/fairytale_1/article/details/51850734)
 - **08** - [Homebrew install: Failed during: git fetch origin master:refs/remotes/origin/master -n --depth=1](http://stackoverflow.com/questions/39836190/homebrew-install-failed-during-git-fetch-origin-masterrefs-remotes-origin-mas)
 - **09** - [Pod /usr/bin/git clone https://github.com/CocoaPods/Specs.git master](http://www.jianshu.com/p/90ca71b3b94a)
-- **10** -[命令行执行命令时报错You don't have write permissions for the /Library/***](https://blog.csdn.net/soindy/article/details/46470463)
+- **10** -[命令行执行命令时报错 You don't have write permissions for the /Library/\*\*\*](https://blog.csdn.net/soindy/article/details/46470463)
 - **11** -[gem install cocoapods ERROR: While executing gem ... (Gem::FilePermissionError)](https://blog.csdn.net/kangguang/article/details/79544515)
 - **12** - [zsh: /usr/local/bin/pod: bad interpreter: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: no such file or directory](https://www.cnblogs.com/BK-12345/p/11645856.html)
 - **13** - [[!] CDN: trunk Repo update failed](https://www.jianshu.com/p/bf1cbe49cb5d)
 - **14** - [Homebrew installation on Mac OS X Failed to connect to raw.githubusercontent.com port 443](https://stackoverflow.com/questions/29910217/homebrew-installation-on-mac-os-x-failed-to-connect-to-raw-githubusercontent-com)
-- **15** - [安装homebrew报错curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
-- **16** - [简书 - 新生代农民工No1 - CocoaPods私有库制作](https://www.jianshu.com/p/0da5a4710850)
-
+- **15** - [安装 homebrew 报错 curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
+- **16** - [简书 - 新生代农民工 No1 - CocoaPods 私有库制作](https://www.jianshu.com/p/0da5a4710850)
 
 # 六、后续更新
 
-### 2016.12.15  问题更新
- - **安装 CocoaPods 步骤指令问题**
-> ① 最初写的：
+### 2016.12.15 问题更新
+
+- **安装 CocoaPods 步骤指令问题**
+  > ① 最初写的：
+
 ```
 由于 OS X 系统的不同，此处的指令也是有些变化:
 OS X 10.11之前系统的安装 CocoaPods 指令： $ sudo gem install cocoapods
 OS X 10.11以后系统的安装 CocoaPods 指令： $ sudo gem install -n /usr/local/bin cocoa pods
 ```
+
 ② 更改原因：
- *因为有朋友说在 `mac OS 10.11` 和 `mac OS 10.12` 环境中所用的指令不一样，当时写这篇文章的时候环境是 `mac OS 10.11` ，但是并没有做 `mac OS 10.12` 的环境，今天又做了一下测试，现在的环境是 `mac OS 10.12.1`。*
+_因为有朋友说在 `mac OS 10.11` 和 `mac OS 10.12` 环境中所用的指令不一样，当时写这篇文章的时候环境是 `mac OS 10.11` ，但是并没有做 `mac OS 10.12` 的环境，今天又做了一下测试，现在的环境是 `mac OS 10.12.1`。_
 ![测试环境 mac OS 10.12.1.png](https://images.xiaozhuanlan.com/photo/2019/48fc1197230defb6860929167adfee1f.png)
 
 ③ 测试结果：
@@ -796,7 +869,6 @@ OS X 10.11以后系统的安装 CocoaPods 指令： $ sudo gem install -n /usr/l
 
 `三种结果都能安装 Cocoapods 成功，只不过安装更新的内容略有不同。
 推荐使用：指令：$ sudo gem install cocoapods`
-
 
 ### 2018.04.08 更新
 
@@ -857,8 +929,6 @@ gem -v             2.6.6
 
   - [② 如何在本地安装多个版本的 CocoaPods](https://www.jianshu.com/p/ca57863c4109)
 
-
-
 ### 2018.07.23 更新
 
 - **1、报错信息**
@@ -889,11 +959,12 @@ fatal: unpack-objects failed
 - **2、解决办法**
 
 ```
-因为本人使用的是 SourceTree，所以本人是在具体项目界面的，点击右上角 Settings --> Remotes --> Edit Config File... --> 输入 `[http] 
+因为本人使用的是 SourceTree，所以本人是在具体项目界面的，点击右上角 Settings --> Remotes --> Edit Config File... --> 输入 `[http]
         postBuffer = 524288000`  增大缓存空间。
 
 保存后再次 pod install 则解决了。
 ```
+
 ```
 另外见到一种方法，但是没有测试：
 
@@ -901,9 +972,8 @@ git clone https://git.coding.net/CocoaPods/Specs.git ~/.cocoapods/repos/master
 ```
 
 - **3、参考链接**
-  
-  - [安装cocoapods设置pod的时候](https://blog.csdn.net/love9099/article/details/79738724)
 
+  - [安装 cocoapods 设置 pod 的时候](https://blog.csdn.net/love9099/article/details/79738724)
 
 ### 2018.10.10 更新
 
@@ -931,7 +1001,6 @@ Error fetching https://gems.ruby-china.org:
 
   - [Error fetching https://gems.ruby-china.org/: bad response Not Found 404 (https://gems.ruby-china.org/specs.4.8.gz)](http://www.mamicode.com/info-detail-2427771.html)
 
-
 ### 2019.12.14 更新
 
 #### 1、问题一：`-bash: /usr/local/bin/pod: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: bad interpreter: No such file or directory`
@@ -945,7 +1014,7 @@ mxgx:PetBar mxgx$ pod --version
 
 - **2、解决办法**
 
-> 主要是因为升级 `macOS Catalina version 10.15` 引起的  `cocoapods` 无法使用了。
+> 主要是因为升级 `macOS Catalina version 10.15` 引起的 `cocoapods` 无法使用了。
 
 ```
 mxgx:PetBar mxgx$ sudo gem update --system
@@ -961,7 +1030,6 @@ mxgx:PetBar mxgx$ pod --version
 
 - **3、参考链接**
   - [zsh: /usr/local/bin/pod: bad interpreter: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: no such file or directory](https://www.cnblogs.com/BK-12345/p/11645856.html)
-
 
 #### 2、问题二：`[!] CDN: trunk Repo update failed - 127 error(s):`
 
@@ -1002,6 +1070,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 end
 ```
+
 ```
 mxgx:PetBar mxgx$ pod repo remove trunk
 Removing spec repo `trunk`
@@ -1027,10 +1096,9 @@ Pod installation complete! There are 9 dependencies from the Podfile and 11 tota
 ```
 
 - **3、参考链接**
-  
+
   - [[!] CDN: trunk Repo update failed](https://www.jianshu.com/p/bf1cbe49cb5d)
   - [CocoaPods 1.8 Beta is Here!](http://blog.cocoapods.org/CocoaPods-1.8.0-beta/)
-
 
 #### 3、问题三：`curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused`
 
@@ -1148,10 +1216,10 @@ Read the analytics documentation (and how to opt-out) here:
   https://github.com/Homebrew/brew#donations
 ==> Next steps:
 - Run `brew help` to get started
-- Further documentation: 
+- Further documentation:
     https://docs.brew.sh
-mxgx:Desktop mxgx$ 
-mxgx:Desktop mxgx$ 
+mxgx:Desktop mxgx$
+mxgx:Desktop mxgx$
 mxgx:Desktop mxgx$ curl -L https://get.rvm.io | bash -s stable
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -1182,16 +1250,16 @@ rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://r
 
 - **3、参考链接**
   - [Homebrew installation on Mac OS X Failed to connect to raw.githubusercontent.com port 443](https://stackoverflow.com/questions/29910217/homebrew-installation-on-mac-os-x-failed-to-connect-to-raw-githubusercontent-com)
-  - [安装homebrew报错curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
-
+  - [安装 homebrew 报错 curl: (7) Failed to connect to raw.githubusercontent.com port 443: Operation](https://www.jianshu.com/p/68efabd2e32b)
 
 ### 2020.05.08 更新
 
-#### 问题一：xcode-select: error: invalid developer directory '/Library/Developer/CommandLineTools'  Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
+#### 问题一：xcode-select: error: invalid developer directory '/Library/Developer/CommandLineTools' Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
 
 - **1、报错信息**
 
 > 在安装 brew 的时候，执行如下命令时出现如下报错：
+>
 > ```
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 > ```
@@ -1209,39 +1277,42 @@ Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/C
 - **2、解决办法**
 
 > 查询了很多资料，发现主要就是因为路径产生一些错误问题，网上也给了很多解决办法，但是经过本人测试，发现比较实在点的方法：
-> 
+>
 > 1、直接去 [Apple Developer - More Downloads](https://developer.apple.com/download/more/) 下载对应 Xcode 版本的 `Command Line Tools for Xcode` 文件，估计在 200MB+；
-> 
+>
 > 2、说明步骤一：【其实也可以通过执行如下指令进行安装，但是发现有时候会无法进行安装，大概原因是由于之前存在的旧版本，被识别到了之后就不会再进行安装了】
+>
 > ```
 > xcode-select --install
 > ```
-> 
+>
 > 3、执行指令如下指令，会得到相应的路径结果：
+>
 > ```
 > xcode-select -p
 > 结果：/Applications/Xcode.app/Contents/Developer
 > ```
-> 
+>
 > 4、然后在执行如下指令更改路径即可：
+>
 > ```
 > sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 > ```
-> 
+>
 > 5、最后再次执行 brew 的安装命令即可：
+>
 > ```
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 > ```
 
-
 - **3、参考链接**
-  
+
   - [Homebrew - 主页](https://brew.sh/index_zh-cn.html)
   - [Stack Overflow - I tried rvm install 2.1 and I got this error xcode-select: error: invalid developer directory](https://stackoverflow.com/questions/48562808/i-tried-rvm-install-2-1-and-i-got-this-error-xcode-select-error-invalid-develo)
 
-
 ### 2022.09.16 更新
-#### 问题一：ERROR:  SSL verification error at depth 1: unable to get local issuer certificate (20) ERROR:  You must add /O=Digital Signature Trust Co./CN=DST Root CA X3 to your local tr sted store
+
+#### 问题一：ERROR: SSL verification error at depth 1: unable to get local issuer certificate (20) ERROR: You must add /O=Digital Signature Trust Co./CN=DST Root CA X3 to your local tr sted store
 
 - **1、报错信息**
 
@@ -1266,7 +1337,7 @@ ERROR:  SSL verification error at depth 1: unable to get local issuer certificat
 后经过多方尝试，最终解决了：
 
 ```
-/// 执行了如下相关指令： 
+/// 执行了如下相关指令：
 
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 $ brew update
@@ -1303,9 +1374,9 @@ brew cleanup -n
 
 - **3、参考资料**
 
-- [知乎 - Mac下Homebrew的基本命令](https://zhuanlan.zhihu.com/p/90765541)
-- [CSDN - CocoaPods安装出现SSL verification error](https://blog.csdn.net/ios_xumin/article/details/76732271)
-- [CSDN - gem install bundler SSL证书错误 解决办法](https://blog.csdn.net/syx_1990/article/details/120895133)
+- [知乎 - Mac 下 Homebrew 的基本命令](https://zhuanlan.zhihu.com/p/90765541)
+- [CSDN - CocoaPods 安装出现 SSL verification error](https://blog.csdn.net/ios_xumin/article/details/76732271)
+- [CSDN - gem install bundler SSL 证书错误 解决办法](https://blog.csdn.net/syx_1990/article/details/120895133)
 
 #### 问题二：/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems.rb:283:in `find_spec_for_exe': can't find gem cocoapods (>= 0.a) with executable pod (Gem::GemNotFoundException)
 
@@ -1342,7 +1413,7 @@ $ brew link --overwrite cocoapods
 ==> Downloading https://ghcr.io/v2/homebrew/core/cocoapods/blobs/sha256:92ea102a56b7f97ea877b289b92ac7005f10be6ad68917f451160f97345
 ==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:92ea102a56b7f97ea877b289b92ac7005f10be6ad68917
 ######################################################################## 100.0%
-==> Reinstalling cocoapods 
+==> Reinstalling cocoapods
 ==> Pouring cocoapods--1.11.3.monterey.bottle.tar.gz
 Error: The `brew link` step did not complete successfully
 The formula built, but is not symlinked into /usr/local
@@ -1487,16 +1558,24 @@ Done installing documentation for atomos, rexml, CFPropertyList, claide, colored
 1.11.3
 ```
 
+> **2024.04.06 更新：**
+>
+> - 1、查看是否存在多个 ruby 版本，通过 `rvm list` 进行查看，建议使用多个版本中的最高版本；
+> - 2、可以通过 `rvm use ruby-3.2.0 --default` 类似的方法设置 `ruby` 版本；
+> - 3、然后再次检测是否仍有报错。
+
 - **3、参考资料**
 
 - [CSDN - pod lib create 报错的问题](https://blog.csdn.net/qq_30932479/article/details/117771804)
-- [CSDN - React-Native ios pod install问题](https://blog.csdn.net/weixin_45922009/article/details/121465164)
-- [简书 - CocoaPods踩坑:activate_dependencies': Could not find 'CFPropertyList' (>= 2.3.3, < 4.0) among 78 to...](http://events.jianshu.io/p/17ef41eba67c)
+- [CSDN - React-Native ios pod install 问题](https://blog.csdn.net/weixin_45922009/article/details/121465164)
+- [简书 - CocoaPods 踩坑:activate_dependencies': Could not find 'CFPropertyList' (>= 2.3.3, < 4.0) among 78 to...](http://events.jianshu.io/p/17ef41eba67c)
 
 ### 2023.05.04 更新
+
 #### pod search 搜索很慢或搜索为空问题
 
 - 解决办法：
+
   - ① 执行 `rm ~/Library/Caches/CocoaPods/ search_index.json` 指令，清除 `pod search` 缓存；
   - ② 执行 `pod setup` 将 `CocoaPods` 信息下载到 `~/.cocoapods/repos/` 文件目录下；
   - ③ 在 `~/.cocoapods/repos/` 目录文件夹下，通过 `pod repo list` 指令查询当前源 `list`；
@@ -1504,41 +1583,39 @@ Done installing documentation for atomos, rexml, CFPropertyList, claide, colored
   - ⑤ 通过 `pod repo remove 'trunk'` 指令移除 `trunk` 源即可。
 
 - 参考链接：
-  - [iOS解决cocoapods 搜索速度慢或者搜索失败问题](https://www.jianshu.com/p/6e2677cc6590)
+  - [iOS 解决 cocoapods 搜索速度慢或者搜索失败问题](https://www.jianshu.com/p/6e2677cc6590)
   - [CocoaPods 【pod search 搜索类库失败的解决办法】](https://wangzhongyao.blog.csdn.net/article/details/53924210)
 
-------
+---
 
 # 声明：
+
 > 报错信息板块尚未写完，后面有时间会继续完善！！！
 > 如果有错误的信息，希望大家可以指出，进而及时修改，相互学习！！！
 > 如有转载的，希望可以注明出处！！！
 
-----
-
+---
 
 # 版权声明
 
 > **原文作者**：[苜蓿鬼仙（苜蓿、jijiucheng）](https://jijiucheng.github.io/)
-> 
-> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【iOS】rvm、Ruby环境和CocoaPods安装使用及相关报错问题解决（2020.09.16 更新）](https://jijiucheng.github.io/2020/04/17/CocoaPods/)
-> 
+>
+> **原文链接**：[GitHub.io - 苜蓿鬼仙 - 【iOS】rvm、Ruby 环境和 CocoaPods 安装使用及相关报错问题解决（2020.09.16 更新）](https://jijiucheng.github.io/2020/04/17/CocoaPods/)
+>
 > **发表日期**：2020/04/17 17:00:00
-> 
+>
 > **更新日期**：2023/05/04 12:00:00
-> 
-> -
-> 
-> **GitHub**：[GitHub - jijiucheng](https://github.com/jijiucheng)
-> 
-> **个人博客**：[GitHub.io - 苜蓿鬼仙](https://jijiucheng.github.io)
-> 
-> **小专栏**：[小专栏 - 苜蓿鬼仙](https://xiaozhuanlan.com/u/6667468960)
-> 
-> **掘金**：[掘金 - 苜蓿鬼仙](https://juejin.im/user/5a31e95c51882533d023137d)
-> 
-> **微博**：[微博 - 苜蓿鬼仙](https://weibo.com/u/1585459545)
-> 
-> **公众号**：[微信 - 苜蓿小站](#)
-> 
-> **小程序**：[微信 - 苜蓿小站](#)
+>
+> - **GitHub**：[GitHub - jijiucheng](https://github.com/jijiucheng)
+>
+>   **个人博客**：[GitHub.io - 苜蓿鬼仙](https://jijiucheng.github.io)
+>
+>   **小专栏**：[小专栏 - 苜蓿鬼仙](https://xiaozhuanlan.com/u/6667468960)
+>
+>   **掘金**：[掘金 - 苜蓿鬼仙](https://juejin.im/user/5a31e95c51882533d023137d)
+>
+>   **微博**：[微博 - 苜蓿鬼仙](https://weibo.com/u/1585459545)
+>
+>   **公众号**：[微信 - 苜蓿小站](#)
+>
+>   **小程序**：[微信 - 苜蓿小站](#)
