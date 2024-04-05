@@ -1586,6 +1586,28 @@ Done installing documentation for atomos, rexml, CFPropertyList, claide, colored
   - [iOS 解决 cocoapods 搜索速度慢或者搜索失败问题](https://www.jianshu.com/p/6e2677cc6590)
   - [CocoaPods 【pod search 搜索类库失败的解决办法】](https://wangzhongyao.blog.csdn.net/article/details/53924210)
 
+### 2024.04.06 更新
+
+#### SDK does not contain 'libarclite' at the path
+
+> **报错信息：**
+>
+> - `SDK does not contain 'libarclite' at the path '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_iphoneos.a'; try increasing the minimum deployment target`
+>
+> **报错原因：**
+>
+> - `Xcode 15` 在某些 `CocoaPods` 中存在构建问题，因为其 `XcodeDefaults` 工具链内容中缺少 `.a` 文件。
+>
+> **解决办法：**
+>
+> - 1、将缺失文件拷贝放入 `/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/` 文件夹下；
+> - 2、如果没有该文件就手动创建该文件即可；
+> - 3、缺少哪种文件就将哪种文件放入该文件夹即可，建议将 `libarclite_iphonesimulator.a` 和 `libarclite_iphoneos.a` 两个文件优先放入其中，毕竟是最常用的。
+>
+> **下载链接：**
+>
+> - [GitHub - jijiucheng/JJC_iOS_DeviceSupport](https://github.com/jijiucheng/JJC_iOS_DeviceSupport)
+
 ---
 
 # 声明：
