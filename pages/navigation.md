@@ -1,8 +1,8 @@
 ---
-layout: page
-title: Navigation
-keywords: 导航
-description: 自用导航
+layout: default
+title: 导航
+keywords: 导航,苜蓿,苜蓿小站,苜蓿导航
+description: 苜蓿导航
 permalink: /navigation/
 ---
 
