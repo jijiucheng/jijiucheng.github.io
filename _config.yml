@@ -8,31 +8,31 @@ title: 苜蓿鬼仙
 subtitle: "曾梦想仗剑天涯，后来工作忙没去"
 description: "GitHub - jijiucheng 个人博客"
 keywords: 苜蓿, 鬼仙, 苜蓿鬼仙, jijiucheng, mxgx
-timezone: '+0800'
+timezone: "+0800"
 encoding: "utf-8"
 side_bar_repo_limit: 5
 repository: jijiucheng/jijiucheng.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 # 如果想在本地预览时能看到图片，需要将 cdn 暂时关闭，当正式上传时在更改为 true 即可
 cdn:
-    jsdelivr:
-        enabled: false
+  jsdelivr:
+    enabled: false
 # 组件配置
 components:
-    # 分享
-    share:
-        enabled: false
-    # 不蒜子访问统计
-    busuanzi:
-        enabled: true
-        start_date: 2020-05-28
+  # 分享
+  share:
+    enabled: false
+  # 不蒜子访问统计
+  busuanzi:
+    enabled: true
+    start_date: 2020-05-28
 # 压缩页面内容
 compress_html:
   clippings: all
   comments: ["<!--", "-->"]
 # 文章字数统计
 word_count:
-    enabled: true
+  enabled: true
 # 代码高亮风格，支持的 theme 列表见 https://github.com/mzlogin/rouge-themes
 highlight_theme: github
 
@@ -40,8 +40,8 @@ highlight_theme: github
 #      Author      #
 # ---------------- #
 author: 苜蓿鬼仙
-organization: 
-organization_url: 
+organization:
+organization_url:
 github_username: jijiucheng
 location: Hefei, China
 email: jijiucheng999@gmail.com
@@ -50,32 +50,25 @@ email: jijiucheng999@gmail.com
 #    Navigation    #
 # ---------------- #
 navs:
-  -
-    href: /
+  - href: /
     label: 首页
 
-  -
-    href: /categories/
+  - href: /categories/
     label: 分类
 
-  -
-    href: /archives/
+  - href: /archives/
     label: 归档
 
-#   -
-#     href: /open-source/
-#     label: 开源
+  - href: /open-source/
+    label: 开源
 
-  -
-    href: /wiki/
+  - href: /wiki/
     label: 维基
 
-  -
-    href: /links/
+  - href: /links/
     label: 链接
 
-  -
-    href: /about/
+  - href: /about/
     label: 关于
 
 # ---------------- #
@@ -88,7 +81,7 @@ subscribe_rss: /feed.xml
 # ---------------- #
 markdown: kramdown
 kramdown:
-    input: GFM
+  input: GFM
 highlighter: rouge
 paginate: 20
 lsi: false
@@ -96,18 +89,18 @@ quiet: false
 excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
 plugins:
-    - jekyll-github-metadata
-    - rouge
-#     - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
+  - jekyll-github-metadata
+  - rouge
+  #     - jekyll-html-pipeline
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
 #     - jekyll-mentions
 collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+  wiki:
+    output: true
+    permalink: /wiki/:path/
 
 # ---------------- #
 #      Comments    #
@@ -118,39 +111,39 @@ comments_provider: gitalk
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: 
+  username:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: jijiucheng
-    repo: jijiucheng.github.io
-    oauth:
-        client_id: 0c478d9a528799ea0055
-        client_secret: 814f60320dfdcafe2a4bca07e978e52cef309f61
+  owner: jijiucheng
+  repo: jijiucheng.github.io
+  oauth:
+    client_id: 0c478d9a528799ea0055
+    client_secret: 814f60320dfdcafe2a4bca07e978e52cef309f61
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: jijiucheng
-    repo: jijiucheng.github.io
-    clientID: 359b06ea524a7700164d
-    clientSecret: 306575c0f8ef949e860ca7012153ea30580a1502
+  owner: jijiucheng
+  repo: jijiucheng.github.io
+  clientID: 359b06ea524a7700164d
+  clientSecret: 306575c0f8ef949e860ca7012153ea30580a1502
 # 在使用其它评论组件时可点击显示 Disqus
-lazy_load_disqus : false
+lazy_load_disqus: false
 
 # ---------------- #
 #      Search      #
 # ---------------- #
 simple_jekyll_search:
-    # 是否支持全文搜索
-    fulltext: false
-    # 最多显示多少条搜索结果
-    limit: 20
+  # 是否支持全文搜索
+  fulltext: false
+  # 最多显示多少条搜索结果
+  limit: 20
 
 # ---------------- #
 #      Google      #
 # ---------------- #
 google:
-    analytics_id: UA-80669434-1
-    adsense:
-        footer: true
-        sidebar: true
-        content_header: true
-        content_footer: false
+  analytics_id: UA-80669434-1
+  adsense:
+    footer: true
+    sidebar: true
+    content_header: true
+    content_footer: false
