@@ -18,7 +18,7 @@ permalink: /navigation/
     <div class="navigation-wrapper">
         <div class='left-navi'>
             {% for category in site.data.navigation %}
-            <div class="left-navi-item">{{ category.title }}</div>
+            <div class="left-navi-item" onclick="clickLeftNaviItem({{ category.index }})">{{ category.title }}</div>
             {% endfor %}
         </div>
         <div class='right-content'>
@@ -30,12 +30,12 @@ permalink: /navigation/
                         {% if subCategory.index == 0 %}
                             {% assign temp_subCategory = subCategory %}
                         {% endif %}
-                        <span class="subNavi-item">{{ subCategory.title }}</span>
+                        <span class="subNavi-item" onclick="clickSubNaviItem({{ category.index }}, {{ subCategory.index }})">{{ subCategory.title }}</span>
                     {% endfor %}
                 </div>
                 <div class="links-wrapper">
                     {% for link in temp_subCategory.list %}
-                    <a class="link-item" href="{{ link.url }}" name="{{ link.url }}" target="_blank">{{ link.title }}</a>
+                    <a class="link-item" href="{{ link.url }}" title="{{ link.url }}" target="_blank">{{ link.title }}</a>
                     {% endfor %}
                 </div>
             </div>

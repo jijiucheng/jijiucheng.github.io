@@ -1,5 +1,9 @@
-function clickLeftNaviItem() {
-  console.log('点击左侧导航 --- ')
+function clickLeftNaviItem(index) {
+  console.log('点击左侧导航 --- ', index)
+}
+
+function clickSubNaviItem(index, subIndex) {
+  console.log('点击右侧导航 --- ', index, subIndex)
 }
 
 
