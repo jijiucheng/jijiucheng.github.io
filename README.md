@@ -1,6 +1,4 @@
-
 ![Alt](https://repobeats.axiom.co/api/embed/6a92e95ae0fa31390c50862fb1bcfb1a4e807f2c.svg "Repobeats analytics image")
-
 
 # jijiucheng.github.io
 
@@ -12,3 +10,6 @@
 - [参考搭建方法](https://www.jianshu.com/p/8a22eaf8c5ca)
 - [参考主题](https://github.com/mzlogin/mzlogin.github.io)
 - [在本地预览博客效果可以参考 Setting up your Pages site locally with Jekyll](https://help.github.com/cn/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll#)
+- []()
+- [Jekyllcn](https://jekyllcn.com/)
+- [Liquid](https://liquid.bootcss.com/)
