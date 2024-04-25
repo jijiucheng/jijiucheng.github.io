@@ -41,7 +41,7 @@
   flex-direction: column;
   width: 100%;
   height: 200px;
+  margin-bottom: 20px;
   border: 1px solid #DDD;
   border-radius: 3px;
-  background-color: pink;
 }

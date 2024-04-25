@@ -15,6 +15,18 @@ permalink: /navigation/
     <header class="text-center">
         <h1>苜蓿导航</h1>
     </header>
-    <div class="navigation-wrapper"></div>
+    <div class="navigation-wrapper">
+        <div class='left-navi'>
+            {% for item in site.data.navigation %}
+            <div class="left-navi-item">{{ item.title }}</div>
+            {% endfor %}
+        </div>
+        <div class='right-content'>
+            {% for item in site.data.navigation %}
+            <div class="right-content-item">{{ item.title }}</div>
+            {% endfor %}
+        </div>
+    </div>
+
 </section>
 {% endif %}
