@@ -9,13 +9,12 @@ permalink: /navigation/
 {% if site.github.public_repositories != null %}
 {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse %}
 
-<link href="././assets/css/pages/navigation.css">
+<link rel="stylesheet" href="../assets/css/pages/navigation.css">
+<script src="../assets/js/navigation.js"></script>
 <section class="container">
     <header class="text-center">
         <h1>苜蓿导航</h1>
     </header>
-    <div class="navigation-wrapper">
-        <div>测试导航</div>
-    </div>
+    <div class="navigation-wrapper"></div>
 </section>
 {% endif %}
