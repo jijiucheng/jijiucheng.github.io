@@ -1,3 +1,9 @@
+function clickLeftNaviItem() {
+  console.log('点击左侧导航 --- ')
+}
+
+
+
 // fetch('../assets/json/navigation.json')
 //   .then(res => res.json())
 //   .then(data => {

@@ -34,8 +34,8 @@ permalink: /navigation/
                     {% endfor %}
                 </div>
                 <div class="links-wrapper">
-                    {% for links in temp_subCategory.list %}
-                    <div class="links-item">{{ links.title }}</div>
+                    {% for link in temp_subCategory.list %}
+                    <a class="link-item" href="{{ link.url }}" name="{{ link.url }}" target="_blank">{{ link.title }}</a>
                     {% endfor %}
                 </div>
             </div>

@@ -78,17 +78,21 @@
   overflow-y: auto;
 }
 
-.links-item {
+.link-item {
   display: flex;
   align-items: center;
   justify-content: center;
   width: calc(20% - 10px);
   height: 40px;
   margin: 5px;
+  color: #666;
+  font-size: 14px;
   border: 1px solid #DDD;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-.links-item:hover {
+.link-item:hover {
   background-color: #DFDFDF;
+  text-decoration: none;
 }
