@@ -17,13 +17,28 @@ permalink: /navigation/
     </header>
     <div class="navigation-wrapper">
         <div class='left-navi'>
-            {% for item in site.data.navigation %}
-            <div class="left-navi-item">{{ item.title }}</div>
+            {% for category in site.data.navigation %}
+            <div class="left-navi-item">{{ category.title }}</div>
             {% endfor %}
         </div>
         <div class='right-content'>
-            {% for item in site.data.navigation %}
-            <div class="right-content-item">{{ item.title }}</div>
+            {% for category in site.data.navigation %}
+            <div class="right-content-item">
+                {% assign temp_subCategory = undefined %}
+                <div class="subNavi-wrapper">
+                    {% for subCategory in category.list %}
+                        {% if subCategory.index == 0 %}
+                            {% assign temp_subCategory = subCategory %}
+                        {% endif %}
+                        <span class="subNavi-item">{{ subCategory.title }}</span>
+                    {% endfor %}
+                </div>
+                <div class="links-wrapper">
+                    {% for links in temp_subCategory.list %}
+                    <div class="links-item">{{ links.title }}</div>
+                    {% endfor %}
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
