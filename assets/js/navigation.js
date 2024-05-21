@@ -1,5 +1,8 @@
 function clickLeftNaviItem(index) {
-  console.log('点击左侧导航 --- ', index)
+  // 锚点 ID
+  const targetId = `left_navi_${index}`
+  // 平滑滚动到目标元素
+  document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
 }
 
 function clickSubNaviItem(index, subIndex) {

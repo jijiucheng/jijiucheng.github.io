@@ -18,12 +18,12 @@ permalink: /navigation/
     <div class="navigation-wrapper">
         <div class='left-navi'>
             {% for category in site.data.navigation %}
-            <div class="left-navi-item" onclick="clickLeftNaviItem({{ category.index }})">{{ category.title }}</div>
+            <a class="left-navi-item" href="#left_navi_{{ category.index }}" onclick="clickLeftNaviItem({{ category.index }})">{{ category.title }}</a>
             {% endfor %}
         </div>
         <div class='right-content'>
             {% for category in site.data.navigation %}
-            <div class="right-content-item">
+            <div id="left_navi_{{ category.index }}" class="right-content-item">
                 {% assign temp_subCategory = undefined %}
                 <div class="subNavi-wrapper">
                     {% for subCategory in category.list %}
@@ -35,13 +35,18 @@ permalink: /navigation/
                 </div>
                 <div class="links-wrapper">
                     {% for link in temp_subCategory.list %}
-                    <a class="link-item" href="{{ link.url }}" title="{{ link.url }}" target="_blank">{{ link.title }}</a>
+                    <a class="link-item" href="{{ link.url }}" title="{{ link.url }}" target="_blank">
+                        <img class="link-item-icon" src="{{ link.icon }}" />
+                        <span class="link-item-title">{{ link.title }}</span>
+                    </a>
                     {% endfor %}
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
-
+    <div class="navigation-tools">
+        <a class="tool-item tool-top" href="#">顶部</a>
+    </div>
 </section>
 {% endif %}
