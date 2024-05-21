@@ -34,13 +34,13 @@
         "list": [
           {
             "title": "菜鸟工具",
-            "icon": "https://static.jyshare.com/images/c-runoob-logo.ico",
+            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
             "url": "https://www.jyshare.com/",
             "desc": "菜鸟教程官方下的程序员工具"
           },
           {
             "title": "子级导航2",
-            "icon": "https://www.baidu.com/favicon.ico",
+            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
             "url": "https://www.baidu.com/",
             "desc": "百度一下"
           }
