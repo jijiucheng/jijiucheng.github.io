@@ -7,6 +7,7 @@
 
 a:hover {
   text-decoration: none;
+  background-color: #EFEFEF;
 }
 
 .left-navi {
@@ -36,10 +37,6 @@ a:hover {
   color: #262626;
   border-bottom: 1px solid #DDD;
   cursor: pointer;
-}
-
-.left-navi-item:hover {
-  background-color: #DFDFDF;
 }
 
 .right-content-item {
@@ -106,10 +103,6 @@ a:hover {
 .link-item-title {
   color: #666;
   font-size: 14px;
-}
-
-.link-item:hover {
-  background-color: #DFDFDF;
 }
 
 .navigation-tools {
