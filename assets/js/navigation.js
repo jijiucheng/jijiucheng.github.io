@@ -1,27 +1,56 @@
-function clickLeftNaviItem(index) {
-  // 锚点 ID
-  const targetId = `left_navi_${index}`
-  // 平滑滚动到目标元素
-  document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-}
-
-function clickSubNaviItem(index, subIndex) {
-  console.log('点击右侧导航 --- ', index, subIndex)
-}
-
-
-
-// fetch('../assets/json/navigation.json')
+// 获取导航数据
+// fetch('../_data/navigation.json')
 //   .then(res => res.json())
 //   .then(data => {
 //     console.log('获取导航数据成功 --- ', data)
-//     // createHTMLElementUI(data)
 //   })
 //   .catch(err => {
 //     console.log('获取导航数据失败 --- ', err)
 //   })
 
-// console.log('site ---- ', site)
+// 获取导航数据
+function requestNavigationData() {
+  var xhr = new XMLHttpRequest()
+  xhr.open('GET', '../_data/navigation.json', true)
+  xhr.responseType = 'json'
+  xhr.onload = function() {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      console.log('[测试] 请求成功 --- ', xhr.response)
+    } else {
+      console.error(xhr.statusText)
+    }
+  }
+  xhr.onerror = function() {
+    console.error('[测试] 请求错误 --- ', xhr.statusText)
+  }
+  xhr.send()
+}
+
+requestNavigationData()
+
+// 滚动到顶部
+function clickGoTop() {
+  $("body,html").animate({
+    scrollTop: 0
+  }, 300)
+}
+
+// 滚动到指定位置
+function clickLeftNaviItem(index) {
+  $('html, body').animate({
+    scrollTop: $(`#left_navi_${index}`).offset().top
+  }, 300)
+}
+
+function clickSubNaviItem(index, subIndex) {
+  console.log('点击右侧导航 --- ', index, subIndex)
+
+
+}
+
+
+
+
 
 // // 创建界面标签元素
 // function createHTMLElementUI(data) {

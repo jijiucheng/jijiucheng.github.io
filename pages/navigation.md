@@ -18,7 +18,7 @@ permalink: /navigation/
     <div class="navigation-wrapper">
         <div class='left-navi'>
             {% for category in site.data.navigation %}
-            <a class="left-navi-item" href="#left_navi_{{ category.index }}" onclick="clickLeftNaviItem({{ category.index }})">{{ category.title }}</a>
+            <div class="left-navi-item" onclick="clickLeftNaviItem({{ category.index }})">{{ category.title }}</div>
             {% endfor %}
         </div>
         <div class='right-content'>
@@ -46,7 +46,7 @@ permalink: /navigation/
         </div>
     </div>
     <div class="navigation-tools">
-        <a class="tool-item tool-top" href="#">顶部</a>
+        <div class="tool-item tool-top" onclick="clickGoTop()">顶部</div>
     </div>
 </section>
 {% endif %}
