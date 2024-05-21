@@ -1,32 +1,66 @@
-// 获取导航数据
-// fetch('../_data/navigation.json')
-//   .then(res => res.json())
-//   .then(data => {
-//     console.log('获取导航数据成功 --- ', data)
-//   })
-//   .catch(err => {
-//     console.log('获取导航数据失败 --- ', err)
-//   })
+let list = []
+let selectIndex = 0
 
 // 获取导航数据
-function requestNavigationData() {
-  var xhr = new XMLHttpRequest()
-  xhr.open('GET', '../_data/navigation.json', true)
-  xhr.responseType = 'json'
-  xhr.onload = function() {
-    if (xhr.status >= 200 && xhr.status < 300) {
-      console.log('[测试] 请求成功 --- ', xhr.response)
-    } else {
-      console.error(xhr.statusText)
-    }
-  }
-  xhr.onerror = function() {
-    console.error('[测试] 请求错误 --- ', xhr.statusText)
-  }
-  xhr.send()
+fetch('../assets/json/navigation.json')
+  .then(res => res.json())
+  .then(data => {
+    console.log('获取导航数据成功 --- ', data)
+    this.list = data
+    this.createHTMLElementUI()
+  })
+  .catch(err => {
+    console.log('获取导航数据失败 --- ', err)
+  })
+
+// 创建标签
+function createHTMLElementUI() {
+  $.each(this.list, (index, item) => {
+    // 左侧导航
+    var $leftItem = $(`<div class="left-navi-item${selectIndex === index ? ' active' : ''}">${item.title}</div>`)
+    $leftItem.on('click', (event) => {
+      event.preventDefault()
+      this.clickLeftNaviItem(index)
+    })
+    $('.left-navi').append($leftItem)
+
+    // 右侧导航单个大类内容
+    var $rightContentItem = $(`<div id="left_navi_${index}" class="right-content-item"></div>`)
+    // 右侧导航单个大类顶部导航
+    var $subNaviWrapper = $(`<div class="subNavi-wrapper"></div>`)
+    // 右侧导航单个大类底部链接区域
+    var $linksWrapper = $(`<div class="links-wrapper"></div>`)
+
+    $.each(item.list, (subIndex, subItem) => {
+      var $subNaviItem = $(`<span class="subNavi-item${item.selectSubIndex === subIndex ? ' active' : ''}">${subItem.title}</span>`)
+      $subNaviItem.on('click', (event) => {
+        event.preventDefault()
+        this.clickSubNaviItem(index, subIndex)
+      })
+      $subNaviWrapper.append($subNaviItem)
+
+      if (item.selectSubIndex === subIndex) {
+        $.each(subItem.list, (linkIndex, link) => {
+          var $linkItem = $(`<a class="link-item" href="${link.url}" title="${link.url}" target="_blank"></a>`)
+          var $linkItemIcon = $(`<img class="link-item-icon" src="${link.icon}" />`)
+          var $linkItemTitle = $(`<span class="link-item-title">${link.title}</span>`)
+          $linkItem.append($linkItemIcon)
+          $linkItem.append($linkItemTitle)
+          $linksWrapper.append($linkItem)
+        })
+      }
+    })
+
+    $rightContentItem.append($subNaviWrapper)
+    $rightContentItem.append($linksWrapper)
+    $('.right-content').append($rightContentItem)
+  })
 }
 
-requestNavigationData()
+// 创建右侧导航单个大类底部链接区域
+function createRightContentLinks() {
+  
+}
 
 // 滚动到顶部
 function clickGoTop() {

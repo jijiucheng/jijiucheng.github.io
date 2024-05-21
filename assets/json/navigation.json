@@ -4,6 +4,7 @@
     "title": "编程开发",
     "icon": "",
     "desc": "",
+    "selectSubIndex": 0,
     "list": [
       {
         "index": 0,
@@ -52,6 +53,7 @@
     "title": "日常工具",
     "icon": "",
     "desc": "",
+    "selectSubIndex": 0,
     "list": [
       {
         "index": 0,
@@ -100,6 +102,7 @@
     "title": "苜蓿导航3",
     "icon": "",
     "desc": "",
+    "selectSubIndex": 0,
     "list": [
       {
         "index": 0,
@@ -147,6 +150,7 @@
     "title": "苜蓿导航4",
     "icon": "",
     "desc": "",
+    "selectSubIndex": 0,
     "list": [
       {
         "index": 0,

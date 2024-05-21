@@ -16,6 +16,27 @@ permalink: /navigation/
         <h1>苜蓿导航</h1>
     </header>
     <div class="navigation-wrapper">
+        <div class='left-navi'></div>
+        <div class='right-content'></div>
+    </div>
+    <div class="navigation-tools">
+        <div class="tool-item tool-top" onclick="clickGoTop()">顶部</div>
+    </div>
+</section>
+{% endif %}
+
+<!--
+// 如果需要使用 liquid 加载数据的方式，必须将数据文件放在 _data 文件夹下，且该种数据加载方式是静态的，无法动态处理
+{% if site.github.public_repositories != null %}
+{% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse %}
+
+<link rel="stylesheet" href="../assets/css/pages/navigation.css">
+<script src="../assets/js/navigation.js"></script>
+<section class="container">
+    <header class="text-center">
+        <h1>苜蓿导航</h1>
+    </header>
+    <div class="navigation-wrapper">
         <div class='left-navi'>
             {% for category in site.data.navigation %}
             <div class="left-navi-item" onclick="clickLeftNaviItem({{ category.index }})">{{ category.title }}</div>
@@ -50,3 +71,4 @@ permalink: /navigation/
     </div>
 </section>
 {% endif %}
+-->
