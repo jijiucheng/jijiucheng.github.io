@@ -17,7 +17,7 @@ fetch('../assets/json/navigation.json')
 function createHTMLElementUI() {
   $.each(this.list, (index, item) => {
     // 左侧导航
-    var $leftItem = $(`<div class="left-navi-item${selectIndex === index ? ' active' : ''}">${item.title}</div>`)
+    var $leftItem = $(`<div class="left-navi-item hover-bg${selectIndex === index ? ' active' : ''}">${item.title}</div>`)
     $leftItem.on('click', (event) => {
       event.preventDefault()
       this.clickLeftNaviItem(index)
@@ -32,7 +32,7 @@ function createHTMLElementUI() {
     var $linksWrapper = $(`<div class="links-wrapper"></div>`)
 
     $.each(item.list, (subIndex, subItem) => {
-      var $subNaviItem = $(`<span class="subNavi-item${item.selectSubIndex === subIndex ? ' active' : ''}">${subItem.title}</span>`)
+      var $subNaviItem = $(`<span class="subNavi-item hover-bg${item.selectSubIndex === subIndex ? ' active' : ''}">${subItem.title}</span>`)
       $subNaviItem.on('click', (event) => {
         event.preventDefault()
         this.clickSubNaviItem(index, subIndex)
@@ -41,7 +41,7 @@ function createHTMLElementUI() {
 
       if (item.selectSubIndex === subIndex) {
         $.each(subItem.list, (linkIndex, link) => {
-          var $linkItem = $(`<a class="link-item" href="${link.url}" title="${link.url}" target="_blank"></a>`)
+          var $linkItem = $(`<a class="link-item hover-bg" href="${link.url}" title="${link.url}" target="_blank"></a>`)
           var $linkItemIcon = $(`<img class="link-item-icon" src="${link.icon}" />`)
           var $linkItemTitle = $(`<span class="link-item-title">${link.title}</span>`)
           $linkItem.append($linkItemIcon)
