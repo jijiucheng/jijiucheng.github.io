@@ -20,7 +20,7 @@ function createHTMLElementUI() {
     var $leftItem = $(`<div class="left-navi-item hover-bg${selectIndex === index ? ' active' : ''}">${item.title}</div>`)
     $leftItem.on('click', (event) => {
       event.preventDefault()
-      this.clickLeftNaviItem(index)
+      this.clickLeftNaviItem(index, true)
     })
     $('.left-navi').append($leftItem)
 
@@ -40,14 +40,7 @@ function createHTMLElementUI() {
       $subNaviWrapper.append($subNaviItem)
 
       if (item.selectSubIndex === subIndex) {
-        $.each(subItem.list, (linkIndex, link) => {
-          var $linkItem = $(`<a class="link-item hover-bg" href="${link.url}" title="${link.url}" target="_blank"></a>`)
-          var $linkItemIcon = $(`<img class="link-item-icon" src="${link.icon}" />`)
-          var $linkItemTitle = $(`<span class="link-item-title">${link.title}</span>`)
-          $linkItem.append($linkItemIcon)
-          $linkItem.append($linkItemTitle)
-          $linksWrapper.append($linkItem)
-        })
+        this.createRightContentLinks($linksWrapper, subItem.list)
       }
     })
 
@@ -58,8 +51,15 @@ function createHTMLElementUI() {
 }
 
 // 创建右侧导航单个大类底部链接区域
-function createRightContentLinks() {
-  
+function createRightContentLinks(obj, links) {
+  $.each(links, (linkIndex, link) => {
+    var $linkItem = $(`<a class="link-item hover-bg" href="${link.url}" title="${link.url}" target="_blank"></a>`)
+    var $linkItemIcon = $(`<img class="link-item-icon" src="${link.icon}" />`)
+    var $linkItemTitle = $(`<span class="link-item-title">${link.title}</span>`)
+    $linkItem.append($linkItemIcon)
+    $linkItem.append($linkItemTitle)
+    obj.append($linkItem)
+  })
 }
 
 // 滚动到顶部
@@ -70,47 +70,34 @@ function clickGoTop() {
 }
 
 // 滚动到指定位置
-function clickLeftNaviItem(index) {
-  $('html, body').animate({
-    scrollTop: $(`#left_navi_${index}`).offset().top
-  }, 300)
+function clickLeftNaviItem(index, isScroll) {
+  if (this.selectIndex === index) return
+  // 更换选中对象
+  this.selectIndex = index
+  var $navItems = $('.left-navi-item')
+  $navItems.filter('.active').removeClass('active')
+  $navItems.eq(this.selectIndex).addClass('active')
+  if (isScroll) {
+    // 滚动到指定位置
+    $('html, body').animate({
+      scrollTop: $(`#left_navi_${index}`).offset().top
+    }, 300)
+  }
 }
 
 function clickSubNaviItem(index, subIndex) {
-  console.log('点击右侧导航 --- ', index, subIndex)
-
-
+  if (this.selectIndex === index && this.list[index].selectSubIndex === subIndex) return
+  this.clickLeftNaviItem(index, false)
+  this.list[index].selectSubIndex = subIndex
+  // 右侧子级容器
+  var $rightContentItem = $('.right-content-item').eq(index)
+  // 更新子级导航选中
+  var $subNaviItems = $rightContentItem.find('.subNavi-item')
+  $subNaviItems.filter('.active').removeClass('active')
+  $subNaviItems.eq(subIndex).addClass('active')
+  // 更新链接页面
+  var $linksWrapper = $rightContentItem.find('.links-wrapper')
+  $linksWrapper.empty()
+  const links = this.list[index].list[subIndex].list
+  this.createRightContentLinks($linksWrapper, links)
 }
-
-
-
-
-
-// // 创建界面标签元素
-// function createHTMLElementUI(data) {
-//   // 添加左侧导航
-//   var $leftNavi = $(document).find('.left-navi')
-//   if ($leftNavi) {
-//     $.each(data, (index, item) => {
-//       $leftNavi.append(`<div class='left-navi-item' index='${index}'>${item.title}</div>`)
-//     })
-
-//     // 监听点击事件
-//     $leftNavi.on('click', '.left-navi-item', function() {
-//       console.log('点击了 1--- ', $(this), $(this).index())
-//     })
-//   }
-
-//   // 添加右侧内容
-//   var $rightContent = $(document).find('.right-content')
-//   if ($rightContent) {
-//     $.each(data, (index, item) => {
-//       $rightContent.append(`<div class='right-content-item' index='${index}}'></div>`)
-
-//       var $rightContentItem = $rightContent.find('.right-content-item')
-//       if ($rightContentItem) {
-
-//       }
-//     })
-//   }
-// }
