@@ -5,12 +5,36 @@
   width: 100%;
 }
 
+.hover-bg:hover {
+  text-decoration: none;
+  background-color: #EFEFEF;
+}
+
 .left-navi {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100px;
   overflow-y: auto;
+}
+
+.left-navi-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+  border-bottom: 1px solid #DDD;
+  cursor: pointer;
+}
+
+.left-navi-item.active {
+  background-color: #EFEFEF;
+  border-bottom: 2px solid yellowgreen;
 }
 
 .right-content {
@@ -21,27 +45,20 @@
   overflow-y: auto;
 }
 
-.left-navi-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 35px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #262626;
-  border-bottom: 1px solid #DDD;
-  cursor: pointer;
-}
-
 .right-content-item {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 200px;
-  margin-bottom: 20px;
-  border: 1px solid #DDD;
+  height: 140px;
+  min-height: 140px;
+  margin-bottom: 40px;
+  border: 1px solid transparent;
+  border-top: 1px solid #DDD;
   border-radius: 3px;
+}
+
+.right-content-item.active {
+  border: 1px solid yellowgreen;
 }
 
 .subNavi-wrapper {
@@ -50,6 +67,7 @@
   width: 100%;
   height: 40px;
   border-bottom: 1px solid #DDD;
+  background-color: #DDD;
 }
 
 .subNavi-item {
@@ -58,13 +76,19 @@
   justify-content: center;
   height: 100%;
   padding: 5px 20px;
-  border-right: 1px solid #DDD;
-  border-bottom: 2px solid transparent;
+  border-right: 1px solid #fff;
   cursor: pointer;
+}
+
+.subNavi-item.active {
+  background-color: yellowgreen;
 }
 
 .links-wrapper {
   flex: 1;
+  height: 100px;
+  min-height: 100px;
+  max-height: 300px;
 }
 
 .links-content-wrapper {
@@ -75,6 +99,7 @@
   overflow-y: auto;
   width: 100%;
   height: 100%;
+  padding: 5px;
 }
 
 .links-content-wrapper.show {
@@ -88,8 +113,8 @@
   width: calc(20% - 10px);
   height: 40px;
   margin: 5px;
-  border: 1px solid #DDD;
-  border-radius: 5px;
+  border-radius: 3px;
+  background-color: #f9f9f9;
   cursor: pointer;
 }
 
@@ -130,14 +155,4 @@
   border: 1px solid #DDD;
   cursor: pointer;
   background-color: #fff;
-}
-
-.active {
-  background-color: #EFEFEF;
-  border-bottom: 2px solid yellowgreen !important;
-}
-
-.hover-bg:hover {
-  text-decoration: none;
-  background-color: #EFEFEF;
 }

@@ -25,14 +25,14 @@ function createHTMLElementUI() {
     $('.left-navi').append($leftItem)
 
     // 右侧导航单个大类内容
-    var $rightContentItem = $(`<div id="left_navi_${index}" class="right-content-item"></div>`)
+    var $rightContentItem = $(`<div id="left_navi_${index}" class="right-content-item${selectIndex === index ? ' active': ''}"></div>`)
     // 右侧导航单个大类顶部导航
     var $subNaviWrapper = $(`<div class="subNavi-wrapper"></div>`)
     // 右侧导航单个大类底部链接区域
     var $linksWrapper = $(`<div class="links-wrapper"></div>`)
 
     $.each(item.list, (subIndex, subItem) => {
-      var $subNaviItem = $(`<span class="subNavi-item hover-bg${item.selectSubIndex === subIndex ? ' active' : ''}">${subItem.title}</span>`)
+      var $subNaviItem = $(`<span class="subNavi-item hover-bg${item.selectSubIndex === subIndex ? ' active' : ''}" title="${subItem.desc}">${subItem.title}</span>`)
       $subNaviItem.on('click', (event) => {
         event.preventDefault()
         this.clickSubNaviItem(index, subIndex)
@@ -42,7 +42,7 @@ function createHTMLElementUI() {
       var $linksContentWrapper = $(`<div class="links-content-wrapper${item.selectSubIndex === subIndex ? ' show' : ''}"></div>`)
       // 创建右侧导航单个大类底部链接区域
       $.each(subItem.list, (linkIndex, link) => {
-        var $linkItem = $(`<a class="link-item hover-bg" href="${link.url}" title="${link.url}" target="_blank"></a>`)
+        var $linkItem = $(`<a class="link-item hover-bg" href="${link.url}" title="${link.url}\n\n${link.desc}" target="_blank"></a>`)
         var $linkItemIcon = $(`<img class="link-item-icon" src="${link.icon}" />`)
         var $linkItemTitle = $(`<span class="link-item-title">${link.title}</span>`)
         $linkItem.append($linkItemIcon)
@@ -72,7 +72,12 @@ function clickLeftNaviItem(index, isScroll) {
   this.selectIndex = index
   var $navItems = $('.left-navi-item')
   $navItems.filter('.active').removeClass('active')
-  $navItems.eq(this.selectIndex).addClass('active')
+  $navItems.eq(index).addClass('active')
+  // 更改右侧单个分类的选中状态
+  var $rightContentItem = $('.right-content-item')
+  $rightContentItem.filter('.active').removeClass('active')
+  $rightContentItem.eq(index).addClass('active')
+  // 开始滚动
   if (isScroll) {
     // 滚动到指定位置
     $('html, body').animate({

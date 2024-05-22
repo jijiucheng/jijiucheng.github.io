@@ -8,29 +8,29 @@
     "list": [
       {
         "index": 0,
-        "title": "综合",
+        "title": "综合网站",
         "icon": "",
-        "desc": "综合类型",
+        "desc": "综合类型编程学习网站",
         "list": [
           {
             "title": "W3School",
             "icon": "https://www.w3school.com.cn/ui2019/logo-180.png",
             "url": "https://www.w3school.com.cn/",
-            "desc": "W3School"
+            "desc": "W3School 是因特网上最大的 WEB 开发者资源，其中包括全面的教程、完善的参考手册以及庞大的代码库"
           },
           {
             "title": "菜鸟教程",
             "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
             "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程"
+            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
           }
         ]
       },
       {
         "index": 1,
-        "title": "程序猿工具",
+        "title": "博客论坛",
         "icon": "",
-        "desc": "程序员工具",
+        "desc": "知名编程开发的博客论坛",
         "list": [
           {
             "title": "菜鸟工具",
@@ -50,26 +50,26 @@
   },
   {
     "index": 1,
-    "title": "日常工具",
+    "title": "编程工具",
     "icon": "",
     "desc": "",
     "selectSubIndex": 0,
     "list": [
       {
         "index": 0,
-        "title": "导航1",
-        "icon": "https://www.baidu.com/favicon.ico",
-        "desc": "百度一下",
+        "title": "常用工具",
+        "icon": "",
+        "desc": "程序猿日常开发中最常用的快捷工具",
         "list": [
           {
-            "title": "子级导航1",
-            "icon": "https://www.baidu.com/favicon.ico",
-            "url": "https://www.baidu.com/",
-            "desc": "百度一下"
+            "title": "菜鸟工具",
+            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
+            "url": "https://www.jyshare.com/",
+            "desc": "菜鸟教程官方下的程序员工具"
           },
           {
             "title": "子级导航2",
-            "icon": "https://www.baidu.com/favicon.ico",
+            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
             "url": "https://www.baidu.com/",
             "desc": "百度一下"
           }
