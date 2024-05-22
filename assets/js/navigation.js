@@ -39,26 +39,22 @@ function createHTMLElementUI() {
       })
       $subNaviWrapper.append($subNaviItem)
 
-      if (item.selectSubIndex === subIndex) {
-        this.createRightContentLinks($linksWrapper, subItem.list)
-      }
+      var $linksContentWrapper = $(`<div class="links-content-wrapper${item.selectSubIndex === subIndex ? ' show' : ''}"></div>`)
+      // 创建右侧导航单个大类底部链接区域
+      $.each(subItem.list, (linkIndex, link) => {
+        var $linkItem = $(`<a class="link-item hover-bg" href="${link.url}" title="${link.url}" target="_blank"></a>`)
+        var $linkItemIcon = $(`<img class="link-item-icon" src="${link.icon}" />`)
+        var $linkItemTitle = $(`<span class="link-item-title">${link.title}</span>`)
+        $linkItem.append($linkItemIcon)
+        $linkItem.append($linkItemTitle)
+        $linksContentWrapper.append($linkItem)
+        $linksWrapper.append($linksContentWrapper)
+      })
     })
 
     $rightContentItem.append($subNaviWrapper)
     $rightContentItem.append($linksWrapper)
     $('.right-content').append($rightContentItem)
-  })
-}
-
-// 创建右侧导航单个大类底部链接区域
-function createRightContentLinks(obj, links) {
-  $.each(links, (linkIndex, link) => {
-    var $linkItem = $(`<a class="link-item hover-bg" href="${link.url}" title="${link.url}" target="_blank"></a>`)
-    var $linkItemIcon = $(`<img class="link-item-icon" src="${link.icon}" />`)
-    var $linkItemTitle = $(`<span class="link-item-title">${link.title}</span>`)
-    $linkItem.append($linkItemIcon)
-    $linkItem.append($linkItemTitle)
-    obj.append($linkItem)
   })
 }
 
@@ -85,6 +81,7 @@ function clickLeftNaviItem(index, isScroll) {
   }
 }
 
+// 点击右侧每个分类的子级导航
 function clickSubNaviItem(index, subIndex) {
   if (this.selectIndex === index && this.list[index].selectSubIndex === subIndex) return
   this.clickLeftNaviItem(index, false)
@@ -96,8 +93,7 @@ function clickSubNaviItem(index, subIndex) {
   $subNaviItems.filter('.active').removeClass('active')
   $subNaviItems.eq(subIndex).addClass('active')
   // 更新链接页面
-  var $linksWrapper = $rightContentItem.find('.links-wrapper')
-  $linksWrapper.empty()
-  const links = this.list[index].list[subIndex].list
-  this.createRightContentLinks($linksWrapper, links)
+  var $linksContentWrapper = $rightContentItem.find('.links-content-wrapper')
+  $linksContentWrapper.filter('.show').removeClass('show')
+  $linksContentWrapper.eq(subIndex).addClass('show')
 }
