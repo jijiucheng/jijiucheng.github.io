@@ -275,48 +275,34 @@
   },
   {
     "index": 2,
-    "title": "苜蓿导航3",
+    "title": "办公工具",
     "icon": "",
     "desc": "",
     "selectSubIndex": 0,
     "list": [
       {
         "index": 0,
-        "title": "导航1",
-        "icon": "https://www.baidu.com/favicon.ico",
-        "desc": "百度一下",
+        "title": "日常办公",
+        "icon": "",
+        "desc": "日常办公使用到的在线快捷工具",
         "list": [
           {
-            "title": "子级导航1",
-            "icon": "https://www.baidu.com/favicon.ico",
-            "url": "https://www.baidu.com/",
-            "desc": "百度一下"
+            "title": "七七工具箱",
+            "icon": "https://www.tool77.com/media/image/favicon.ico",
+            "url": "https://www.tool77.com/",
+            "desc": "七七工具箱是聚合类在线办公快捷工具合集，支持文件转换、图片转换"
           },
           {
-            "title": "子级导航2",
-            "icon": "https://www.baidu.com/favicon.ico",
-            "url": "https://www.baidu.com/",
-            "desc": "百度一下"
-          }
-        ]
-      },
-      {
-        "index": 1,
-        "title": "导航2",
-        "icon": "https://www.baidu.com/favicon.ico",
-        "desc": "百度一下",
-        "list": [
-          {
-            "title": "子级导航1",
-            "icon": "https://www.baidu.com/favicon.ico",
-            "url": "https://www.baidu.com/",
-            "desc": "百度一下"
+            "title": "改图鸭",
+            "icon": "https://www.gaituya.com/favicon.ico",
+            "url": "https://www.gaituya.com/",
+            "desc": "改图鸭支持在线图片压缩、图片编辑、图片格式转换的工具"
           },
           {
-            "title": "子级导航2",
-            "icon": "https://www.baidu.com/favicon.ico",
-            "url": "https://www.baidu.com/",
-            "desc": "百度一下"
+            "title": "Smallpdf",
+            "icon": "https://smallpdf.com/favicon.png",
+            "url": "https://smallpdf.com/cn/",
+            "desc": "轻松转换和编辑所有 PDF 文件的平台"
           }
         ]
       }
