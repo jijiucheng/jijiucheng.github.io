@@ -42,7 +42,7 @@ function createHTMLElementUI() {
       var $linksContentWrapper = $(`<div class="links-content-wrapper${item.selectSubIndex === subIndex ? ' show' : ''}"></div>`)
       // 创建右侧导航单个大类底部链接区域
       $.each(subItem.list, (linkIndex, link) => {
-        var $linkItem = $(`<a class="link-item hover-bg" href="${link.url}" title="${link.url}\n\n${link.desc}" target="_blank"></a>`)
+        var $linkItem = $(`<a class="link-item hover-bg${!link.url.length ? ' hide' : ''}" href="${link.url}" title="${link.url}\n\n${link.desc}" target="_blank"></a>`)
         var $linkItemIcon = $(`<img class="link-item-icon" src="${link.icon}" />`)
         var $linkItemTitle = $(`<span class="link-item-title">${link.title}</span>`)
         $linkItem.append($linkItemIcon)

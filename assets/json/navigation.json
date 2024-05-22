@@ -4,7 +4,7 @@
     "title": "编程开发",
     "icon": "",
     "desc": "",
-    "selectSubIndex": 0,
+    "selectSubIndex": 2,
     "list": [
       {
         "index": 0,
@@ -13,262 +13,16 @@
         "desc": "综合类型编程学习网站",
         "list": [
           {
+            "title": "MDN 官网",
+            "icon": "https://developer.mozilla.org/favicon-48x48.cbbd161b.png",
+            "url": "https://developer.mozilla.org/zh-CN/",
+            "desc": "前端标准学习网站"
+          },
+          {
             "title": "W3School",
             "icon": "https://www.w3school.com.cn/ui2019/logo-180.png",
             "url": "https://www.w3school.com.cn/",
             "desc": "W3School 是因特网上最大的 WEB 开发者资源，其中包括全面的教程、完善的参考手册以及庞大的代码库"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
-          },
-          {
-            "title": "菜鸟教程",
-            "icon": "https://img2.baidu.com/it/u=641446360,3821858044&fm=253",
-            "url": "https://www.runoob.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "廖雪峰官网",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.liaoxuefeng.com/",
-            "desc": "菜鸟教程提供了全平台、全语言的基础编程技术教程"
-          },
-          {
-            "title": "小呆导航",
-            "icon": "https://webjike.com/favicon.png",
-            "url": "https://webjike.com/web.html/",
-            "desc": "前端学习网站导航"
           },
           {
             "title": "菜鸟教程",
@@ -301,12 +55,80 @@
             "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
             "url": "https://www.jyshare.com/",
             "desc": "菜鸟教程官方下的程序员工具"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "title": "大前端",
+        "icon": "",
+        "desc": "大前端技术栈，包含iOS、Android、HarmonyOS（鸿蒙）、前端、小程序、Electron、Flutter、Uni-app等技术栈",
+        "list": [
+          {
+            "title": "Vue 官网",
+            "icon": "https://cn.vuejs.org/logo.svg",
+            "url": "https://cn.vuejs.org/",
+            "desc": "Vue 中文官方网站"
           },
           {
-            "title": "子级导航2",
-            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
-            "url": "https://www.baidu.com/",
-            "desc": "百度一下"
+            "title": "Vue Router 官网",
+            "icon": "https://cn.vuejs.org/logo.svg",
+            "url": "https://router.vuejs.org/zh/",
+            "desc": "Vue 官方路由工具"
+          },
+          {
+            "title": "Pinia 官网",
+            "icon": "https://pinia.vuejs.org/logo.svg",
+            "url": "https://pinia.vuejs.org/zh/",
+            "desc": "Pinia 是 Vue 官方在 Vue3.x 版本下的状态管理工具"
+          },
+          {
+            "title": "Vite 官网",
+            "icon": "https://cn.vitejs.dev/logo.svg",
+            "url": "https://cn.vitejs.dev/",
+            "desc": "Vue 官方前端工具链，可用于工具化构建打包，对标 Webpack"
+          },
+          {
+            "title": "Vue CLI 官网",
+            "icon": "https://cn.vuejs.org/logo.svg",
+            "url": "https://cli.vuejs.org/zh/",
+            "desc": "Vue CLI 是 Vue 官方封装使用 Webpack 的构建打包工具"
+          },
+          {
+            "title": "Webpack 官网",
+            "icon": "https://webpack.js.org/icon-square-small.9e8aff7a67a5dd20.svg",
+            "url": "https://webpack.js.org/",
+            "desc": "Webpack 是前端快速工具化构建打包工具"
+          },
+          {
+            "title": "微信开发官网文档",
+            "icon": "https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico",
+            "url": "https://developers.weixin.qq.com/doc/",
+            "desc": "微信开发官方文档，包含小程序、公众号、开放平台、微信支付、小游戏等开发文档"
+          },
+          {
+            "title": "Electron 官网",
+            "icon": "https://www.electronjs.org/assets/img/logo.svg",
+            "url": "https://www.electronjs.org/",
+            "desc": "Electron 是当下最流行的跨平台开发技术，支持 Windows、Mac、Linux 平台"
+          },
+          {
+            "title": "Electron-Vite 官网",
+            "icon": "https://electron-vite.org/favicon.svg",
+            "url": "https://electron-vite.org/",
+            "desc": "Electron-Vite 是通过 Electron + Vite 的开发方式进行跨平台开发"
+          },
+          {
+            "title": "Flutter 官网",
+            "icon": "https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png",
+            "url": "https://flutter.dev/",
+            "desc": "Flutter 是当下十分流行的跨平台开发，支持iOS、Android、Windows、Mac、Linux、嵌入式，当下 HarmonyOS（鸿蒙）也在接入之中"
+          },
+          {
+            "title": "Flutter 中文官网",
+            "icon": "https://docs.flutter.cn/assets/images/cn/flutter-icon.png",
+            "url": "https://flutter.cn/",
+            "desc": "Flutter 官方推荐的中文官网，Flutter 是当下十分流行的跨平台开发，支持iOS、Android、Windows、Mac、Linux、嵌入式，当下 HarmonyOS（鸿蒙）也在接入之中"
           }
         ]
       }

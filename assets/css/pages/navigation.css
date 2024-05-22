@@ -103,25 +103,30 @@
 .link-item {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: calc(20% - 10px);
   height: 40px;
   margin: 5px;
+  padding: 5px 10px;
   border-radius: 3px;
   background-color: #f9f9f9;
   cursor: pointer;
 }
 
+.link-item.hide {
+  /* 仍占据空间 */
+  visibility: hidden;
+}
+
 .link-item-icon {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   border-radius: 5px;
   margin-right: 5px;
 }
 
 .link-item-title {
   color: #666;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .navigation-tools {
