@@ -275,13 +275,27 @@
   },
   {
     "index": 2,
-    "title": "办公工具",
+    "title": "生活办公",
     "icon": "",
     "desc": "",
-    "selectSubIndex": 0,
+    "selectSubIndex": 1,
     "list": [
       {
         "index": 0,
+        "title": "查询工具",
+        "icon": "",
+        "desc": "日常生活中使用到的在线查询工具",
+        "list": [
+          {
+            "title": "我就差查询",
+            "icon": "http://wjccx.com/favicon.ico",
+            "url": "http://wjccx.com/",
+            "desc": "我就查查询提供实用工具在线查询，免费在线工具包括生活服务、金融理财、教育学习、数学计算和站长查询等实用工具，是较受欢迎的在线实用查询工具网站。"
+          }
+        ]
+      },
+      {
+        "index": 1,
         "title": "日常办公",
         "icon": "",
         "desc": "日常办公使用到的在线快捷工具",
