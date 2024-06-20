@@ -668,7 +668,7 @@ rvm --default use ruby-3.2.0
 
 实际上该种现象并不是报错，只是说当前未设定 `swift` 版本的情况下，会按照默认使用 `swift 4.0` 进行相关代码校验。
 
-亦或者可以通过在 `podspec` 文件中设置 `s.swift-versions` 属性配置。
+亦或者可以通过在 `podspec` 文件中设置 `s.swift_versions = '5.10'` 属性配置。
 
 最后就是在 `podspec` 同级目录下添加一个 `.swift-version` 的文件，文件的内容直接是 `swift` 的版本号，比如当下我这边是 `swift 5.10` 版本的，所以该 `.swift-version` 文件中就只有 `5.10` 的字样即可，然而该设置方式实际上已经被官方废弃了，所以并不建议使用。
 
