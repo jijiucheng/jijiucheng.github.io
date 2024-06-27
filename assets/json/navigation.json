@@ -4,7 +4,7 @@
     "title": "编程开发",
     "icon": "",
     "desc": "",
-    "selectSubIndex": 2,
+    "selectSubIndex": 1,
     "list": [
       {
         "index": 0,
@@ -45,54 +45,64 @@
         ]
       },
       {
-        "index": 1,
-        "title": "博客论坛",
-        "icon": "",
-        "desc": "知名编程开发的博客论坛",
-        "list": [
-          {
-            "title": "掘金",
-            "icon": "https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/static/favicons/favicon-32x32.png",
-            "url": "https://juejin.cn/",
-            "desc": "掘金是面向全球中文开发者的技术内容分享与交流平台"
-          },
-          {
-            "title": "博客园",
-            "icon": "https://img2.baidu.com/it/u=468013898,4135718053&fm=253&fmt=auto",
-            "url": "https://www.cnblogs.com/",
-            "desc": "客园是一个面向开发者的知识分享社区"
-          }
-        ]
-      },
-      {
         "index": 2,
         "title": "大前端",
         "icon": "",
         "desc": "大前端技术栈，包含iOS、Android、HarmonyOS（鸿蒙）、前端、小程序、Electron、Flutter、Uni-app等技术栈",
         "list": [
           {
+            "title": "Apple API 文档",
+            "icon": "https://cdn.cnswift.org/wp-content/uploads/2015/08/cropped-swift_2x-192x192.png",
+            "url": "https://developer.apple.com/documentation/",
+            "desc": "苹果开发文档官网"
+          },
+          {
+            "title": "Swift 官网",
+            "icon": "https://cdn.cnswift.org/wp-content/uploads/2015/08/cropped-swift_2x-192x192.png",
+            "url": "https://www.swift.org/",
+            "desc": "Swift 官网"
+          },
+          {
+            "title": "Swift 开发指南",
+            "icon": "https://cdn.cnswift.org/wp-content/uploads/2015/08/cropped-swift_2x-192x192.png",
+            "url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/",
+            "desc": "Swift 官方开发指南"
+          },
+          {
+            "title": "Swift 开发指南（翻译）",
+            "icon": "https://cdn.cnswift.org/wp-content/uploads/2015/08/cropped-swift_2x-192x192.png",
+            "url": "https://www.cnswift.org/",
+            "desc": "Swift 开发指南翻译版"
+          },
+          {
+            "title": "Swift API 文档",
+            "icon": "https://cdn.cnswift.org/wp-content/uploads/2015/08/cropped-swift_2x-192x192.png",
+            "url": "https://developer.apple.com/documentation/",
+            "desc": "苹果 Swift 开发文档官网"
+          },
+          {
+            "title": "SwiftUI API 文档",
+            "icon": "https://cdn.cnswift.org/wp-content/uploads/2015/08/cropped-swift_2x-192x192.png",
+            "url": "https://developer.apple.com/documentation/SwiftUI/",
+            "desc": "苹果 SwiftUI 开发文档官网"
+          },
+          {
+            "title": "Android 官网",
+            "icon": "https://www.gstatic.cn/devrel-devsite/prod/vb33e12289bba8e69a7a2381ed0b330f48e3451c31f78602f030bd1a47c2a4e59/android/images/touchicon-180.png",
+            "url": "https://developer.android.google.cn/?hl=zh-cn",
+            "desc": "Android 开发者官网"
+          },
+          {
+            "title": "Android 开发指南",
+            "icon": "https://www.gstatic.cn/devrel-devsite/prod/vb33e12289bba8e69a7a2381ed0b330f48e3451c31f78602f030bd1a47c2a4e59/android/images/touchicon-180.png",
+            "url": "https://developer.android.google.cn/guide?hl=zh-cn",
+            "desc": "Android 开发指南"
+          },
+          {
             "title": "HarmonyOS 鸿蒙",
             "icon": "https://developer.huawei.com/dev_index/favicon.ico",
             "url": "https://developer.huawei.com/consumer/cn/app/",
             "desc": "HarmonyOS（鸿蒙）开发者官网"
-          },
-          {
-            "title": "",
-            "icon": "",
-            "url": "",
-            "desc": ""
-          },
-          {
-            "title": "",
-            "icon": "",
-            "url": "",
-            "desc": ""
-          },
-          {
-            "title": "",
-            "icon": "",
-            "url": "",
-            "desc": ""
           },
           {
             "title": "",
@@ -185,10 +195,22 @@
             "desc": "Flutter 官方推荐的中文官网，Flutter 是当下十分流行的跨平台开发，支持iOS、Android、Windows、Mac、Linux、嵌入式，当下 HarmonyOS（鸿蒙）也在接入之中"
           },
           {
+            "title": "Dart 官网",
+            "icon": "https://dart.dev/assets/img/logo/dart-64.png",
+            "url": "https://dart.dev/",
+            "desc": "Flutter 开发语言 Dart 的官网"
+          },
+          {
+            "title": "Dart 中文官网",
+            "icon": "https://dart.cn/assets/img/logo/dart-64.png",
+            "url": "https://dart.cn/",
+            "desc": "Flutter 开发语言 Dart 的中文官网"
+          },
+          {
             "title": "Tauri 官网",
             "icon": "https://tauri.app/meta/favicon-32x32.png",
             "url": "https://tauri.app/",
-            "desc": "Tauri 是一个可用于为所有主要桌面平台构建微小的、极速的二进制文件的框架，开发人员使用任何可编译为前端代码的框架来构建他们的用户界面。"
+            "desc": "Tauri 是一个可用于为所有主要桌面平台构建微小的、极速的二进制文件的框架，开发人员使用任何可编译为前端代码的框架来构建他们的用户界面"
           },
           {
             "title": "QT 官网",
@@ -201,6 +223,12 @@
             "icon": "https://reactnative.cn/img/logo-og.png",
             "url": "https://reactnative.cn/",
             "desc": "React Native 是使用 React 来编写 iOS 和 Android 原生应用端的框架"
+          },
+          {
+            "title": "微信公众平台",
+            "icon": "https://res.wx.qq.com/",
+            "url": "https://mp.weixin.qq.com/",
+            "desc": "微信小程序后台管理平台"
           },
           {
             "title": "微信开发官网文档",
@@ -219,6 +247,26 @@
             "icon": "https://storage.360buyimg.com/pubfree-bucket/taro-docs/f1fdc1a4a18/img/logo-taro.png",
             "url": "https://taro.zone/",
             "desc": "Taro 是一个开放式跨端跨框架解决方案，支持使用 React/Vue/Nerv 等框架来开发 微信 / 京东 / 百度 / 支付宝 / 字节跳动 / QQ / 飞书 小程序 / H5 / RN 等应用"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "title": "博客论坛",
+        "icon": "",
+        "desc": "知名编程开发的博客论坛",
+        "list": [
+          {
+            "title": "掘金",
+            "icon": "https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/static/favicons/favicon-32x32.png",
+            "url": "https://juejin.cn/",
+            "desc": "掘金是面向全球中文开发者的技术内容分享与交流平台"
+          },
+          {
+            "title": "博客园",
+            "icon": "https://img2.baidu.com/it/u=468013898,4135718053&fm=253&fmt=auto",
+            "url": "https://www.cnblogs.com/",
+            "desc": "客园是一个面向开发者的知识分享社区"
           }
         ]
       }
