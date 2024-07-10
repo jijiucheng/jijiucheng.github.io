@@ -310,12 +310,6 @@
             "icon": "https://static.json.cn/r/img/favicon/favicon.ico",
             "url": "https://www.json.cn/",
             "desc": "常用的 JSON 格式化、序列化、反序列化、压缩等功能"
-          },
-          {
-            "title": "子级导航2",
-            "icon": "https://www.baidu.com/favicon.ico",
-            "url": "https://www.baidu.com/",
-            "desc": "百度一下"
           }
         ]
       }
@@ -335,7 +329,7 @@
         "desc": "日常生活中使用到的在线查询工具",
         "list": [
           {
-            "title": "我就差查询",
+            "title": "我就查查询",
             "icon": "http://wjccx.com/favicon.ico",
             "url": "http://wjccx.com/",
             "desc": "我就查查询提供实用工具在线查询，免费在线工具包括生活服务、金融理财、教育学习、数学计算和站长查询等实用工具，是较受欢迎的在线实用查询工具网站。"
@@ -344,7 +338,7 @@
       },
       {
         "index": 1,
-        "title": "日常办公",
+        "title": "转换工具",
         "icon": "",
         "desc": "日常办公使用到的在线快捷工具",
         "list": [
@@ -365,6 +359,12 @@
             "icon": "https://smallpdf.com/favicon.png",
             "url": "https://smallpdf.com/cn/",
             "desc": "轻松转换和编辑所有 PDF 文件的平台"
+          },
+          {
+            "title": "CloudConvert",
+            "icon": "https://cloudconvert.com/images/logo_flat_32.png",
+            "url": "https://cloudconvert.com/",
+            "desc": "常用的转换工具，可以将 png 转换成 ico、icns 等，可以将文件转换、视频转换等操作"
           }
         ]
       }
