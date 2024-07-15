@@ -269,6 +269,26 @@
             "desc": "客园是一个面向开发者的知识分享社区"
           }
         ]
+      },
+      {
+        "index": 3,
+        "title": "优秀库文",
+        "icon": "",
+        "desc": "优秀的三方库或网站",
+        "list": [
+          {
+            "title": "Hello 算法",
+            "icon": "https://www.hello-algo.com/assets/images/favicon.png",
+            "url": "https://www.hello-algo.com/",
+            "desc": "优秀的多平台算法网站"
+          },
+          {
+            "title": "Hello 算法 github",
+            "icon": "https://www.hello-algo.com/assets/images/favicon.png",
+            "url": "https://github.com/krahets/hello-algo/",
+            "desc": "优秀的多平台算法网站，github 地址"
+          }
+        ]
       }
     ]
   },
