@@ -13,6 +13,18 @@
         "desc": "综合类型编程学习网站",
         "list": [
           {
+            "title": "LeetCode 英文官网",
+            "icon": "https://leetcode.com/static/images/LeetCode_Sharing.png",
+            "url": "https://leetcode.com/",
+            "desc": "力扣算法刷题网站，经典的多平台算法网站"
+          },
+          {
+            "title": "LeetCode 中文官网",
+            "icon": "https://leetcode.com/static/images/LeetCode_Sharing.png",
+            "url": "https://leetcode.cn/",
+            "desc": "力扣算法刷题网站，经典的多平台算法网站"
+          },
+          {
             "title": "MDN 官网",
             "icon": "https://developer.mozilla.org/favicon-48x48.cbbd161b.png",
             "url": "https://developer.mozilla.org/zh-CN/",
