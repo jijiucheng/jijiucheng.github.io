@@ -57,7 +57,7 @@
         ]
       },
       {
-        "index": 2,
+        "index": 1,
         "title": "大前端",
         "icon": "",
         "desc": "大前端技术栈，包含iOS、Android、HarmonyOS（鸿蒙）、前端、小程序、Electron、Flutter、Uni-app等技术栈",
@@ -178,9 +178,15 @@
           },
           {
             "title": "Vant 官网",
+            "icon": "https://fastly.jsdelivr.net/npm/@vant/assets/logo.png",
+            "url": "https://vant-ui.github.io/vant/#/zh-CN/",
+            "desc": "Vant 是轻量、可靠的移动端 Vue 组件库"
+          },
+          {
+            "title": "VantGreen 官网",
             "icon": "https://img.yzcdn.cn/zanui/vant/vant-2017-12-18.ico",
             "url": "http://mui.ucmed.cn/",
-            "desc": "Vant 是轻量、可靠的移动端 Vue 组件库"
+            "desc": "基于vant开源代码，经过二次开发，修改原有组件以及新增部分组件，打造而成的卓健科技Vue组件库"
           },
           {
             "title": "Electron 官网",
@@ -263,7 +269,7 @@
         ]
       },
       {
-        "index": 1,
+        "index": 2,
         "title": "博客论坛",
         "icon": "",
         "desc": "知名编程开发的博客论坛",
