@@ -358,10 +358,42 @@
     "title": "生活办公",
     "icon": "",
     "desc": "",
-    "selectSubIndex": 1,
+    "selectSubIndex": 0,
     "list": [
       {
         "index": 0,
+        "title": "AI 工具",
+        "icon": "",
+        "desc": "日常生活中使用到的在线AI工具",
+        "list": [
+          {
+            "title": "AI 工具箱",
+            "icon": "https://www.ailookme.com/wp-content/uploads/2023/04/1234-1.png",
+            "url": "https://www.ailookme.com/",
+            "desc": "AI工具箱是一款免费在线AI工具合集，包含各种实用的AI工具，让您在工作和生活中更加高效和便捷。访AI工具箱官网，体验最新最全的AI工具，助力您的科技创新和实践。"
+          },
+          {
+            "title": "AI 写作网",
+            "icon": "https://aixzw.cn/zb_users/theme/cat_dh/static/favicon.ico",
+            "url": "https://aixzw.cn/",
+            "desc": "AI写作生成器官网【AI写作网 aixzw.cn】领先的AI写作免费在线网站,提供AI论文写作,作文生成,原创文章,文案生成,方案撰写,小说改写,写简历,写周报,写工作总结报告等内容的免费ai写作和AI绘画,ai视频一键生成服务。"
+          },
+          {
+            "title": "AI 138",
+            "icon": "https://cdn.ai138.com/wp-content/uploads/2023/05/croppe1.png",
+            "url": "https://www.ai138.com/",
+            "desc": "AI工具网是专业的AI工具导航平台，汇集超过800种国内外AI人工智能工具，专为AI创作者和开发者设计，涵盖智能对话、AI绘画、创意写作、多语言翻译、3D设计、视频编辑和语音合成等高效工具。AI工具导航为您推荐最优秀的人工智能工具，助您提升工作效率和创造力！"
+          },
+          {
+            "title": "AI 宇宙吧",
+            "icon": "http://www.aiyuzhou8.com/wp-content/uploads/2023/04/48x48.png",
+            "url": "https://www.aiyuzhou8.com/",
+            "desc": "这是一个国内精致前沿的Midjourney绘图的关键词收集站点，非常高兴在此与你相遇！"
+          }
+        ]
+      },
+      {
+        "index": 1,
         "title": "查询工具",
         "icon": "",
         "desc": "日常生活中使用到的在线查询工具",
@@ -375,7 +407,7 @@
         ]
       },
       {
-        "index": 1,
+        "index": 2,
         "title": "转换工具",
         "icon": "",
         "desc": "日常办公使用到的在线快捷工具",
