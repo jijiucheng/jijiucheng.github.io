@@ -111,10 +111,40 @@
             "desc": "Android 开发指南"
           },
           {
+            "title": "Kotlin 官网",
+            "icon": "https://kotlinlang.org/assets/images/favicon.svg?v2",
+            "url": "https://kotlinlang.org/",
+            "desc": "Kotlin 英文官网"
+          },
+          {
+            "title": "Kotlin 中文官网",
+            "icon": "https://kotlinlang.org/assets/images/favicon.svg?v2",
+            "url": "https://www.kotlincn.net/",
+            "desc": "Kotlin 官方文档中文版（非官方版）"
+          },
+          {
+            "title": "Kotlin 中文开发文档",
+            "icon": "https://kotlinlang.org/assets/images/favicon.svg?v2",
+            "url": "https://book.kotlincn.net/",
+            "desc": "Kotlin 官方文档中文版（非官方版）"
+          },
+          {
             "title": "HarmonyOS 鸿蒙",
             "icon": "https://developer.huawei.com/dev_index/favicon.ico",
             "url": "https://developer.huawei.com/consumer/cn/app/",
             "desc": "HarmonyOS（鸿蒙）开发者官网"
+          },
+          {
+            "title": "",
+            "icon": "",
+            "url": "",
+            "desc": ""
+          },
+          {
+            "title": "",
+            "icon": "",
+            "url": "",
+            "desc": ""
           },
           {
             "title": "",
@@ -439,7 +469,8 @@
         ]
       }
     ]
-  },{
+  },
+  {
     "index": 3,
     "title": "苜蓿导航4",
     "icon": "",
