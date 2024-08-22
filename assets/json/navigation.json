@@ -325,16 +325,64 @@
         "desc": "优秀的三方库或网站",
         "list": [
           {
-            "title": "Hello 算法",
+            "title": "Hello 算法官网",
             "icon": "https://www.hello-algo.com/assets/images/favicon.png",
             "url": "https://www.hello-algo.com/",
             "desc": "优秀的多平台算法网站"
           },
           {
-            "title": "Hello 算法 github",
+            "title": "Hello 算法 Github",
             "icon": "https://www.hello-algo.com/assets/images/favicon.png",
             "url": "https://github.com/krahets/hello-algo/",
             "desc": "优秀的多平台算法网站，github 地址"
+          },
+          {
+            "title": "MindMap 官网",
+            "icon": "https://wanglin2.github.io/mind-map-docs/logo.png",
+            "url": "https://wanglin2.github.io/mind-map-docs//",
+            "desc": "MindMap，一个还算强大的 Web 思维导图，官方地址"
+          },
+          {
+            "title": "MindMap Github",
+            "icon": "https://wanglin2.github.io/mind-map-docs/logo.png",
+            "url": "https://github.com/wanglin2/mind-map/",
+            "desc": "MindMap，一个还算强大的 Web 思维导图，github 地址"
+          },
+          {
+            "title": "MindMap 在线编辑",
+            "icon": "https://wanglin2.github.io/mind-map-docs/logo.png",
+            "url": "https://wanglin2.github.io/mind-map/#/",
+            "desc": "MindMap 思维导图，在线编辑地址"
+          },
+          {
+            "title": "Quill 官网",
+            "icon": "https://quilljs.com/assets/images/favicon.ico",
+            "url": "https://quilljs.com/",
+            "desc": "Quill 官网，富文本编辑器"
+          },
+          {
+            "title": "Quill Github",
+            "icon": "https://quilljs.com/assets/images/favicon.ico",
+            "url": "https://github.com/slab/quill",
+            "desc": "Quill 官网，Github，富文本编辑器"
+          },
+          {
+            "title": "Quill 中文文档",
+            "icon": "https://www.kancloud.cn/favicon.ico",
+            "url": "https://www.kancloud.cn/liuwave/quill/1409423",
+            "desc": "Quill 中文文档，非官方，推荐，富文本编辑器"
+          },
+          {
+            "title": "Quill 中文文档",
+            "icon": "https://www.kancloud.cn/favicon.ico",
+            "url": "https://kang-bing-kui.gitbook.io/quill",
+            "desc": "Quill 中文文档，非官方，富文本编辑器"
+          },
+          {
+            "title": "Quill 在线编辑",
+            "icon": "https://quilljs.com/assets/images/favicon.ico",
+            "url": "https://codepen.io/liuwave/pen/bGNbrpW",
+            "desc": "Quill 在线编辑，富文本编辑器"
           }
         ]
       }
