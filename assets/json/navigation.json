@@ -383,6 +383,18 @@
             "icon": "https://quilljs.com/assets/images/favicon.ico",
             "url": "https://codepen.io/liuwave/pen/bGNbrpW",
             "desc": "Quill 在线编辑，富文本编辑器"
+          },
+          {
+            "title": "千古前端图文教程 Github",
+            "icon": "",
+            "url": "https://github.com/qianguyihao/web",
+            "desc": "系统性的前端学习教程"
+          },
+          {
+            "title": "千古前端图文教程 官网",
+            "icon": "",
+            "url": "https://web.qianguyihao.com/",
+            "desc": "系统性的前端学习教程"
           }
         ]
       }
