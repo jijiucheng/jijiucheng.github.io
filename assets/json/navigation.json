@@ -243,6 +243,12 @@
             "desc": "Flutter 官方推荐的中文官网，Flutter 是当下十分流行的跨平台开发，支持iOS、Android、Windows、Mac、Linux、嵌入式，当下 HarmonyOS（鸿蒙）也在接入之中"
           },
           {
+            "title": "Flutter API 官网",
+            "icon": "https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png",
+            "url": "https://api.flutter.dev/index.html",
+            "desc": "Flutter API 官网"
+          },
+          {
             "title": "Dart 官网",
             "icon": "https://dart.dev/assets/img/logo/dart-64.png",
             "url": "https://dart.dev/",
