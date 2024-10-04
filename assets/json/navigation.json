@@ -444,6 +444,12 @@
             "icon": "https://static.json.cn/r/img/favicon/favicon.ico",
             "url": "https://www.json.cn/",
             "desc": "常用的 JSON 格式化、序列化、反序列化、压缩等功能"
+          },
+          {
+            "title": "Quicktype",
+            "icon": "https://app.quicktype.io/favicon-96.png",
+            "url": "https://app.quicktype.io/",
+            "desc": "常用的 C#、Swift、TypeScript、Go、C++、Dart 和其它编程语言, 快速的 JSON 数据转模型工具"
           }
         ]
       }
