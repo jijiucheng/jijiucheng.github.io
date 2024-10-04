@@ -401,6 +401,18 @@
             "icon": "",
             "url": "https://web.qianguyihao.com/",
             "desc": "系统性的前端学习教程"
+          },
+          {
+            "title": "C++那些事 官网",
+            "icon": "https://light-city.github.io/stories_things/assets/images/favicon.png",
+            "url": "https://light-city.github.io/stories_things/",
+            "desc": "C++ 系统的从入门到进阶课程"
+          },
+          {
+            "title": "C++那些事 Github",
+            "icon": "https://light-city.github.io/stories_things/assets/images/favicon.png",
+            "url": "https://github.com/Light-City/CPlusPlusThings/",
+            "desc": "C++ 系统的从入门到进阶课程"
           }
         ]
       }
