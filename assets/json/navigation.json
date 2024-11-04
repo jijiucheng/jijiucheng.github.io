@@ -261,6 +261,12 @@
             "desc": "Flutter 开发语言 Dart 的中文官网"
           },
           {
+            "title": "Pub.Dev 官网",
+            "icon": "https://dart.cn/assets/img/logo/dart-64.png",
+            "url": "https://pub.dev/",
+            "desc": "Flutter 三方库检索网站"
+          },
+          {
             "title": "Tauri 官网",
             "icon": "https://tauri.app/meta/favicon-32x32.png",
             "url": "https://tauri.app/",
