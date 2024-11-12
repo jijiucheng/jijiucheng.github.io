@@ -153,6 +153,42 @@
             "desc": ""
           },
           {
+            "title": "MDN 官网",
+            "icon": "https://developer.mozilla.org/favicon-48x48.cbbd161b.png",
+            "url": "https://developer.mozilla.org/zh-CN/",
+            "desc": "前端标准学习网站"
+          },
+          {
+            "title": "NodeJS 官网",
+            "icon": "https://nodejs.org/static/images/favicons/favicon.png",
+            "url": "https://nodejs.org/zh-cn/",
+            "desc": "NodeJS 中文官方网站"
+          },
+          {
+            "title": "NodeJS API 文档",
+            "icon": "https://nodejs.org/static/images/favicons/favicon.png",
+            "url": "https://nodejs.org/docs/latest/api/",
+            "desc": "NodeJS API 文档"
+          },
+          {
+            "title": "NodeJS 中文网",
+            "icon": "https://nodejs.org/static/images/favicons/favicon.png",
+            "url": "https://nodejs.cn/",
+            "desc": "NodeJS 非官方中文网站，囊括各类前端官网"
+          },
+          {
+            "title": "TypeScript 官网",
+            "icon": "https://www.typescriptlang.org/icons/icon-512x512.png",
+            "url": "https://www.typescriptlang.org/",
+            "desc": "TypeScript 官网"
+          },
+          {
+            "title": "TypeScript 中文网",
+            "icon": "https://www.typescriptlang.org/icons/icon-512x512.png",
+            "url": "https://ts.nodejs.cn/",
+            "desc": "TypeScript 中文网，非官方中文网站"
+          },
+          {
             "title": "Vue 官网",
             "icon": "https://cn.vuejs.org/logo.svg",
             "url": "https://cn.vuejs.org/",
@@ -222,6 +258,12 @@
             "title": "Electron 官网",
             "icon": "https://www.electronjs.org/assets/img/logo.svg",
             "url": "https://www.electronjs.org/",
+            "desc": "Electron 是当下最流行的跨平台开发技术，支持 Windows、Mac、Linux 平台"
+          },
+          {
+            "title": "Electron 中文官网",
+            "icon": "https://www.electronjs.org/assets/img/logo.svg",
+            "url": "https://electron.nodejs.cn/",
             "desc": "Electron 是当下最流行的跨平台开发技术，支持 Windows、Mac、Linux 平台"
           },
           {
