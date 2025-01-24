@@ -575,6 +575,12 @@
         "desc": "日常办公使用到的在线快捷工具",
         "list": [
           {
+            "title": "BestPDF",
+            "icon": "https://bestpdf.cn/img/icon.png",
+            "url": "https://bestpdf.cn/",
+            "desc": "最佳PDF工具平台，一站式简便快捷、稳定可靠、极速强劲PDF在线工具"
+          },
+          {
             "title": "七七工具箱",
             "icon": "https://www.tool77.com/media/image/favicon.ico",
             "url": "https://www.tool77.com/",
