@@ -524,6 +524,98 @@
     "list": [
       {
         "index": 0,
+        "title": "AI 大模型",
+        "icon": "",
+        "desc": "当下常用的大模型网站",
+        "list": [
+          {
+            "title": "OpenAI 官网",
+            "icon": "https://openai.com/favicon.ico",
+            "url": "https://openai.com/",
+            "desc": "OpenAI 官网"
+          },
+          {
+            "title": "ChatGPT 官网",
+            "icon": "https://openai.com/favicon.ico",
+            "url": "https://chatgpt.com/",
+            "desc": "ChatGPT 官网"
+          },
+          {
+            "title": "DeepSeek 官网",
+            "icon": "https://www.deepseek.com/favicon.ico",
+            "url": "https://www.deepseek.com/",
+            "desc": "DeepSeek 官网"
+          },
+          {
+            "title": "豆包官网",
+            "icon": "https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/web/logo-icon.png",
+            "url": "https://www.doubao.com/",
+            "desc": "豆包官网，字节跳动旗下 AI 智能助手"
+          },
+          {
+            "title": "Kimi 官网",
+            "icon": "https://statics.moonshot.cn/kimi-chat/favicon.ico",
+            "url": "https://kimi.moonshot.cn/",
+            "desc": "Kimi 官网"
+          },
+          {
+            "title": "通义千问官网",
+            "icon": "https://img.alicdn.com/imgextra/i1/O1CN01AKUdEM1qP6BQVaYhT_!!6000000005487-2-tps-512-512.png",
+            "url": "https://tongyi.aliyun.com/",
+            "desc": "通义千问官网，阿里巴巴旗下 AI 智能助手"
+          },
+          {
+            "title": "文心一言官网",
+            "icon": "https://nlp-eb.cdn.bcebos.com/logo/favicon.ico",
+            "url": "https://yiyan.baidu.com/",
+            "desc": "文心一言官网，百度旗下 AI 智能助手"
+          },
+          {
+            "title": "讯飞星火官网",
+            "icon": "https://xinghuo.xfyun.cn/spark-icon.ico",
+            "url": "https://xinghuo.xfyun.cn/",
+            "desc": "讯飞星火官网，科大讯飞旗下 AI 智能助手"
+          },
+          {
+            "title": "腾讯混元官网",
+            "icon": "https://cdn-portal.hunyuan.tencent.com/public/static/logo/logo.png",
+            "url": "https://hunyuan.tencent.com/",
+            "desc": "腾讯混元官网，腾讯旗下 AI 智能助手"
+          },
+          {
+            "title": "腾讯元宝官网",
+            "icon": "https://cdn-bot.hunyuan.tencent.com/logo.png",
+            "url": "https://yuanbao.tencent.com/",
+            "desc": "腾讯元宝官网，腾讯旗下 AI 智能助手"
+          },
+          {
+            "title": "腾讯元器官网",
+            "icon": "https://cdn-bot.hunyuan.tencent.com/logo.png",
+            "url": "https://yuanqi.tencent.com/",
+            "desc": "腾讯元器官网，腾讯旗下 AI 智能助手"
+          },
+          {
+            "title": "天工 AI 官网",
+            "icon": "https://static.tiangong.cn/wwwsite/logo.ico",
+            "url": "https://www.tiangong.cn/",
+            "desc": "天工 AI 官网，昆仑万维旗下 AI 智能助手"
+          },
+          {
+            "title": "百川 AI 官网",
+            "icon": "https://cdn.baichuan-ai.com/build/_next/static/media/logo.ce66885d.png",
+            "url": "https://www.baichuan-ai.com/",
+            "desc": "百川 AI 官网"
+          },
+          {
+            "title": "BigModel 官网",
+            "icon": "https://open.bigmodel.cn/img/icons/favicon-16x16.png",
+            "url": "https://open.bigmodel.cn/",
+            "desc": "BigModel 官网，智谱 AI 大模型开放平台"
+          }
+        ]
+      },
+      {
+        "index": 1,
         "title": "AI 工具",
         "icon": "",
         "desc": "日常生活中使用到的在线AI工具",
@@ -555,7 +647,7 @@
         ]
       },
       {
-        "index": 1,
+        "index": 2,
         "title": "查询工具",
         "icon": "",
         "desc": "日常生活中使用到的在线查询工具",
@@ -569,7 +661,7 @@
         ]
       },
       {
-        "index": 2,
+        "index": 3,
         "title": "转换工具",
         "icon": "",
         "desc": "日常办公使用到的在线快捷工具",
