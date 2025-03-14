@@ -463,6 +463,38 @@
             "desc": "C++ 系统的从入门到进阶课程"
           }
         ]
+      },
+      {
+        "index": 4,
+        "title": "产品设计",
+        "icon": "",
+        "desc": "产品、交互、设计相关网站",
+        "list": [
+          {
+            "title": "字体世界官网",
+            "icon": "https://freefonts.top/images/favicon.ico",
+            "url": "https://freefonts.top/",
+            "desc": "免费字体网站"
+          },
+          {
+            "title": "字体家官网",
+            "icon": "https://www.zitijia.com/static/img/favicon.ico",
+            "url": "https://www.zitijia.com/",
+            "desc": "免费字体网站"
+          },
+          {
+            "title": "优品PPT官网",
+            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
+            "url": "https://www.ypppt.com/",
+            "desc": "优品PPT模板网是一家专注于分享高质量的免费PPT模板下载网站，包括图表、背景图片、素材、教程等各类PPT模板相关资源"
+          },
+          {
+            "title": "Github-fonts",
+            "icon": "https://img1.baidu.com/it/u=3083471091,3280805397&fm=253&fmt=auto&app=138&f=JPEG?w=20&h=20",
+            "url": "https://github.com/zyh1102/fonts",
+            "desc": "Github 个人仓库收集的免费字体"
+          }
+        ]
       }
     ]
   },
