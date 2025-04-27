@@ -792,16 +792,34 @@
         "desc": "",
         "list": [
           {
+            "title": "喜马拉雅",
+            "icon": "https://www.ximalaya.com/favicon.ico",
+            "url": "https://www.ximalaya.com/",
+            "desc": "喜马拉雅听书网站"
+          },
+          {
+            "title": "懒人听书",
+            "icon": "https://assets.lrts.me/fed-assets/images/favicon.ico",
+            "url": "https://www.lrts.me/",
+            "desc": "懒人听书网"
+          },
+          {
             "title": "恋听网",
-            "icon": "https://www.baidu.com/favicon.ico",
+            "icon": "https://i.ting55.com/site/favicon.ico",
             "url": "https://ting55.com/",
             "desc": "恋听网"
           },
           {
             "title": "六月听书",
-            "icon": "https://www.baidu.com/favicon.ico",
+            "icon": "http://www.6yueting.com/favicon.ico",
             "url": "http://www.6yueting.com/",
             "desc": "六月听书网"
+          },
+          {
+            "title": "麒麟听书",
+            "icon": "https://70ts.com/favicon.ico",
+            "url": "https://70ts.com/",
+            "desc": "麒麟听书网"
           }
         ]
       },
