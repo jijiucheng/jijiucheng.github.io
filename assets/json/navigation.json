@@ -810,6 +810,24 @@
             "desc": "恋听网"
           },
           {
+            "title": "幻听网",
+            "icon": "https://www.huanting.cc/favicon.ico",
+            "url": "https://www.huanting.cc/",
+            "desc": "幻听网"
+          },
+          {
+            "title": "悦听吧",
+            "icon": "http://yuetingba.cn/custom/favicon.ico",
+            "url": "http://yuetingba.cn/",
+            "desc": "悦听吧"
+          },
+          {
+            "title": "悦听有声书",
+            "icon": "https://www.ytysxs.com/wp-content/uploads/2024/06/LOGO200.png",
+            "url": "https://www.ytysxs.com/",
+            "desc": "悦听有声书"
+          },
+          {
             "title": "六月听书",
             "icon": "http://www.6yueting.com/favicon.ico",
             "url": "http://www.6yueting.com/",
