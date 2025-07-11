@@ -747,21 +747,27 @@
     "list": [
       {
         "index": 0,
-        "title": "磁力种子",
-        "icon": "https://www.baidu.com/favicon.ico",
-        "desc": "百度一下",
+        "title": "磁力网盘",
+        "icon": "",
+        "desc": "",
         "list": [
           {
-            "title": "子级导航1",
-            "icon": "https://www.baidu.com/favicon.ico",
-            "url": "https://www.baidu.com/",
-            "desc": "百度一下"
+            "title": "BD影视",
+            "icon": "https://www.bdjuhe.com/img/favicon.ico",
+            "url": "https://www.bdjuhe.com/",
+            "desc": "BD影视"
           },
           {
-            "title": "子级导航2",
-            "icon": "https://www.baidu.com/favicon.ico",
-            "url": "https://www.baidu.com/",
-            "desc": "百度一下"
+            "title": "团长资源",
+            "icon": "https://www.yppan.com/wp-content/uploads/2025/02/cropped-69d8f122740640519216514462cc50c5-32x32.png",
+            "url": "https://t-rex.tzfile.com/",
+            "desc": "团长资源，霸王龙压制组"
+          },
+          {
+            "title": "云盘盘",
+            "icon": "https://www.yppan.com/wp-content/uploads/2025/02/cropped-69d8f122740640519216514462cc50c5-32x32.png",
+            "url": "https://www.yppan.com/",
+            "desc": "云盘盘"
           }
         ]
       },
