@@ -544,6 +544,44 @@
             "desc": "常用的 C#、Swift、TypeScript、Go、C++、Dart 和其它编程语言, 快速的 JSON 数据转模型工具"
           }
         ]
+      },
+      {
+        "index": 2,
+        "title": "软件破解",
+        "icon": "",
+        "desc": "常用的软件破解网站",
+        "list": [
+          {
+            "title": "吾爱破解网",
+            "icon": "https://www.52pojie.cn/favicon.ico",
+            "url": "https://www.52pojie.cn/",
+            "desc": "吾爱破解网"
+          },
+          {
+            "title": "Macked",
+            "icon": "https://macked.app/wp-content/uploads/favicon.png",
+            "url": "https://macked.app/",
+            "desc": "Mac 破解软件网站，推荐"
+          },
+          {
+            "title": "MacWk",
+            "icon": "https://www.macwk.com/favicon-32x32.ico",
+            "url": "https://www.macwk.com/",
+            "desc": "Mac 破解软件网站，推荐"
+          },
+          {
+            "title": "MacWk（伪）",
+            "icon": "https://macwk.cn/wp-content/uploads/2023/07/macwkico.png",
+            "url": "https://www.macwk.cn/",
+            "desc": "Mac 破解软件网站，伪网站，推荐"
+          },
+          {
+            "title": "MacApp",
+            "icon": "https://macapp.org.cn/wp-content/uploads/2024/09/a6e5b49cb355225.png",
+            "url": "https://macapp.org.cn/",
+            "desc": "Mac 破解软件网站"
+          }
+        ]
       }
     ]
   },
