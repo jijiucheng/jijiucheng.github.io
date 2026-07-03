@@ -99,6 +99,12 @@
             "desc": "苹果 SwiftUI 开发文档官网"
           },
           {
+            "title": "SwiftGG 官网",
+            "icon": "https://swift.swiftgg.team/favicon.ico",
+            "url": "https://swift.swiftgg.team/",
+            "desc": "SwiftGG 官网"
+          },
+          {
             "title": "Android 官网",
             "icon": "https://www.gstatic.cn/devrel-devsite/prod/vb33e12289bba8e69a7a2381ed0b330f48e3451c31f78602f030bd1a47c2a4e59/android/images/touchicon-180.png",
             "url": "https://developer.android.google.cn/?hl=zh-cn",
