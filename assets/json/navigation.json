@@ -83,7 +83,7 @@
           {
             "title": "Swift 开发指南（翻译）",
             "icon": "https://cdn.cnswift.org/wp-content/uploads/2015/08/cropped-swift_2x-192x192.png",
-            "url": "https://www.cnswift.org/",
+            "url": "https://doc.swiftgg.team/documentation/the-swift-programming-language",
             "desc": "Swift 开发指南翻译版"
           },
           {
@@ -558,6 +558,12 @@
             "desc": "吾爱破解网"
           },
           {
+            "title": "MacApp",
+            "icon": "https://macapp.org.cn/wp-content/uploads/2024/09/a6e5b49cb355225.png",
+            "url": "https://macapp.org.cn/",
+            "desc": "Mac 破解软件网站"
+          },
+          {
             "title": "Macked",
             "icon": "https://macked.app/wp-content/uploads/favicon.png",
             "url": "https://macked.app/",
@@ -567,19 +573,13 @@
             "title": "MacWk",
             "icon": "https://www.macwk.com/favicon-32x32.ico",
             "url": "https://www.macwk.com/",
-            "desc": "Mac 破解软件网站，推荐"
+            "desc": "Mac 破解软件网站，推荐" 
           },
           {
             "title": "MacWk（伪）",
             "icon": "https://macwk.cn/wp-content/uploads/2023/07/macwkico.png",
             "url": "https://www.macwk.cn/",
             "desc": "Mac 破解软件网站，伪网站，推荐"
-          },
-          {
-            "title": "MacApp",
-            "icon": "https://macapp.org.cn/wp-content/uploads/2024/09/a6e5b49cb355225.png",
-            "url": "https://macapp.org.cn/",
-            "desc": "Mac 破解软件网站"
           }
         ]
       }
